@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const line = require("@line/bot-sdk");
 const express = require("express");
+const { getPrice } = require("./stock");
 
 // create LINE SDK config from env variables
 const config = {
@@ -26,9 +27,6 @@ app.post("/callback", line.middleware(config), (req, res) => {
       res.status(500).end();
     });
 });
-// app.post("/callback", (req, res) => {
-//   res.json("test");
-// });
 
 // event handler
 function handleEvent(event) {
@@ -38,7 +36,8 @@ function handleEvent(event) {
   }
 
   // create a echoing text message
-  const echo = { type: "text", text: event.message.text };
+  // const echo = { type: "text", text: event.message.text };
+  const echo = { type: "text", text: getPrice() };
 
   // use reply API
   return client.replyMessage(event.replyToken, echo);
