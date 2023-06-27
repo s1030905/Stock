@@ -2,6 +2,58 @@
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary px-4">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">大祕寶</a>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul
+          class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+          style="--bs-scroll-height: 100px;"
+        >
+          {{! <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">熱門股</a>
+          </li> }}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarScrollingDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              簡易選股策略
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a
+                  class="dropdown-item"
+                  href="/ezSelect/0050"
+                >0050成分股</a></li>
+              <li><a
+                  class="dropdown-item"
+                  href="/ezSelect/0056"
+                >0056成分股</a></li>
+              <li><a
+                  class="dropdown-item"
+                  href="/ezSelect/foreignBuy"
+                >外資買超</a></li>
+              <li><a
+                  class="dropdown-item"
+                  href="/ezSelect/localBuy"
+                >投信買超</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">管理自選股</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-info" type="submit">Search</button>
+        </form>
+      </div>
     </div>
   </nav>
 </header>
