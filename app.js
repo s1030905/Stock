@@ -1,57 +1,24 @@
 require("dotenv").config();
 
-const line = require("@line/bot-sdk");
+// 套件引入
 const express = require("express");
-const { getPrice } = require("./stock");
+const handlebars = require("express-handlebars");
 
-// create LINE SDK config from env variables
-const config = {
-  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
-  channelSecret: process.env.CHANNEL_SECRET,
-};
+// 自訂
+const router = require("./routes");
+const handlebarsHelpers = require("./helpers/handlebars-helpers");
 
-// create LINE SDK client
-const client = new line.Client(config);
-
-// create Express app
-// about Express itself: https://expressjs.com/
+// 變數
+const port = process.env.PORT || 3000;
 const app = express();
 
-// register a webhook handler with middleware
-// about the middleware, please refer to doc
-app.post("/callback", line.middleware(config), (req, res) => {
-  Promise.all(req.body.events.map(handleEvent))
-    .then((result) => res.json(result))
-    .catch((err) => {
-      console.error(err);
-      res.status(500).end();
-    });
-});
+// view engine設定
+app.set("view engine", "hbs");
+app.engine("hbs", handlebars({ extname: ".hbs", helpers: handlebarsHelpers }));
 
-// event handler
-async function handleEvent(event) {
-  if (event.type !== "message" || event.message.type !== "text") {
-    // ignore non-text-message event
-    return Promise.resolve(null);
-  }
-
-  // create a echoing text message
-  // const echo = { type: "text", text: event.message.text };
-  const data = await getPrice();
-  const echo = { type: "text", text: data };
-
-  // use reply API
-  return client.replyMessage(event.replyToken, echo);
-}
-
-// app.get("/", async (req, res) => {
-//   const data = await getPrice();
-//   console.log(data);
-//   res.send(data);
-// });
+app.use(router);
 
 // listen on port
-const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`listening on ${port}`);
 });
