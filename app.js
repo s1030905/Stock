@@ -29,7 +29,7 @@ app.post("/callback", line.middleware(config), (req, res) => {
 });
 
 // event handler
-function handleEvent(event) {
+async function handleEvent(event) {
   if (event.type !== "message" || event.message.type !== "text") {
     // ignore non-text-message event
     return Promise.resolve(null);
@@ -37,11 +37,18 @@ function handleEvent(event) {
 
   // create a echoing text message
   // const echo = { type: "text", text: event.message.text };
-  const echo = { type: "text", text: getPrice() };
+  const data = await getPrice();
+  const echo = { type: "text", text: data };
 
   // use reply API
   return client.replyMessage(event.replyToken, echo);
 }
+
+// app.get("/", async (req, res) => {
+//   const data = await getPrice();
+//   console.log(data);
+//   res.send(data);
+// });
 
 // listen on port
 const port = process.env.PORT || 3000;
