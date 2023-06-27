@@ -1,14 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { getPrice } = require("../helpers/stock");
+const { stockController } = require("../controllers/stock-controller");
 
-// router.get("/", async (req, res) => {
-//   const data = await getPrice();
-//   console.log(data);
-//   res.send(data);
-// });
+router.get("/ezSelect/0050", stockController.fifty);
 
-router.get("/", (req, res) => {
+router.get("/ezSelect/index", (req, res) => {
   res.render("index");
 });
 
