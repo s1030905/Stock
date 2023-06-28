@@ -41,12 +41,13 @@
             <a class="nav-link" href="#">管理自選股</a>
           </li>
         </ul>
-        <form class="d-flex">
+        <form class="d-flex" action="/stock/search" method="POST">
           <input
             class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
+            type="Search"
+            placeholder="股票代號"
+            id="stockId"
+            name="stockId"
           />
           <button class="btn btn-outline-info" type="submit">Search</button>
         </form>

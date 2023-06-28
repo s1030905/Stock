@@ -1,4 +1,4 @@
-const { getPrice, getForeignBuy, getLocalBuy } = require("../helpers/stock");
+const { getForeignBuy, getLocalBuy } = require("../helpers/stock");
 const fiftyData = require("../fifty.json");
 const fiftySixData = require("../fiftysix.json");
 
@@ -12,9 +12,8 @@ const stockController = {
     res.render("stock-list", { data });
   },
   homePage: (req, res) => {
-    // const data = await getPrice();
-    // console.log(data);
-    // res.send(data);
+    // 代處理
+
     res.render("index");
   },
   foreignBuy: async (req, res) => {

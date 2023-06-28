@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 // 股票代碼
-const stockNo = 2330;
+// const stockNo = 2330;
 
 // 今天日期
 const date = new Date();
@@ -19,18 +19,19 @@ if (day < 10) {
 const today = year + "" + month + "" + day;
 
 // 取得個股價格資訊
-const getPrice = async function () {
+const getStock = async function (stockNo) {
   const url =
     "http://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=" +
     today +
     "&stockNo=" +
     stockNo;
+
   try {
     const response = await axios.get(url);
     const data = response.data;
 
     // 資料不足5筆
-    if (data.total < 5) {
+    if (data.total < 5 && data.stat === "OK") {
       // 年初
       if (month === "01") {
         const lastYear = Number(year) - 1;
@@ -73,12 +74,7 @@ const getPrice = async function () {
         return data;
       }
     } else {
-      const arr = [];
-      data.data.forEach((element) => {
-        arr.push(element[7]);
-      });
-      return data.title;
-      // console.log(arr);
+      return data;
     }
   } catch (error) {
     console.error("Error occurred while fetching data:", error);
@@ -107,4 +103,4 @@ const getLocalBuy = async function () {
   }
 };
 
-module.exports = { getPrice, getForeignBuy, getLocalBuy };
+module.exports = { getStock, getForeignBuy, getLocalBuy };

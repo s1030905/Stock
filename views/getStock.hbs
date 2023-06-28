@@ -1,0 +1,34 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">日期</th>
+      <th scope="col">成交股數</th>
+      <th scope="col">成交金額</th>
+      <th scope="col">開盤價</th>
+      <th scope="col">最高價</th>
+      <th scope="col">最低價</th>
+      <th scope="col">收盤價</th>
+      <th scope="col">漲跌價差</th>
+      <th scope="col">成交筆數</th>
+      <th scope="col">加入自選股</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+      <tr>
+        <th scope="row">{{addIndex @index}}</th>
+        <td>{{this.date}}</td>
+        <td>{{this.dealStock}}</td>
+        <td>{{this.dealMoney}}</td>
+        <td>{{this.start}}</td>
+        <td>{{this.hight}}</td>
+        <td>{{this.low}}</td>
+        <td>{{this.end}}</td>
+        <td>{{this.difference}}</td>
+        <td>{{this.dealNumber}}</td>
+        <td><a class="btn btn-success" href="#">+</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
