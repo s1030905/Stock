@@ -1,13 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const { stockController } = require("../controllers/stock-controller");
+const userController = require("../controllers/user-controller");
+const ezSelect = require("./modules/ezSelect");
 
-router.get("/ezSelect/0050", stockController.fifty);
-router.get("/ezSelect/0056", stockController.fiftySix);
-router.get("/ezSelect/foreignBuy", stockController.foreignBuy);
-router.get("/ezSelect/localBuy", stockController.localBuy);
+router.use("/stock/ezSelect", ezSelect);
 
-router.get("/ezSelect/index", (req, res) => {
+router.get("/stock/login", (req, res) => {
+  res.render("login");
+});
+
+router.get("/stock/signup", (req, res) => {
+  res.render("signup");
+});
+
+router.get("/stock/index", (req, res) => {
   res.render("index");
 });
 
