@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">股票代號</th>
+      <th scope="col">股票名稱</th>
+      <th scope="col">權重(%)</th>
+      <th scope="col">加入自選股</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+      <tr>
+        <th scope="row">{{addIndex @index}}</th>
+        <td>{{this.id}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.weight}}</td>
+        <td><a class="btn btn-success" href="#">+</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

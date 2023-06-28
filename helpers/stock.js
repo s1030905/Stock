@@ -85,6 +85,26 @@ const getPrice = async function () {
   }
 };
 
-// getPrice();
+const getForeignBuy = async function () {
+  const url = `https://www.twse.com.tw/rwd/zh/fund/TWT38U?date=20230627&response=json`; //${today}
+  try {
+    let data = await axios.get(url);
+    data = data.data;
+    return data;
+  } catch (error) {
+    console.error("Error occurred while fetching data:", error);
+  }
+};
 
-module.exports = { getPrice };
+const getLocalBuy = async function () {
+  const url = `https://www.twse.com.tw/rwd/zh/fund/TWT44U?date=20230619&response=json`; //${today}
+  try {
+    let data = await axios.get(url);
+    data = data.data;
+    return data;
+  } catch (error) {
+    console.error("Error occurred while fetching data:", error);
+  }
+};
+
+module.exports = { getPrice, getForeignBuy, getLocalBuy };
