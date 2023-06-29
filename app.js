@@ -4,10 +4,13 @@ require("dotenv").config();
 const express = require("express");
 const handlebars = require("express-handlebars");
 const methodOverride = require("method-override");
+const session = require("express-session");
+const flash = require("connect-flash");
 
 // 自訂模組
 const router = require("./routes");
 const handlebarsHelpers = require("./helpers/handlebars-helpers");
+const passport = require("./config/passport");
 
 // 變數軒高
 const port = process.env.PORT || 3000;
@@ -21,6 +24,26 @@ app.engine("hbs", handlebars({ extname: ".hbs", helpers: handlebarsHelpers }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+
+// session setting
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET || "NoSecret",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+// passport初始化
+app.use(passport.initialize());
+
+// flash
+app.use(flash());
+app.use((req, res, next) => {
+  res.locals.user = req.user;
+  res.locals.error_messages = req.flash("error_messages");
+  next();
+});
 
 app.use(router);
 
