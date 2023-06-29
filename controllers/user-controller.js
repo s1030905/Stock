@@ -1,5 +1,4 @@
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
 const { User } = require("../models");
 
 const userController = {
@@ -28,12 +27,9 @@ const userController = {
   },
   login: (req, res, next) => {
     try {
-      const user = req.user.toJSON();
-      const token = jwt.sign(user, process.env.JWT_SECRET, {
-        expiresIn: "30d",
-      });
-      user.token = token;
-      res.render("index");
+      // console.log("login--------------------");
+      // console.log(req.user);
+      return res.redirect("/");
     } catch (error) {
       next(error);
     }

@@ -26,7 +26,12 @@
         <td>{{this.buy}}</td>
         <td>{{this.sell}}</td>
         <td>{{this.difference}}</td>
-        <td><a class="btn btn-success" href="#">+</a></td>
+        <td>
+          <form action="/stock/{{this.id}}" method="post">
+            <button class="btn btn-success" type="submit">+</button>
+          </form>
+          {{! <a class="btn btn-success" href="#">+</a> }}
+        </td>
       </tr>
     {{/each}}
   </tbody>

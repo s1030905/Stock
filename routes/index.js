@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 const { userController } = require("../controllers/user-controller");
 const { getStock } = require("../helpers/stock");
-const ezSelect = require("./modules/ezSelect");
+const { authenticator } = require("../middleware/auth");
+const stock = require("./modules/stock");
 const passport = require("../config/passport");
 
 //簡易選股策略頁面
-router.use("/stock/ezSelect", ezSelect);
+router.use("/stock", authenticator, stock);
 
 //login
 router.get("/login", (req, res) => {
@@ -16,7 +17,6 @@ router.get("/login", (req, res) => {
 router.post(
   "/login",
   passport.authenticate("local", {
-    session: false,
     failureRedirect: "/login",
     failureFlash: true,
   }),
@@ -31,7 +31,9 @@ router.get("/signup", (req, res) => {
 router.post("/signup", userController.signUP);
 
 // home page
-router.get("/", (req, res) => {
+router.get("/", authenticator, (req, res) => {
+  // console.log("home-------------");
+  // console.log(req.user);
   res.render("index");
 });
 

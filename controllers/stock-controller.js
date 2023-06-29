@@ -1,6 +1,7 @@
 const { getForeignBuy, getLocalBuy } = require("../helpers/stock");
 const fiftyData = require("../fifty.json");
 const fiftySixData = require("../fiftysix.json");
+const { User, Stock } = require("../models");
 
 const stockController = {
   fifty: async (req, res) => {
@@ -65,6 +66,59 @@ const stockController = {
     });
 
     res.render("stock-list-buy", { transformedData });
+  },
+  userStock: async (req, res, next) => {
+    try {
+      const userId = req.user.id;
+      const data = await Stock.findAll({ where: { userId }, raw: true });
+      if (!data.length) {
+        req.flash("error_messages", "你的自選股清單跟你的財富一樣");
+        res.render("userStock", { data });
+      }
+      res.render("userStock", { data });
+    } catch (error) {
+      next(error);
+    }
+  },
+  addStock: async (req, res, next) => {
+    try {
+      const { id } = req.params;
+      const userId = req.user.id;
+      console.log(userId);
+      const [stocks, stock] = await Promise.all([
+        Stock.findAll({ where: { userId } }),
+        Stock.findOne({ where: { userId, stockId: id } }),
+      ]);
+      if (stock) {
+        req.flash("error_messages", "已在你的清單內");
+        return res.render("userStock");
+      } else {
+        Stock.create({
+          userId,
+          stockId: id,
+        });
+        return res.redirect("/stock/userStock");
+      }
+    } catch (error) {
+      next(error);
+    }
+  },
+  deleteStock: async (req, res, next) => {
+    try {
+      const { id } = req.params;
+      const stock = await Stock.findByPk(id);
+      if (!stock) {
+        req.flash(
+          "error_messages",
+          "Oops! something wrong. You can't remove it"
+        );
+        return res.redirect("/stock/userStock");
+      }
+      await stock.destroy();
+      return res.redirect("/stock/userStock");
+    } catch (error) {
+      next(error);
+    }
   },
 };
 

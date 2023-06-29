@@ -3,21 +3,19 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">股票代號</th>
-      <th scope="col">股票名稱</th>
-      <th scope="col">權重(%)</th>
-      <th scope="col">加入自選股</th>
+      {{! <th scope="col">股票名稱</th> }}
+      <th scope="col">移除自選股</th>
     </tr>
   </thead>
   <tbody>
     {{#each data}}
       <tr>
         <th scope="row">{{addIndex @index}}</th>
-        <td>{{this.id}}</td>
-        <td>{{this.name}}</td>
-        <td>{{this.weight}}</td>
+        <td>{{this.stockId}}</td>
+        {{!-- <td>{{this.name}}</td> --}}
         <td>
-          <form action="/stock/{{this.id}}" method="post">
-            <button class="btn btn-success" type="submit">+</button>
+          <form action="/stock/{{this.id}}?_method=DELETE" method="post">
+            <button class="btn btn-danger" type="submit">X</button>
           </form>
           {{! <a class="btn btn-success" href="#">+</a> }}
         </td>
