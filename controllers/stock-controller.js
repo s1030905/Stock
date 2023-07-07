@@ -1,7 +1,8 @@
 const { getForeignBuy, getLocalBuy } = require("../helpers/stock");
 const fiftyData = require("../fifty.json");
 const fiftySixData = require("../fiftysix.json");
-const { User, Stock } = require("../models");
+const { Stock } = require("../models");
+const { getStock, stockList } = require("../helpers/stock");
 
 const stockController = {
   fifty: async (req, res) => {
@@ -12,14 +13,12 @@ const stockController = {
     const data = fiftySixData.data;
     res.render("stock-list", { data });
   },
-  homePage: (req, res) => {
-    // 代處理
-
-    res.render("index");
-  },
   foreignBuy: async (req, res) => {
     // 發apis獲取資料
-    let data = await getForeignBuy();
+    const response = await getForeignBuy();
+    let data = response.data;
+    const title = data.title;
+    const date = data.date;
 
     // 錯誤處理
     if (data.stat !== "OK") {
@@ -39,12 +38,14 @@ const stockController = {
         difference: element[5],
       };
     });
-
-    res.render("stock-list-buy", { transformedData });
+    return res.render("stock-list-buy", { transformedData, title, date });
   },
   localBuy: async (req, res) => {
     // 發apis獲取資料
-    let data = await getLocalBuy();
+    const response = await getLocalBuy();
+    let data = response.data;
+    const title = data.title;
+    const date = data.date;
 
     // 錯誤處理
     if (data.stat !== "OK") {
@@ -65,39 +66,56 @@ const stockController = {
       };
     });
 
-    res.render("stock-list-buy", { transformedData });
+    res.render("stock-list-buy", { transformedData, title, date });
   },
   userStock: async (req, res, next) => {
     try {
+      // 取得userStock資料
       const userId = req.user.id;
       const data = await Stock.findAll({ where: { userId }, raw: true });
-      if (!data.length) {
-        req.flash("error_messages", "你的自選股清單跟你的財富一樣");
-        res.render("userStock", { data });
-      }
-      res.render("userStock", { data });
+
+      // PEratio/PBratio/DividendYield 數據獲取
+      const stocks = await stockList();
+
+      data.forEach((e) => {
+        e.PEratio = stocks[e.stockId]["PEratio"];
+        e.PBratio = stocks[e.stockId]["PBratio"];
+        e.DividendYield = stocks[e.stockId]["DividendYield"];
+      });
+      console.log(data);
+      // --------------------------------------------------------
+      return res.render("userStock", { data });
     } catch (error) {
       next(error);
     }
   },
   addStock: async (req, res, next) => {
     try {
+      // 尋找欲新增資料
       const { id } = req.params;
       const userId = req.user.id;
-      console.log(userId);
-      const [stocks, stock] = await Promise.all([
-        Stock.findAll({ where: { userId } }),
-        Stock.findOne({ where: { userId, stockId: id } }),
-      ]);
+      const stock = await Stock.findOne({
+        where: { userId, stockId: id },
+        raw: true,
+      });
+
+      // 錯誤處理
       if (stock) {
         req.flash("error_messages", "已在你的清單內");
-        return res.render("userStock");
+        const referer = req.headers.referer;
+        return res.redirect(referer);
       } else {
+        // 新增資料
+        const stocks = await stockList();
+        const name = stocks[id]["name"];
         Stock.create({
           userId,
           stockId: id,
+          name,
         });
-        return res.redirect("/stock/userStock");
+        req.flash("error_messages", "已新增至自選股清單");
+        const referer = req.headers.referer;
+        return res.redirect(referer);
       }
     } catch (error) {
       next(error);
@@ -119,6 +137,46 @@ const stockController = {
     } catch (error) {
       next(error);
     }
+  },
+  search: async (req, res) => {
+    let { stockId } = req.body;
+    stockId = stockId.trim();
+
+    // 輸入值得錯誤處理
+    // 空白
+    if (!stockId) {
+      req.flash("error_messages", "請輸入正確股票代號");
+      return res.redirect("/");
+    }
+
+    const response = await getStock(stockId);
+
+    // 錯誤處理
+    if (response.stat !== "OK") {
+      req.flash("error_messages", "請輸入正確股票代號");
+      return res.redirect("/");
+    }
+
+    //資料處理
+    const obj = {};
+    const data = response.data;
+    const title = response.title;
+    data.forEach((element) => {
+      obj[element[0]] = {
+        date: element[0],
+        dealStock: element[1],
+        dealMoney: element[2],
+        start: element[3],
+        hight: element[4],
+        low: element[5],
+        end: element[6],
+        difference: element[7],
+        dealNumber: element[8],
+      };
+    });
+    // 畫圖
+    // stockChart(data);
+    return res.render("getStock", { data: obj, title });
   },
 };
 

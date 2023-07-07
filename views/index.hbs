@@ -1,0 +1,24 @@
+<h2>{{title}}</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th>指數</th>
+      <th>收盤指數</th>
+      <th>漲跌</th>
+      <th>漲跌百分比</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+      <tr>
+        <th scope="row">{{addIndex @index}}</th>
+        <td>{{this.指數}}</td>
+        <td>{{this.收盤指數}}</td>
+        <td>{{this.漲跌}} {{this.漲跌點數}}</td>
+        {{#ifCondition this.漲跌百分比}}{{/ifCondition}}
+
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

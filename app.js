@@ -24,6 +24,7 @@ app.engine("hbs", handlebars({ extname: ".hbs", helpers: handlebarsHelpers }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+// app.use(express.static("public"));
 
 // session setting
 app.use(
@@ -44,6 +45,7 @@ app.use((req, res, next) => {
   // console.log("----------------------------------req.user");
   // console.log(req.user);
   res.locals.user = req.user;
+  res.locals.isAuthenticated = req.isAuthenticated();
   res.locals.error_messages = req.flash("error_messages");
   next();
 });

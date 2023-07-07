@@ -1,0 +1,65 @@
+<div>
+  <h1>K Line Chart</h1>
+  <canvas id="myChart" width="800" height="400"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+<script>
+const ctx = document.getElementById("myChart");
+const openEnd = [{{openEnd}}]
+const high = [{{high}}]
+const low = [{{low}}]
+const date = [{{date}}]
+const red = "red"
+const green = "green"
+const color = [{{color}}]
+const formedOpenEnd = []
+
+for(let i = 0; i < openEnd.length; i+=2){
+  if(openEnd[i] === openEnd[i+1]){
+    formedOpenEnd.push([openEnd[i], openEnd[i+1] + 0.1])
+  }else{
+    formedOpenEnd.push([openEnd[i], openEnd[i+1]])
+  }
+}
+console.log(formedOpenEnd)
+var myChart = new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: [{{date}}],
+    datasets: [
+      {
+        type: "bar",
+        backgroundColor: color,
+        borderColor: color,
+        borderWidth: 1,
+        label: "開收價",
+        data: formedOpenEnd,
+      },
+      {
+        type: "scatter",
+        backgroundColor: color,
+        borderColor: color,
+        label: "最高價",
+        data: high,
+      },
+      {
+        type: "scatter",
+        backgroundColor: color,
+        borderColor: color,
+        label: "最低價",
+        data: low,
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        min: Math.ceil({{min}}/10)*10 - 10,  // y 軸的最小值
+        max: Math.floor({{max}}/10)*10 + 10, // y 軸的最大值
+      }
+    }
+  }
+});
+
+</script>

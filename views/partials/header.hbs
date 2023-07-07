@@ -40,17 +40,27 @@
           <li class="nav-item">
             <a class="nav-link" href="/stock/userStock">管理自選股</a>
           </li>
+          <li>
+            <form class="d-flex" action="/stock/search" method="POST">
+              <input
+                class="form-control me-2"
+                type="Search"
+                placeholder="股票代號"
+                id="stockId"
+                name="stockId"
+              />
+              <button
+                class="btn btn-outline-light"
+                type="submit"
+              >Search</button>
+            </form>
+          </li>
         </ul>
-        <form class="d-flex" action="/stock/search" method="POST">
-          <input
-            class="form-control me-2"
-            type="Search"
-            placeholder="股票代號"
-            id="stockId"
-            name="stockId"
-          />
-          <button class="btn btn-outline-info" type="submit">Search</button>
-        </form>
+        {{#if isAuthenticated}}
+          <a href="/logout" class="btn btn-danger">Logout</a>
+        {{else}}
+          <a href="/login" class="btn btn-outline-light">Login</a>
+        {{/if}}
       </div>
     </div>
   </nav>
