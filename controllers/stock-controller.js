@@ -149,7 +149,7 @@ const stockController = {
       return res.redirect("/");
     }
 
-    const response = await getStock(stockId);
+    const { response, timestamp, price } = await getStock(stockId);
 
     // 錯誤處理
     if (response.stat !== "OK") {

@@ -1,43 +1,27 @@
 const axios = require("axios");
-const { taiwanTime } = require("./date");
+const { taiwanTime, todayStart } = require("./date");
 
 // 取得個股本月價格資訊
 const getStock = async function (stockNo) {
   // 日期
-  let tradeDay = taiwanTime.format("YYYYMMDD");
-  let url =
-    "http://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=" +
-    tradeDay +
-    "&stockNo=" +
-    stockNo;
+  let tradeDay = todayStart;
+  let tradeDay30 = todayStart - 2592000;
 
   try {
-    let n = 1;
-    let response = await axios.get(url);
-    let data = response.data;
-    while (data.total < 20) {
-      tradeDay = taiwanTime.clone().subtract(n, "month").format("YYYYMMDD");
-      url =
-        "http://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=" +
-        tradeDay +
-        "&stockNo=" +
-        stockNo;
-      const lastMonthResponse = await axios.get(url);
-      const lastMonthData = lastMonthResponse.data;
-      console.log(data);
-      console.log("-----------------------");
-      console.log(lastMonthData);
-      const concatDate = lastMonthData.slice(0, 20 - data.data.length);
-      data.concat(concatDate);
-
-      n++;
-    }
-    return data;
+    let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay30}&period2=${tradeDay}&interval=1d&events=history`;
+    let stock = await axios.get(url);
+    let response = stock.data.chart.result;
+    let timestamp = response[0].timestamp;
+    let price = response[0].indicators.quote;
+    return { response, timestamp, price };
   } catch (error) {
-    console.error("Error occurred while fetching data:", error);
+    console.error(
+      "Error occurred while fetching data:",
+      error.response.statusText
+    );
+    next(error.response.statusText);
   }
 };
-
 // 外資今日買超
 const getForeignBuy = async function () {
   //日期

@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const passport = require("../../config/passport");
-const { stockController } = require("../../controllers/stock-controller");
+const { stockController } = require("../../../controllers/stock-controller");
 
 router.get("/0050", stockController.fifty);
 router.get("/0056", stockController.fiftySix);

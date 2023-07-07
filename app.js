@@ -8,7 +8,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 
 // 自訂模組
-const router = require("./routes");
+const { pages, apis } = require("./routes");
 const handlebarsHelpers = require("./helpers/handlebars-helpers");
 const passport = require("./config/passport");
 
@@ -24,7 +24,7 @@ app.engine("hbs", handlebars({ extname: ".hbs", helpers: handlebarsHelpers }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride("_method"));
-// app.use(express.static("public"));
+app.use(express.static("public"));
 
 // session setting
 app.use(
@@ -50,7 +50,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(router);
+app.use("/api", apis);
+app.use(pages);
 
 // listen on port
 app.listen(port, () => {
