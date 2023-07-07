@@ -7,6 +7,7 @@ router.get("/chatData", async (req, res, next) => {
     const { response, timestamp, price } = await getStock(2330);
     const date = [];
     const openEnd = [];
+    const highLow = [];
     const high = price[0].high;
     const low = price[0].low;
     const color = [];
@@ -27,11 +28,13 @@ router.get("/chatData", async (req, res, next) => {
         color.push("black");
       }
     }
+    for (let i = 0; i < high.length; i++) {
+      highLow.push([high[i], low[i]]);
+    }
     res.json({
       date,
       openEnd,
-      high,
-      low,
+      highLow,
       max,
       min,
       color,

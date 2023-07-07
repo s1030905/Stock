@@ -2,7 +2,7 @@ const ctx = document.getElementById("myChart");
 (async () => {
   const response = await fetch("/api/chatData");
   const records = await response.json();
-  const { high, low, date, color, openEnd, max, min } = records;
+  const { highLow, date, color, openEnd, max, min } = records;
   const [red, green, black] = ["red", "green", "black"];
   const formedOpenEnd = [];
   openEnd.forEach((element) => {
@@ -12,6 +12,7 @@ const ctx = document.getElementById("myChart");
       formedOpenEnd.push([element[0], element[1]]);
     }
   });
+  console.log(highLow);
   const myChart = new Chart(ctx, {
     type: "bar",
     data: {
@@ -24,20 +25,17 @@ const ctx = document.getElementById("myChart");
           borderWidth: 1,
           label: "開收價",
           data: formedOpenEnd,
+          barPercentage: 10,
+          categoryPercentage: -0.1,
         },
         {
-          type: "scatter",
-          backgroundColor: color,
-          borderColor: color,
-          label: "最高價",
-          data: high,
-        },
-        {
-          type: "scatter",
-          backgroundColor: color,
-          borderColor: color,
-          label: "最低價",
-          data: low,
+          type: "bar",
+          backgroundColor: "black",
+          borderColor: "black",
+          label: "高低價",
+          data: highLow,
+          barPercentage: 0.5,
+          categoryPercentage: 0.1,
         },
       ],
     },
