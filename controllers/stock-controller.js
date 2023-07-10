@@ -85,7 +85,11 @@ const stockController = {
       data.forEach((e) => {
         e.PEratio = stocks[e.stockId]["PEratio"];
         e.PBratio = stocks[e.stockId]["PBratio"];
-        e.DividendYield = stocks[e.stockId]["DividendYield"];
+        if (!stocks[e.stockId]["DividendYield"]) {
+          e.DividendYield = "--";
+        } else {
+          e.DividendYield = stocks[e.stockId]["DividendYield"];
+        }
       });
       // --------------------------------------------------------
       return res.render("userStock", { data });
@@ -128,7 +132,8 @@ const stockController = {
   deleteStock: async (req, res, next) => {
     try {
       const { id } = req.params;
-      const stock = await Stock.findByPk(id);
+      const stock = await Stock.findOne({ where: { stockId: id } });
+      console.log(stock);
       if (!stock) {
         req.flash(
           "error_messages",
@@ -142,51 +147,48 @@ const stockController = {
       next(error);
     }
   },
-  search: async (req, res) => {
-    let { stockId } = req.query;
-    stockId = stockId.trim();
+  search: async (req, res, next) => {
+    try {
+      let { stockId } = req.query;
+      stockId = stockId.trim();
 
-    // 輸入值得錯誤處理
-    // 空白
+      // 輸入值錯誤處理
+      // 空白
+      if (!stockId) {
+        req.flash("error_messages", "請輸入正確股票代號");
+        return res.redirect("/");
+      }
+      const { response, timestamp, price } = await getStock(stockId);
 
-    if (!stockId) {
-      req.flash("error_messages", "請輸入正確股票代號");
-      return res.redirect("/");
+      const date = timestamp.map((e) => {
+        const str = formattedDate(e);
+        const year = str.slice(0, 4);
+        const month = str.slice(4, 6);
+        const date = str.slice(6, 8);
+        return `${year}/${month}/${date}`;
+      });
+      const diff = ["N/A"];
+      for (let i = 1; i < date.length; i++) {
+        diff.push((price[0].close[i] - price[0].close[i - 1]).toFixed(2));
+      }
+      const data = {};
+      const dic = await stockList(stockId);
+      const title = dic[stockId].name;
+      for (let i = 0; i < date.length; i++) {
+        data[date[i]] = {
+          date: date[i],
+          volume: price[0].volume[i],
+          open: price[0].open[i].toFixed(2),
+          high: price[0].high[i].toFixed(2),
+          low: price[0].low[i].toFixed(2),
+          close: price[0].close[i].toFixed(2),
+          diff: diff[i],
+        };
+      }
+      return res.render("getStock", { data, title, stockId });
+    } catch (error) {
+      next(error.response.status);
     }
-    const { timestamp, price } = await getStock(stockId);
-
-    // 錯誤處理
-    // if (response.stat !== "OK") {
-    //   req.flash("error_messages", "請輸入正確股票代號");
-    //   return res.redirect("/");
-    // }
-    const date = timestamp.map((e) => {
-      const str = formattedDate(e);
-      const year = str.slice(0, 4);
-      const month = str.slice(4, 6);
-      const date = str.slice(6, 8);
-      return `${year}/${month}/${date}`;
-    });
-    const diff = ["N/A"];
-    for (let i = 1; i < date.length; i++) {
-      console.log(price[0].close[i]);
-      diff.push(price[0].close[i] - price[0].close[i - 1]);
-    }
-    const data = {};
-    const dic = await stockList(stockId);
-    const title = dic[stockId].name;
-    for (let i = 0; i < date.length; i++) {
-      data[date[i]] = {
-        date: date[i],
-        volume: price[0].volume[i],
-        open: price[0].open[i],
-        high: price[0].high[i],
-        low: price[0].low[i],
-        close: price[0].close[i],
-        diff: diff[i],
-      };
-    }
-    return res.render("getStock", { data, title, stockId });
   },
 };
 

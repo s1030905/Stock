@@ -1,5 +1,12 @@
-<div id="container" style="width:400px;height:400px"></div>
+<div>
+  <div style="display: flex; justify-content: space-between;">
+  <h2>{{title}}近30日交易資訊</h2>
+</div>
+  <canvas id="container" width="800" height="400"></canvas>
+</div>
 
+<br>
+<br>
 <table class="table">
   <thead>
     <tr>
@@ -16,13 +23,13 @@
     {{#each data}}
       <tr>
         <th scope="row">{{addIndex @index}}</th>
-        <td>{{this.stockId}}</td>
+        <td><a href="http://localhost:3000/stock/search?stockId={{this.stockId}}">{{this.stockId}}</a></td>
         <td>{{this.name}}</td>
         <td>{{this.PEratio}}</td>
         <td>{{this.PBratio}}</td>
         <td>{{this.DividendYield}}</td>
         <td>
-          <form action="/stock/{{this.id}}?_method=DELETE" method="post">
+          <form action="/stock/{{this.stockId}}?_method=DELETE" method="post">
             <button
               class="btn btn-danger"
               type="submit"
@@ -34,3 +41,4 @@
     {{/each}}
   </tbody>
 </table>
+<script src="/javascripts/userChart.js"></script>

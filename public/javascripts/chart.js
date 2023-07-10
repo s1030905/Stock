@@ -6,14 +6,6 @@ const ctx = document.getElementById("myChart");
   const records = await response.json();
   const { highLow, date, color, openEnd, max, min } = records;
   const [red, green, black] = ["red", "green", "black"];
-  const formedOpenEnd = [];
-  openEnd.forEach((element) => {
-    if (element[0] === element[1]) {
-      formedOpenEnd.push([element[0], element[1] + 0.1]);
-    } else {
-      formedOpenEnd.push([element[0], element[1]]);
-    }
-  });
   const myChart = new Chart(ctx, {
     type: "bar",
     data: {
@@ -25,7 +17,7 @@ const ctx = document.getElementById("myChart");
           borderColor: color,
           borderWidth: 1,
           label: "開收價",
-          data: formedOpenEnd,
+          data: openEnd,
           barPercentage: 10,
           categoryPercentage: -0.1,
         },
@@ -43,8 +35,8 @@ const ctx = document.getElementById("myChart");
     options: {
       scales: {
         y: {
-          min: Math.ceil(min / 10) * 10 - 10, // y 軸的最小值
-          max: Math.floor(max / 10) * 10 + 10, // y 軸的最大值
+          min: Math.round(min) - Math.floor(min / 10) * 10 * 0.1, // y 軸的最小值
+          max: Math.round(max) + Math.floor(max / 10) * 10 * 0.1, // y 軸的最大值
         },
       },
     },

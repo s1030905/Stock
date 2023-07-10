@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { userController } = require("../../controllers/user-controller");
 const { authenticator } = require("../../middleware/auth");
+const { errorHandler } = require("../../middleware/error-handler");
 const stock = require("./modules/stock");
 const passport = require("../../config/passport");
 const axios = require("axios");
@@ -61,19 +62,12 @@ router.get("/", authenticator, async (req, res, next) => {
     data = data.data;
     const dic = {};
     dic[data[0]["指數"]] = data[0];
-    // stockChart(data);
     res.render("index", { data, title });
   } catch (error) {
     next(error);
   }
 });
 
-router.get("/myChart", async (req, res, next) => {
-  try {
-    return res.render("myChart");
-  } catch (error) {
-    next(error);
-  }
-});
+router.use("/", errorHandler);
 
 module.exports = router;

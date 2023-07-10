@@ -2,7 +2,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const passportJWT = require("passport-jwt");
 const bcrypt = require("bcryptjs");
-const { User } = require("../models");
+const { User, Stock } = require("../models");
 
 // LocalStrategy setting
 passport.use(
@@ -36,8 +36,13 @@ passport.serializeUser((user, cb) => {
 });
 passport.deserializeUser(async (id, cb) => {
   try {
-    const user = await User.findByPk(id, { raw: true });
-    return cb(null, user);
+    const user = await User.findByPk(id, {
+      nest: true,
+      include: [{ model: Stock }],
+    });
+    const userData = user.dataValues;
+    delete userData.password;
+    return cb(null, userData);
   } catch (error) {
     return cb(error);
   }

@@ -6,16 +6,18 @@ const getStock = async function (stockNo) {
   // 日期
   let tradeDay = todayStart;
   let tradeDay30 = todayStart - 2592000;
-  try {
-    let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay30}&period2=${tradeDay}&interval=1d&events=history`;
-    let stock = await axios.get(url);
-    let response = stock.data.chart.result;
-    let timestamp = response[0].timestamp;
-    let price = response[0].indicators.quote;
+  let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay30}&period2=${tradeDay}&interval=1d&events=history`;
+  let stock = await axios.get(url);
+  let response = stock.data.chart;
+  if (response.result === null) {
+    let timestamp = null;
+    let price = null;
     return { response, timestamp, price };
-  } catch (error) {
-    console.error("Error occurred while fetching data:", error);
   }
+  let timestamp = response.result[0].timestamp;
+  let price = response.result[0].indicators.quote;
+
+  return { response, timestamp, price };
 };
 // 外資今日買超
 const getForeignBuy = async function () {
