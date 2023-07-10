@@ -41,14 +41,8 @@
             <a class="nav-link" href="/stock/userStock">管理自選股</a>
           </li>
           <li>
-            <form class="d-flex" action="/stock/search" method="POST">
-              <input
-                class="form-control me-2"
-                type="Search"
-                placeholder="股票代號"
-                id="stockId"
-                name="stockId"
-              />
+            <form class="d-flex" action="/stock/search" >
+              <input class="form-control me-2" type="Search" placeholder="股票代號" id="stockId" name="stockId" value={{stockId}}></input>
               <button
                 class="btn btn-outline-light"
                 type="submit"

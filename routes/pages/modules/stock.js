@@ -7,7 +7,7 @@ router.get("/0056", stockController.fiftySix);
 router.get("/foreignBuy", stockController.foreignBuy);
 router.get("/localBuy", stockController.localBuy);
 router.get("/userStock", stockController.userStock);
-router.post("/search", stockController.search);
+router.get("/search", stockController.search);
 router.post("/:id", stockController.addStock);
 router.delete("/:id", stockController.deleteStock);
 

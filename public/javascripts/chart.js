@@ -1,6 +1,8 @@
 const ctx = document.getElementById("myChart");
 (async () => {
-  const response = await fetch("/api/chatData");
+  const queryString = window.location.search;
+  const stockId = queryString.slice(-4);
+  const response = await fetch(`/api/stock/${stockId}`);
   const records = await response.json();
   const { highLow, date, color, openEnd, max, min } = records;
   const [red, green, black] = ["red", "green", "black"];
@@ -12,7 +14,6 @@ const ctx = document.getElementById("myChart");
       formedOpenEnd.push([element[0], element[1]]);
     }
   });
-  console.log(highLow);
   const myChart = new Chart(ctx, {
     type: "bar",
     data: {

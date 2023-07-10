@@ -6,7 +6,6 @@ const getStock = async function (stockNo) {
   // 日期
   let tradeDay = todayStart;
   let tradeDay30 = todayStart - 2592000;
-
   try {
     let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay30}&period2=${tradeDay}&interval=1d&events=history`;
     let stock = await axios.get(url);
@@ -15,18 +14,13 @@ const getStock = async function (stockNo) {
     let price = response[0].indicators.quote;
     return { response, timestamp, price };
   } catch (error) {
-    console.error(
-      "Error occurred while fetching data:",
-      error.response.statusText
-    );
-    next(error.response.statusText);
+    console.error("Error occurred while fetching data:", error);
   }
 };
 // 外資今日買超
 const getForeignBuy = async function () {
   //日期
   let tradeDay = taiwanTime.format("YYYYMMDD");
-  console.log(tradeDay);
   // api
   let url =
     "https://www.twse.com.tw/rwd/zh/fund/TWT38U?date=" +

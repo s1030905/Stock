@@ -1,8 +1,13 @@
-const { getForeignBuy, getLocalBuy } = require("../helpers/stock");
+const {
+  getForeignBuy,
+  getLocalBuy,
+  getStock,
+  stockList,
+} = require("../helpers/stock");
 const fiftyData = require("../fifty.json");
 const fiftySixData = require("../fiftysix.json");
 const { Stock } = require("../models");
-const { getStock, stockList } = require("../helpers/stock");
+const { formattedDate } = require("../helpers/date");
 
 const stockController = {
   fifty: async (req, res) => {
@@ -82,7 +87,6 @@ const stockController = {
         e.PBratio = stocks[e.stockId]["PBratio"];
         e.DividendYield = stocks[e.stockId]["DividendYield"];
       });
-      console.log(data);
       // --------------------------------------------------------
       return res.render("userStock", { data });
     } catch (error) {
@@ -139,44 +143,50 @@ const stockController = {
     }
   },
   search: async (req, res) => {
-    let { stockId } = req.body;
+    let { stockId } = req.query;
     stockId = stockId.trim();
 
     // 輸入值得錯誤處理
     // 空白
+
     if (!stockId) {
       req.flash("error_messages", "請輸入正確股票代號");
       return res.redirect("/");
     }
-
-    const { response, timestamp, price } = await getStock(stockId);
+    const { timestamp, price } = await getStock(stockId);
 
     // 錯誤處理
-    if (response.stat !== "OK") {
-      req.flash("error_messages", "請輸入正確股票代號");
-      return res.redirect("/");
-    }
-
-    //資料處理
-    const obj = {};
-    const data = response.data;
-    const title = response.title;
-    data.forEach((element) => {
-      obj[element[0]] = {
-        date: element[0],
-        dealStock: element[1],
-        dealMoney: element[2],
-        start: element[3],
-        hight: element[4],
-        low: element[5],
-        end: element[6],
-        difference: element[7],
-        dealNumber: element[8],
-      };
+    // if (response.stat !== "OK") {
+    //   req.flash("error_messages", "請輸入正確股票代號");
+    //   return res.redirect("/");
+    // }
+    const date = timestamp.map((e) => {
+      const str = formattedDate(e);
+      const year = str.slice(0, 4);
+      const month = str.slice(4, 6);
+      const date = str.slice(6, 8);
+      return `${year}/${month}/${date}`;
     });
-    // 畫圖
-    // stockChart(data);
-    return res.render("getStock", { data: obj, title });
+    const diff = ["N/A"];
+    for (let i = 1; i < date.length; i++) {
+      console.log(price[0].close[i]);
+      diff.push(price[0].close[i] - price[0].close[i - 1]);
+    }
+    const data = {};
+    const dic = await stockList(stockId);
+    const title = dic[stockId].name;
+    for (let i = 0; i < date.length; i++) {
+      data[date[i]] = {
+        date: date[i],
+        volume: price[0].volume[i],
+        open: price[0].open[i],
+        high: price[0].high[i],
+        low: price[0].low[i],
+        close: price[0].close[i],
+        diff: diff[i],
+      };
+    }
+    return res.render("getStock", { data, title, stockId });
   },
 };
 

@@ -2,8 +2,9 @@ const router = require("express").Router();
 const { getStock } = require("../../helpers/stock");
 const { formattedDate } = require("../../helpers/date");
 
-router.get("/chatData", async (req, res, next) => {
+router.get("/stock/:id", async (req, res, next) => {
   try {
+    const { id } = req.params;
     const { response, timestamp, price } = await getStock(2330);
     const date = [];
     const openEnd = [];

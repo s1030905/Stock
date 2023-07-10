@@ -1,14 +1,15 @@
 <div>
-  <h2>K Line Chart</h2>
-  <canvas id="myChart" width="800" height="400"></canvas>
-</div>
-
-<div style="display: flex; justify-content: space-between;">
-  <h2>{{title}}</h2>
+  <div style="display: flex; justify-content: space-between;">
+  <h2>{{title}}近30日交易資訊</h2>
   <form action="/stock/{{this.id}}" method="post">
     <button class="btn btn-primary" type="submit">加入自選股</button>
   </form>
 </div>
+  <canvas id="myChart" width="800" height="400"></canvas>
+</div>
+
+<br>
+<br>
 
 <table class="table">
   <thead>
@@ -16,13 +17,11 @@
       <th scope="col">#</th>
       <th scope="col">日期</th>
       <th scope="col">成交股數</th>
-      <th scope="col">成交金額</th>
       <th scope="col">開盤價</th>
       <th scope="col">最高價</th>
       <th scope="col">最低價</th>
       <th scope="col">收盤價</th>
       <th scope="col">漲跌價差</th>
-      <th scope="col">成交筆數</th>
     </tr>
   </thead>
   <tbody>
@@ -30,46 +29,15 @@
       <tr>
         <th scope="row">{{addIndex @index}}</th>
         <td>{{this.date}}</td>
-        <td>{{this.dealStock}}</td>
-        <td>{{this.dealMoney}}</td>
-        <td>{{this.start}}</td>
-        <td>{{this.hight}}</td>
+        <td>{{this.volume}}</td>
+        <td>{{this.open}}</td>
+        <td>{{this.high}}</td>
         <td>{{this.low}}</td>
-        <td>{{this.end}}</td>
-        <td>{{this.difference}}</td>
-        <td>{{this.dealNumber}}</td>
+        <td>{{this.close}}</td>
+        <td>{{this.diff}}</td>
       </tr>
     {{/each}}
   </tbody>
 </table>
 
-<script>
-  var ctx = document.getElementById('myChart'); 
- var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['一月', '二月', '三月'],
-    datasets: [{
-    type: 'bar',
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)'
-      ],
-      borderColor: [
-        'rgba(255,99,132,1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)'
-      ],
-      borderWidth: 1,
-      label: '銷售業績(百萬)',
-      data: [60, 49, 72]
-    }, {
-      type: 'line',
-      label: '新開發客戶',
-      data: [25, 13, 30]
-    }]
-  }
-});
-</script>
+<script src="/javascripts/chart.js"></script>
