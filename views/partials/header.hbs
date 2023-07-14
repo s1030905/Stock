@@ -1,0 +1,61 @@
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">大祕寶</a>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul
+          class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+          style="--bs-scroll-height: 100px;"
+        >
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarScrollingDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              簡易選股策略
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a
+                  class="dropdown-item"
+                  href="/stock/0050"
+                >0050成分股</a></li>
+              <li><a
+                  class="dropdown-item"
+                  href="/stock/0056"
+                >0056成分股</a></li>
+              <li><a
+                  class="dropdown-item"
+                  href="/stock/foreignBuy"
+                >外資買超</a></li>
+              <li><a
+                  class="dropdown-item"
+                  href="/stock/localBuy"
+                >投信買超</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/stock/userStock">管理自選股</a>
+          </li>
+          <li>
+            <form class="d-flex" action="/stock/search" >
+              <input class="form-control me-2" type="Search" placeholder="股票代號" id="stockId" name="stockId" value={{stockId}}></input>
+              <button
+                class="btn btn-outline-light"
+                type="submit"
+              >Search</button>
+            </form>
+          </li>
+        </ul>
+        {{#if isAuthenticated}}
+          <a href="/logout" class="btn btn-danger">Logout</a>
+        {{else}}
+          <a href="/login" class="btn btn-outline-light">Login</a>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+</header>

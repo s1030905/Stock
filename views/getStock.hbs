@@ -1,0 +1,43 @@
+<div>
+  <div style="display: flex; justify-content: space-between;">
+  <h2>{{title}}近30日交易資訊</h2>
+  <form action="/stock/{{stockId}}" method="post">
+    <button class="btn btn-primary" type="submit">加入自選股</button>
+  </form>
+</div>
+  <canvas id="myChart" width="800" height="400"></canvas>
+</div>
+
+<br>
+<br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">日期</th>
+      <th scope="col">成交股數</th>
+      <th scope="col">開盤價</th>
+      <th scope="col">最高價</th>
+      <th scope="col">最低價</th>
+      <th scope="col">收盤價</th>
+      <th scope="col">漲跌價差</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+      <tr>
+        <th scope="row">{{addIndex @index}}</th>
+        <td>{{this.date}}</td>
+        <td>{{this.volume}}</td>
+        <td>{{this.open}}</td>
+        <td>{{this.high}}</td>
+        <td>{{this.low}}</td>
+        <td>{{this.close}}</td>
+        <td>{{this.diff}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<script src="/javascripts/chart.js"></script>

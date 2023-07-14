@@ -1,0 +1,44 @@
+<div>
+  <div style="display: flex; justify-content: space-between;">
+  <h2>{{title}}近30日交易資訊</h2>
+</div>
+  <canvas id="container" width="800" height="400"></canvas>
+</div>
+
+<br>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">股票代號</th>
+      <th scope="col">股票名稱</th>
+      <th scope="col">本益比</th>
+      <th scope="col">股價淨值比</th>
+      <th scope="col">殖利率</th>
+      <th scope="col">移除自選股</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+      <tr>
+        <th scope="row">{{addIndex @index}}</th>
+        <td><a href="http://localhost:3000/stock/search?stockId={{this.stockId}}">{{this.stockId}}</a></td>
+        <td>{{this.name}}</td>
+        <td>{{this.PEratio}}</td>
+        <td>{{this.PBratio}}</td>
+        <td>{{this.DividendYield}}</td>
+        <td>
+          <form action="/stock/{{this.stockId}}?_method=DELETE" method="post">
+            <button
+              class="btn btn-danger"
+              type="submit"
+              onclick="return confirm(`確定將 {{this.name}}({{this.stockId}}) 移除自選股嗎?`)"
+            >X</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<script src="/javascripts/userChart.js"></script>

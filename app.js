@@ -1,50 +1,59 @@
 require("dotenv").config();
 
-const line = require("@line/bot-sdk");
+// 套件引入
 const express = require("express");
-const { getPrice } = require("./stock");
+const handlebars = require("express-handlebars");
+const methodOverride = require("method-override");
+const session = require("express-session");
+const flash = require("connect-flash");
 
-// create LINE SDK config from env variables
-const config = {
-  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
-  channelSecret: process.env.CHANNEL_SECRET,
-};
+// 自訂模組
+const { pages, apis } = require("./routes");
+const handlebarsHelpers = require("./helpers/handlebars-helpers");
+const passport = require("./config/passport");
 
-// create LINE SDK client
-const client = new line.Client(config);
-
-// create Express app
-// about Express itself: https://expressjs.com/
+// 變數軒高
+const port = process.env.PORT || 3000;
 const app = express();
 
-// register a webhook handler with middleware
-// about the middleware, please refer to doc
-app.post("/callback", line.middleware(config), (req, res) => {
-  Promise.all(req.body.events.map(handleEvent))
-    .then((result) => res.json(result))
-    .catch((err) => {
-      console.error(err);
-      res.status(500).end();
-    });
+// view engine設定
+app.set("view engine", "hbs");
+app.engine("hbs", handlebars({ extname: ".hbs", helpers: handlebarsHelpers }));
+
+// 解析請求
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(methodOverride("_method"));
+app.use(express.static("public"));
+
+// session setting
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET || "NoSecret",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+// passport初始化
+app.use(passport.initialize());
+app.use(passport.session());
+
+// flash
+app.use(flash());
+app.use((req, res, next) => {
+  // console.log("----------------------------------req.user");
+  // console.log(req.user);
+  res.locals.user = req.user;
+  res.locals.isAuthenticated = req.isAuthenticated();
+  res.locals.error_messages = req.flash("error_messages");
+  next();
 });
 
-// event handler
-function handleEvent(event) {
-  if (event.type !== "message" || event.message.type !== "text") {
-    // ignore non-text-message event
-    return Promise.resolve(null);
-  }
-
-  // create a echoing text message
-  // const echo = { type: "text", text: event.message.text };
-  const echo = { type: "text", text: getPrice() };
-
-  // use reply API
-  return client.replyMessage(event.replyToken, echo);
-}
+app.use("/api", apis);
+app.use(pages);
 
 // listen on port
-const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`listening on ${port}`);
 });
