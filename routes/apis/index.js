@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { getStock } = require("../../helpers/stock");
+const { getStock, stockList } = require("../../helpers/stock");
 const { formattedDate } = require("../../helpers/date");
 const { authenticator } = require("../../middleware/auth");
 const { apiErrorHandler } = require("../../middleware/error-handler");
@@ -19,8 +19,9 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
     // 使用者的自選股
     const user = req.user;
     const userStock = user.Stocks;
+    const dic = await stockList();
     const stockId = ["0050"];
-
+    const stockName = ["台灣50"];
     // 0050 ratio
     const sum0050 = price[0].close.reduce((acc, curr) => {
       return acc + curr;
@@ -33,6 +34,7 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
     for (const element of userStock) {
       const { timestamp, price } = await getStock(element.stockId);
       stockId.push(element.stockId);
+      stockName.push(dic[element.stockId].name);
       const sum = price[0].close.reduce((acc, curr) => {
         return acc + curr;
       }, 0);
@@ -40,8 +42,7 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
       const ratio = price[0].close.map((e) => (e / avg).toFixed(2));
       compare.push(ratio);
     }
-
-    return res.json({ compare, date, stockId });
+    return res.json({ compare, date, stockId, stockName });
   } catch (error) {
     next(error);
   }
