@@ -55,5 +55,5 @@ app.use(pages);
 
 // listen on port
 app.listen(port, () => {
-  console.log(`listening on ${port}`);
+  console.log(`listening on http://localhost:${port}`);
 });

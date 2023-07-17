@@ -2,7 +2,6 @@ const errorHandler = (err, req, res, next) => {
   if (err === 404) {
     req.flash("error_messages", `請輸入正確股票代號`);
   } else {
-    console.log(err);
     req.flash("error_messages", `${err}`);
   }
   res.redirect("back");
