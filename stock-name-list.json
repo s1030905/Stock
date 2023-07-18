@@ -1,0 +1,6855 @@
+{
+  "台泥": {
+    "stockId": "1101",
+    "name": "台泥",
+    "PEratio": "48.68",
+    "DividendYield": "1.35",
+    "PBratio": "1.23"
+  },
+  "亞泥": {
+    "stockId": "1102",
+    "name": "亞泥",
+    "PEratio": "12.80",
+    "DividendYield": "5.24",
+    "PBratio": "1.00"
+  },
+  "嘉泥": {
+    "stockId": "1103",
+    "name": "嘉泥",
+    "PEratio": "",
+    "DividendYield": "2.35",
+    "PBratio": "0.62"
+  },
+  "環泥": {
+    "stockId": "1104",
+    "name": "環泥",
+    "PEratio": "11.23",
+    "DividendYield": "5.89",
+    "PBratio": "0.93"
+  },
+  "幸福": {
+    "stockId": "1108",
+    "name": "幸福",
+    "PEratio": "10.22",
+    "DividendYield": "4.83",
+    "PBratio": "1.42"
+  },
+  "信大": {
+    "stockId": "1109",
+    "name": "信大",
+    "PEratio": "13.01",
+    "DividendYield": "4.62",
+    "PBratio": "0.74"
+  },
+  "東泥": {
+    "stockId": "1110",
+    "name": "東泥",
+    "PEratio": "71.67",
+    "DividendYield": "0.52",
+    "PBratio": "1.27"
+  },
+  "味全": {
+    "stockId": "1201",
+    "name": "味全",
+    "PEratio": "36.67",
+    "DividendYield": "1.21",
+    "PBratio": "1.38"
+  },
+  "味王": {
+    "stockId": "1203",
+    "name": "味王",
+    "PEratio": "17.38",
+    "DividendYield": "2.67",
+    "PBratio": "1.74"
+  },
+  "大成": {
+    "stockId": "1210",
+    "name": "大成",
+    "PEratio": "18.52",
+    "DividendYield": "2.85",
+    "PBratio": "2.04"
+  },
+  "大飲": {
+    "stockId": "1213",
+    "name": "大飲",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.06"
+  },
+  "卜蜂": {
+    "stockId": "1215",
+    "name": "卜蜂",
+    "PEratio": "16.30",
+    "DividendYield": "3.83",
+    "PBratio": "2.96"
+  },
+  "統一": {
+    "stockId": "1216",
+    "name": "統一",
+    "PEratio": "23.92",
+    "DividendYield": "4.17",
+    "PBratio": "3.30"
+  },
+  "愛之味": {
+    "stockId": "1217",
+    "name": "愛之味",
+    "PEratio": "21.10",
+    "DividendYield": "3.21",
+    "PBratio": "0.90"
+  },
+  "泰山": {
+    "stockId": "1218",
+    "name": "泰山",
+    "PEratio": "2.10",
+    "DividendYield": "2.32",
+    "PBratio": "0.95"
+  },
+  "福壽": {
+    "stockId": "1219",
+    "name": "福壽",
+    "PEratio": "34.65",
+    "DividendYield": "4.05",
+    "PBratio": "1.43"
+  },
+  "台榮": {
+    "stockId": "1220",
+    "name": "台榮",
+    "PEratio": "476.67",
+    "DividendYield": "1.40",
+    "PBratio": "1.14"
+  },
+  "福懋油": {
+    "stockId": "1225",
+    "name": "福懋油",
+    "PEratio": "53.24",
+    "DividendYield": "3.58",
+    "PBratio": "3.45"
+  },
+  "佳格": {
+    "stockId": "1227",
+    "name": "佳格",
+    "PEratio": "32.17",
+    "DividendYield": "3.16",
+    "PBratio": "2.08"
+  },
+  "聯華": {
+    "stockId": "1229",
+    "name": "聯華",
+    "PEratio": "28.44",
+    "DividendYield": "2.81",
+    "PBratio": "2.82"
+  },
+  "聯華食": {
+    "stockId": "1231",
+    "name": "聯華食",
+    "PEratio": "23.02",
+    "DividendYield": "2.87",
+    "PBratio": "3.78"
+  },
+  "大統益": {
+    "stockId": "1232",
+    "name": "大統益",
+    "PEratio": "21.46",
+    "DividendYield": "4.08",
+    "PBratio": "4.28"
+  },
+  "天仁": {
+    "stockId": "1233",
+    "name": "天仁",
+    "PEratio": "51.94",
+    "DividendYield": "2.27",
+    "PBratio": "2.43"
+  },
+  "黑松": {
+    "stockId": "1234",
+    "name": "黑松",
+    "PEratio": "16.90",
+    "DividendYield": "4.49",
+    "PBratio": "0.90"
+  },
+  "興泰": {
+    "stockId": "1235",
+    "name": "興泰",
+    "PEratio": "15.15",
+    "DividendYield": "2.64",
+    "PBratio": "1.65"
+  },
+  "宏亞": {
+    "stockId": "1236",
+    "name": "宏亞",
+    "PEratio": "454.00",
+    "DividendYield": "4.41",
+    "PBratio": "0.90"
+  },
+  "鮮活果汁-KY": {
+    "stockId": "1256",
+    "name": "鮮活果汁-KY",
+    "PEratio": "26.44",
+    "DividendYield": "2.06",
+    "PBratio": "2.88"
+  },
+  "台塑": {
+    "stockId": "1301",
+    "name": "台塑",
+    "PEratio": "24.33",
+    "DividendYield": "5.02",
+    "PBratio": "1.55"
+  },
+  "南亞": {
+    "stockId": "1303",
+    "name": "南亞",
+    "PEratio": "31.50",
+    "DividendYield": "4.21",
+    "PBratio": "1.59"
+  },
+  "台聚": {
+    "stockId": "1304",
+    "name": "台聚",
+    "PEratio": "25.93",
+    "DividendYield": "3.14",
+    "PBratio": "0.98"
+  },
+  "華夏": {
+    "stockId": "1305",
+    "name": "華夏",
+    "PEratio": "",
+    "DividendYield": "1.34",
+    "PBratio": "1.34"
+  },
+  "三芳": {
+    "stockId": "1307",
+    "name": "三芳",
+    "PEratio": "17.58",
+    "DividendYield": "3.50",
+    "PBratio": "1.10"
+  },
+  "亞聚": {
+    "stockId": "1308",
+    "name": "亞聚",
+    "PEratio": "12.79",
+    "DividendYield": "4.67",
+    "PBratio": "1.04"
+  },
+  "台達化": {
+    "stockId": "1309",
+    "name": "台達化",
+    "PEratio": "97.50",
+    "DividendYield": "2.56",
+    "PBratio": "1.07"
+  },
+  "台苯": {
+    "stockId": "1310",
+    "name": "台苯",
+    "PEratio": "",
+    "DividendYield": "1.29",
+    "PBratio": "1.24"
+  },
+  "國喬": {
+    "stockId": "1312",
+    "name": "國喬",
+    "PEratio": "",
+    "DividendYield": "2.71",
+    "PBratio": "0.52"
+  },
+  "聯成": {
+    "stockId": "1313",
+    "name": "聯成",
+    "PEratio": "",
+    "DividendYield": "1.37",
+    "PBratio": "0.72"
+  },
+  "中石化": {
+    "stockId": "1314",
+    "name": "中石化",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.45"
+  },
+  "達新": {
+    "stockId": "1315",
+    "name": "達新",
+    "PEratio": "10.29",
+    "DividendYield": "8.45",
+    "PBratio": "0.63"
+  },
+  "上曜": {
+    "stockId": "1316",
+    "name": "上曜",
+    "PEratio": "22.17",
+    "DividendYield": "5.96",
+    "PBratio": "0.98"
+  },
+  "東陽": {
+    "stockId": "1319",
+    "name": "東陽",
+    "PEratio": "13.43",
+    "DividendYield": "4.70",
+    "PBratio": "1.29"
+  },
+  "大洋": {
+    "stockId": "1321",
+    "name": "大洋",
+    "PEratio": "74.36",
+    "DividendYield": "",
+    "PBratio": "1.35"
+  },
+  "永裕": {
+    "stockId": "1323",
+    "name": "永裕",
+    "PEratio": "18.32",
+    "DividendYield": "3.47",
+    "PBratio": "1.21"
+  },
+  "地球": {
+    "stockId": "1324",
+    "name": "地球",
+    "PEratio": "65.28",
+    "DividendYield": "1.70",
+    "PBratio": "0.93"
+  },
+  "恆大": {
+    "stockId": "1325",
+    "name": "恆大",
+    "PEratio": "162.86",
+    "DividendYield": "2.19",
+    "PBratio": "0.70"
+  },
+  "台化": {
+    "stockId": "1326",
+    "name": "台化",
+    "PEratio": "722.22",
+    "DividendYield": "1.46",
+    "PBratio": "1.14"
+  },
+  "再生-KY": {
+    "stockId": "1337",
+    "name": "再生-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.46"
+  },
+  "廣華-KY": {
+    "stockId": "1338",
+    "name": "廣華-KY",
+    "PEratio": "",
+    "DividendYield": "4.65",
+    "PBratio": "0.56"
+  },
+  "昭輝": {
+    "stockId": "1339",
+    "name": "昭輝",
+    "PEratio": "9.24",
+    "DividendYield": "6.71",
+    "PBratio": "0.93"
+  },
+  "勝悅-KY": {
+    "stockId": "1340",
+    "name": "勝悅-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.44"
+  },
+  "富林-KY": {
+    "stockId": "1341",
+    "name": "富林-KY",
+    "PEratio": "11.79",
+    "DividendYield": "9.00",
+    "PBratio": "3.05"
+  },
+  "八貫": {
+    "stockId": "1342",
+    "name": "八貫",
+    "PEratio": "16.41",
+    "DividendYield": "4.63",
+    "PBratio": "4.66"
+  },
+  "遠東新": {
+    "stockId": "1402",
+    "name": "遠東新",
+    "PEratio": "25.23",
+    "DividendYield": "4.18",
+    "PBratio": "0.82"
+  },
+  "新纖": {
+    "stockId": "1409",
+    "name": "新纖",
+    "PEratio": "13.89",
+    "DividendYield": "5.90",
+    "PBratio": "0.80"
+  },
+  "南染": {
+    "stockId": "1410",
+    "name": "南染",
+    "PEratio": "43.49",
+    "DividendYield": "2.14",
+    "PBratio": "2.22"
+  },
+  "宏洲": {
+    "stockId": "1413",
+    "name": "宏洲",
+    "PEratio": "64.86",
+    "DividendYield": "",
+    "PBratio": "1.01"
+  },
+  "東和": {
+    "stockId": "1414",
+    "name": "東和",
+    "PEratio": "53.18",
+    "DividendYield": "1.82",
+    "PBratio": "1.26"
+  },
+  "廣豐": {
+    "stockId": "1416",
+    "name": "廣豐",
+    "PEratio": "15.87",
+    "DividendYield": "4.57",
+    "PBratio": "0.57"
+  },
+  "嘉裕": {
+    "stockId": "1417",
+    "name": "嘉裕",
+    "PEratio": "22.88",
+    "DividendYield": "2.74",
+    "PBratio": "0.93"
+  },
+  "東華": {
+    "stockId": "1418",
+    "name": "東華",
+    "PEratio": "45.00",
+    "DividendYield": "",
+    "PBratio": "0.97"
+  },
+  "新紡": {
+    "stockId": "1419",
+    "name": "新紡",
+    "PEratio": "17.80",
+    "DividendYield": "3.42",
+    "PBratio": "1.10"
+  },
+  "利華": {
+    "stockId": "1423",
+    "name": "利華",
+    "PEratio": "42.59",
+    "DividendYield": "0.84",
+    "PBratio": "1.08"
+  },
+  "大魯閣": {
+    "stockId": "1432",
+    "name": "大魯閣",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.04"
+  },
+  "福懋": {
+    "stockId": "1434",
+    "name": "福懋",
+    "PEratio": "15.86",
+    "DividendYield": "5.43",
+    "PBratio": "0.84"
+  },
+  "華友聯": {
+    "stockId": "1436",
+    "name": "華友聯",
+    "PEratio": "10.11",
+    "DividendYield": "7.74",
+    "PBratio": "2.35"
+  },
+  "勤益控": {
+    "stockId": "1437",
+    "name": "勤益控",
+    "PEratio": "12.67",
+    "DividendYield": "2.86",
+    "PBratio": "0.80"
+  },
+  "三地開發": {
+    "stockId": "1438",
+    "name": "三地開發",
+    "PEratio": "7.06",
+    "DividendYield": "3.28",
+    "PBratio": "1.36"
+  },
+  "雋揚": {
+    "stockId": "1439",
+    "name": "雋揚",
+    "PEratio": "18.46",
+    "DividendYield": "1.32",
+    "PBratio": "0.89"
+  },
+  "南紡": {
+    "stockId": "1440",
+    "name": "南紡",
+    "PEratio": "",
+    "DividendYield": "2.22",
+    "PBratio": "0.98"
+  },
+  "大東": {
+    "stockId": "1441",
+    "name": "大東",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.56"
+  },
+  "名軒": {
+    "stockId": "1442",
+    "name": "名軒",
+    "PEratio": "14.65",
+    "DividendYield": "5.03",
+    "PBratio": "1.88"
+  },
+  "立益物流": {
+    "stockId": "1443",
+    "name": "立益物流",
+    "PEratio": "22.32",
+    "DividendYield": "",
+    "PBratio": "2.13"
+  },
+  "力麗": {
+    "stockId": "1444",
+    "name": "力麗",
+    "PEratio": "83.46",
+    "DividendYield": "3.69",
+    "PBratio": "0.95"
+  },
+  "大宇": {
+    "stockId": "1445",
+    "name": "大宇",
+    "PEratio": "85.45",
+    "DividendYield": "0.53",
+    "PBratio": "1.49"
+  },
+  "宏和": {
+    "stockId": "1446",
+    "name": "宏和",
+    "PEratio": "",
+    "DividendYield": "0.54",
+    "PBratio": "3.59"
+  },
+  "力鵬": {
+    "stockId": "1447",
+    "name": "力鵬",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.71"
+  },
+  "佳和": {
+    "stockId": "1449",
+    "name": "佳和",
+    "PEratio": "15.91",
+    "DividendYield": "1.63",
+    "PBratio": "0.95"
+  },
+  "年興": {
+    "stockId": "1451",
+    "name": "年興",
+    "PEratio": "153.85",
+    "DividendYield": "10.00",
+    "PBratio": "0.55"
+  },
+  "宏益": {
+    "stockId": "1452",
+    "name": "宏益",
+    "PEratio": "34.39",
+    "DividendYield": "4.75",
+    "PBratio": "0.86"
+  },
+  "大將": {
+    "stockId": "1453",
+    "name": "大將",
+    "PEratio": "",
+    "DividendYield": "2.03",
+    "PBratio": "1.12"
+  },
+  "台富": {
+    "stockId": "1454",
+    "name": "台富",
+    "PEratio": "93.33",
+    "DividendYield": "1.49",
+    "PBratio": "1.31"
+  },
+  "集盛": {
+    "stockId": "1455",
+    "name": "集盛",
+    "PEratio": "",
+    "DividendYield": "0.99",
+    "PBratio": "0.82"
+  },
+  "怡華": {
+    "stockId": "1456",
+    "name": "怡華",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.06"
+  },
+  "宜進": {
+    "stockId": "1457",
+    "name": "宜進",
+    "PEratio": "51.62",
+    "DividendYield": "5.70",
+    "PBratio": "0.79"
+  },
+  "聯發": {
+    "stockId": "1459",
+    "name": "聯發",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.11"
+  },
+  "宏遠": {
+    "stockId": "1460",
+    "name": "宏遠",
+    "PEratio": "14.78",
+    "DividendYield": "",
+    "PBratio": "0.83"
+  },
+  "強盛": {
+    "stockId": "1463",
+    "name": "強盛",
+    "PEratio": "24.66",
+    "DividendYield": "2.75",
+    "PBratio": "1.06"
+  },
+  "得力": {
+    "stockId": "1464",
+    "name": "得力",
+    "PEratio": "19.87",
+    "DividendYield": "6.54",
+    "PBratio": "1.13"
+  },
+  "偉全": {
+    "stockId": "1465",
+    "name": "偉全",
+    "PEratio": "17.47",
+    "DividendYield": "6.01",
+    "PBratio": "0.92"
+  },
+  "聚隆": {
+    "stockId": "1466",
+    "name": "聚隆",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.82"
+  },
+  "南緯": {
+    "stockId": "1467",
+    "name": "南緯",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.00"
+  },
+  "昶和": {
+    "stockId": "1468",
+    "name": "昶和",
+    "PEratio": "129.58",
+    "DividendYield": "",
+    "PBratio": "2.10"
+  },
+  "大統新創": {
+    "stockId": "1470",
+    "name": "大統新創",
+    "PEratio": "40.83",
+    "DividendYield": "2.30",
+    "PBratio": "1.73"
+  },
+  "首利": {
+    "stockId": "1471",
+    "name": "首利",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.68"
+  },
+  "三洋實業": {
+    "stockId": "1472",
+    "name": "三洋實業",
+    "PEratio": "96.74",
+    "DividendYield": "",
+    "PBratio": "1.33"
+  },
+  "台南": {
+    "stockId": "1473",
+    "name": "台南",
+    "PEratio": "13.54",
+    "DividendYield": "4.06",
+    "PBratio": "1.00"
+  },
+  "弘裕": {
+    "stockId": "1474",
+    "name": "弘裕",
+    "PEratio": "69.44",
+    "DividendYield": "3.20",
+    "PBratio": "0.77"
+  },
+  "業旺": {
+    "stockId": "1475",
+    "name": "業旺",
+    "PEratio": "11.58",
+    "DividendYield": "0.94",
+    "PBratio": "3.28"
+  },
+  "儒鴻": {
+    "stockId": "1476",
+    "name": "儒鴻",
+    "PEratio": "23.09",
+    "DividendYield": "3.47",
+    "PBratio": "6.33"
+  },
+  "聚陽": {
+    "stockId": "1477",
+    "name": "聚陽",
+    "PEratio": "20.60",
+    "DividendYield": "4.77",
+    "PBratio": "5.76"
+  },
+  "士電": {
+    "stockId": "1503",
+    "name": "士電",
+    "PEratio": "40.63",
+    "DividendYield": "1.23",
+    "PBratio": "2.83"
+  },
+  "東元": {
+    "stockId": "1504",
+    "name": "東元",
+    "PEratio": "23.78",
+    "DividendYield": "2.80",
+    "PBratio": "1.33"
+  },
+  "正道": {
+    "stockId": "1506",
+    "name": "正道",
+    "PEratio": "50.43",
+    "DividendYield": "",
+    "PBratio": "1.99"
+  },
+  "瑞利": {
+    "stockId": "1512",
+    "name": "瑞利",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.60"
+  },
+  "中興電": {
+    "stockId": "1513",
+    "name": "中興電",
+    "PEratio": "24.55",
+    "DividendYield": "2.41",
+    "PBratio": "4.13"
+  },
+  "亞力": {
+    "stockId": "1514",
+    "name": "亞力",
+    "PEratio": "28.37",
+    "DividendYield": "2.07",
+    "PBratio": "3.75"
+  },
+  "力山": {
+    "stockId": "1515",
+    "name": "力山",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.00"
+  },
+  "川飛": {
+    "stockId": "1516",
+    "name": "川飛",
+    "PEratio": "17.74",
+    "DividendYield": "6.18",
+    "PBratio": "1.58"
+  },
+  "利奇": {
+    "stockId": "1517",
+    "name": "利奇",
+    "PEratio": "9.32",
+    "DividendYield": "5.22",
+    "PBratio": "0.95"
+  },
+  "華城": {
+    "stockId": "1519",
+    "name": "華城",
+    "PEratio": "49.63",
+    "DividendYield": "1.25",
+    "PBratio": "14.12"
+  },
+  "大億": {
+    "stockId": "1521",
+    "name": "大億",
+    "PEratio": "32.96",
+    "DividendYield": "1.85",
+    "PBratio": "1.59"
+  },
+  "堤維西": {
+    "stockId": "1522",
+    "name": "堤維西",
+    "PEratio": "13.73",
+    "DividendYield": "5.22",
+    "PBratio": "1.32"
+  },
+  "耿鼎": {
+    "stockId": "1524",
+    "name": "耿鼎",
+    "PEratio": "11.49",
+    "DividendYield": "4.46",
+    "PBratio": "1.54"
+  },
+  "江申": {
+    "stockId": "1525",
+    "name": "江申",
+    "PEratio": "19.62",
+    "DividendYield": "1.95",
+    "PBratio": "1.63"
+  },
+  "日馳": {
+    "stockId": "1526",
+    "name": "日馳",
+    "PEratio": "6.68",
+    "DividendYield": "8.96",
+    "PBratio": "1.54"
+  },
+  "鑽全": {
+    "stockId": "1527",
+    "name": "鑽全",
+    "PEratio": "9.30",
+    "DividendYield": "5.75",
+    "PBratio": "1.21"
+  },
+  "恩德": {
+    "stockId": "1528",
+    "name": "恩德",
+    "PEratio": "20.25",
+    "DividendYield": "0.63",
+    "PBratio": "1.27"
+  },
+  "樂事綠能": {
+    "stockId": "1529",
+    "name": "樂事綠能",
+    "PEratio": "64.76",
+    "DividendYield": "1.32",
+    "PBratio": "3.48"
+  },
+  "亞崴": {
+    "stockId": "1530",
+    "name": "亞崴",
+    "PEratio": "10.52",
+    "DividendYield": "4.80",
+    "PBratio": "0.98"
+  },
+  "高林股": {
+    "stockId": "1531",
+    "name": "高林股",
+    "PEratio": "26.55",
+    "DividendYield": "5.48",
+    "PBratio": "0.71"
+  },
+  "勤美": {
+    "stockId": "1532",
+    "name": "勤美",
+    "PEratio": "31.25",
+    "DividendYield": "3.31",
+    "PBratio": "1.06"
+  },
+  "車王電": {
+    "stockId": "1533",
+    "name": "車王電",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.46"
+  },
+  "中宇": {
+    "stockId": "1535",
+    "name": "中宇",
+    "PEratio": "14.66",
+    "DividendYield": "4.79",
+    "PBratio": "2.12"
+  },
+  "和大": {
+    "stockId": "1536",
+    "name": "和大",
+    "PEratio": "27.74",
+    "DividendYield": "2.37",
+    "PBratio": "2.11"
+  },
+  "廣隆": {
+    "stockId": "1537",
+    "name": "廣隆",
+    "PEratio": "15.75",
+    "DividendYield": "6.99",
+    "PBratio": "2.63"
+  },
+  "正峰": {
+    "stockId": "1538",
+    "name": "正峰",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.95"
+  },
+  "巨庭": {
+    "stockId": "1539",
+    "name": "巨庭",
+    "PEratio": "6.21",
+    "DividendYield": "9.04",
+    "PBratio": "1.08"
+  },
+  "喬福": {
+    "stockId": "1540",
+    "name": "喬福",
+    "PEratio": "18.14",
+    "DividendYield": "3.24",
+    "PBratio": "1.14"
+  },
+  "錩泰": {
+    "stockId": "1541",
+    "name": "錩泰",
+    "PEratio": "22.48",
+    "DividendYield": "2.70",
+    "PBratio": "1.60"
+  },
+  "伸興": {
+    "stockId": "1558",
+    "name": "伸興",
+    "PEratio": "21.41",
+    "DividendYield": "4.91",
+    "PBratio": "1.35"
+  },
+  "中砂": {
+    "stockId": "1560",
+    "name": "中砂",
+    "PEratio": "18.52",
+    "DividendYield": "2.80",
+    "PBratio": "3.45"
+  },
+  "倉佑": {
+    "stockId": "1568",
+    "name": "倉佑",
+    "PEratio": "16.35",
+    "DividendYield": "4.55",
+    "PBratio": "1.59"
+  },
+  "信錦": {
+    "stockId": "1582",
+    "name": "信錦",
+    "PEratio": "19.57",
+    "DividendYield": "5.03",
+    "PBratio": "1.32"
+  },
+  "程泰": {
+    "stockId": "1583",
+    "name": "程泰",
+    "PEratio": "10.90",
+    "DividendYield": "4.19",
+    "PBratio": "1.47"
+  },
+  "吉茂": {
+    "stockId": "1587",
+    "name": "吉茂",
+    "PEratio": "13.36",
+    "DividendYield": "4.54",
+    "PBratio": "1.13"
+  },
+  "永冠-KY": {
+    "stockId": "1589",
+    "name": "永冠-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.80"
+  },
+  "亞德客-KY": {
+    "stockId": "1590",
+    "name": "亞德客-KY",
+    "PEratio": "33.06",
+    "DividendYield": "1.33",
+    "PBratio": "5.18"
+  },
+  "直得": {
+    "stockId": "1597",
+    "name": "直得",
+    "PEratio": "19.66",
+    "DividendYield": "2.86",
+    "PBratio": "2.67"
+  },
+  "岱宇": {
+    "stockId": "1598",
+    "name": "岱宇",
+    "PEratio": "",
+    "DividendYield": "1.30",
+    "PBratio": "1.37"
+  },
+  "華電": {
+    "stockId": "1603",
+    "name": "華電",
+    "PEratio": "16.39",
+    "DividendYield": "1.39",
+    "PBratio": "0.96"
+  },
+  "聲寶": {
+    "stockId": "1604",
+    "name": "聲寶",
+    "PEratio": "15.41",
+    "DividendYield": "5.35",
+    "PBratio": "1.33"
+  },
+  "華新": {
+    "stockId": "1605",
+    "name": "華新",
+    "PEratio": "8.65",
+    "DividendYield": "4.41",
+    "PBratio": "1.22"
+  },
+  "華榮": {
+    "stockId": "1608",
+    "name": "華榮",
+    "PEratio": "22.03",
+    "DividendYield": "1.89",
+    "PBratio": "1.22"
+  },
+  "大亞": {
+    "stockId": "1609",
+    "name": "大亞",
+    "PEratio": "10.59",
+    "DividendYield": "1.60",
+    "PBratio": "2.06"
+  },
+  "中電": {
+    "stockId": "1611",
+    "name": "中電",
+    "PEratio": "65.86",
+    "DividendYield": "1.57",
+    "PBratio": "1.44"
+  },
+  "宏泰": {
+    "stockId": "1612",
+    "name": "宏泰",
+    "PEratio": "20.75",
+    "DividendYield": "5.74",
+    "PBratio": "1.12"
+  },
+  "三洋電": {
+    "stockId": "1614",
+    "name": "三洋電",
+    "PEratio": "33.51",
+    "DividendYield": "2.66",
+    "PBratio": "1.81"
+  },
+  "大山": {
+    "stockId": "1615",
+    "name": "大山",
+    "PEratio": "14.02",
+    "DividendYield": "6.26",
+    "PBratio": "2.20"
+  },
+  "億泰": {
+    "stockId": "1616",
+    "name": "億泰",
+    "PEratio": "73.57",
+    "DividendYield": "",
+    "PBratio": "1.17"
+  },
+  "榮星": {
+    "stockId": "1617",
+    "name": "榮星",
+    "PEratio": "53.06",
+    "DividendYield": "1.82",
+    "PBratio": "1.24"
+  },
+  "合機": {
+    "stockId": "1618",
+    "name": "合機",
+    "PEratio": "19.96",
+    "DividendYield": "2.44",
+    "PBratio": "1.07"
+  },
+  "艾美特-KY": {
+    "stockId": "1626",
+    "name": "艾美特-KY",
+    "PEratio": "468.75",
+    "DividendYield": "5.33",
+    "PBratio": "0.85"
+  },
+  "中化": {
+    "stockId": "1701",
+    "name": "中化",
+    "PEratio": "15.12",
+    "DividendYield": "3.21",
+    "PBratio": "0.96"
+  },
+  "南僑": {
+    "stockId": "1702",
+    "name": "南僑",
+    "PEratio": "22.99",
+    "DividendYield": "4.26",
+    "PBratio": "1.27"
+  },
+  "葡萄王": {
+    "stockId": "1707",
+    "name": "葡萄王",
+    "PEratio": "16.14",
+    "DividendYield": "4.22",
+    "PBratio": "2.46"
+  },
+  "東鹼": {
+    "stockId": "1708",
+    "name": "東鹼",
+    "PEratio": "12.01",
+    "DividendYield": "8.98",
+    "PBratio": "1.33"
+  },
+  "和益": {
+    "stockId": "1709",
+    "name": "和益",
+    "PEratio": "13.80",
+    "DividendYield": "7.29",
+    "PBratio": "1.39"
+  },
+  "東聯": {
+    "stockId": "1710",
+    "name": "東聯",
+    "PEratio": "24.53",
+    "DividendYield": "0.96",
+    "PBratio": "1.43"
+  },
+  "永光": {
+    "stockId": "1711",
+    "name": "永光",
+    "PEratio": "38.58",
+    "DividendYield": "1.71",
+    "PBratio": "1.33"
+  },
+  "興農": {
+    "stockId": "1712",
+    "name": "興農",
+    "PEratio": "10.00",
+    "DividendYield": "7.89",
+    "PBratio": "1.93"
+  },
+  "國化": {
+    "stockId": "1713",
+    "name": "國化",
+    "PEratio": "14.84",
+    "DividendYield": "3.08",
+    "PBratio": "1.83"
+  },
+  "和桐": {
+    "stockId": "1714",
+    "name": "和桐",
+    "PEratio": "25.32",
+    "DividendYield": "1.16",
+    "PBratio": "0.70"
+  },
+  "長興": {
+    "stockId": "1717",
+    "name": "長興",
+    "PEratio": "19.91",
+    "DividendYield": "3.82",
+    "PBratio": "1.57"
+  },
+  "中纖": {
+    "stockId": "1718",
+    "name": "中纖",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.49"
+  },
+  "生達": {
+    "stockId": "1720",
+    "name": "生達",
+    "PEratio": "13.84",
+    "DividendYield": "3.79",
+    "PBratio": "2.60"
+  },
+  "三晃": {
+    "stockId": "1721",
+    "name": "三晃",
+    "PEratio": "",
+    "DividendYield": "0.68",
+    "PBratio": "1.16"
+  },
+  "台肥": {
+    "stockId": "1722",
+    "name": "台肥",
+    "PEratio": "26.16",
+    "DividendYield": "3.90",
+    "PBratio": "1.17"
+  },
+  "中碳": {
+    "stockId": "1723",
+    "name": "中碳",
+    "PEratio": "15.08",
+    "DividendYield": "4.57",
+    "PBratio": "3.03"
+  },
+  "元禎": {
+    "stockId": "1725",
+    "name": "元禎",
+    "PEratio": "17.54",
+    "DividendYield": "4.67",
+    "PBratio": "0.96"
+  },
+  "永記": {
+    "stockId": "1726",
+    "name": "永記",
+    "PEratio": "15.14",
+    "DividendYield": "4.64",
+    "PBratio": "1.25"
+  },
+  "中華化": {
+    "stockId": "1727",
+    "name": "中華化",
+    "PEratio": "31.49",
+    "DividendYield": "2.52",
+    "PBratio": "2.26"
+  },
+  "花仙子": {
+    "stockId": "1730",
+    "name": "花仙子",
+    "PEratio": "15.74",
+    "DividendYield": "5.04",
+    "PBratio": "2.00"
+  },
+  "美吾華": {
+    "stockId": "1731",
+    "name": "美吾華",
+    "PEratio": "17.38",
+    "DividendYield": "5.10",
+    "PBratio": "1.39"
+  },
+  "毛寶": {
+    "stockId": "1732",
+    "name": "毛寶",
+    "PEratio": "673.75",
+    "DividendYield": "",
+    "PBratio": "2.38"
+  },
+  "五鼎": {
+    "stockId": "1733",
+    "name": "五鼎",
+    "PEratio": "15.90",
+    "DividendYield": "5.12",
+    "PBratio": "1.60"
+  },
+  "杏輝": {
+    "stockId": "1734",
+    "name": "杏輝",
+    "PEratio": "22.07",
+    "DividendYield": "3.08",
+    "PBratio": "1.81"
+  },
+  "日勝化": {
+    "stockId": "1735",
+    "name": "日勝化",
+    "PEratio": "25.94",
+    "DividendYield": "3.01",
+    "PBratio": "1.09"
+  },
+  "喬山": {
+    "stockId": "1736",
+    "name": "喬山",
+    "PEratio": "",
+    "DividendYield": "0.79",
+    "PBratio": "2.62"
+  },
+  "臺鹽": {
+    "stockId": "1737",
+    "name": "臺鹽",
+    "PEratio": "17.43",
+    "DividendYield": "4.22",
+    "PBratio": "1.07"
+  },
+  "南光": {
+    "stockId": "1752",
+    "name": "南光",
+    "PEratio": "14.81",
+    "DividendYield": "3.87",
+    "PBratio": "2.40"
+  },
+  "寶齡富錦": {
+    "stockId": "1760",
+    "name": "寶齡富錦",
+    "PEratio": "66.84",
+    "DividendYield": "1.55",
+    "PBratio": "5.95"
+  },
+  "中化生": {
+    "stockId": "1762",
+    "name": "中化生",
+    "PEratio": "12.04",
+    "DividendYield": "1.62",
+    "PBratio": "1.83"
+  },
+  "勝一": {
+    "stockId": "1773",
+    "name": "勝一",
+    "PEratio": "19.64",
+    "DividendYield": "2.68",
+    "PBratio": "4.01"
+  },
+  "展宇": {
+    "stockId": "1776",
+    "name": "展宇",
+    "PEratio": "189.44",
+    "DividendYield": "3.52",
+    "PBratio": "1.18"
+  },
+  "和康生": {
+    "stockId": "1783",
+    "name": "和康生",
+    "PEratio": "31.35",
+    "DividendYield": "1.65",
+    "PBratio": "3.81"
+  },
+  "科妍": {
+    "stockId": "1786",
+    "name": "科妍",
+    "PEratio": "38.12",
+    "DividendYield": "2.33",
+    "PBratio": "3.56"
+  },
+  "神隆": {
+    "stockId": "1789",
+    "name": "神隆",
+    "PEratio": "75.63",
+    "DividendYield": "1.19",
+    "PBratio": "2.29"
+  },
+  "美時": {
+    "stockId": "1795",
+    "name": "美時",
+    "PEratio": "19.30",
+    "DividendYield": "1.25",
+    "PBratio": "5.16"
+  },
+  "台玻": {
+    "stockId": "1802",
+    "name": "台玻",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.09"
+  },
+  "寶徠": {
+    "stockId": "1805",
+    "name": "寶徠",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.85"
+  },
+  "冠軍": {
+    "stockId": "1806",
+    "name": "冠軍",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.76"
+  },
+  "潤隆": {
+    "stockId": "1808",
+    "name": "潤隆",
+    "PEratio": "38.28",
+    "DividendYield": "0.73",
+    "PBratio": "5.61"
+  },
+  "中釉": {
+    "stockId": "1809",
+    "name": "中釉",
+    "PEratio": "80.26",
+    "DividendYield": "1.64",
+    "PBratio": "0.87"
+  },
+  "和成": {
+    "stockId": "1810",
+    "name": "和成",
+    "PEratio": "138.44",
+    "DividendYield": "0.90",
+    "PBratio": "1.02"
+  },
+  "凱撒衛": {
+    "stockId": "1817",
+    "name": "凱撒衛",
+    "PEratio": "10.07",
+    "DividendYield": "6.16",
+    "PBratio": "1.33"
+  },
+  "士紙": {
+    "stockId": "1903",
+    "name": "士紙",
+    "PEratio": "66.03",
+    "DividendYield": "",
+    "PBratio": "2.86"
+  },
+  "正隆": {
+    "stockId": "1904",
+    "name": "正隆",
+    "PEratio": "16.88",
+    "DividendYield": "3.40",
+    "PBratio": "1.30"
+  },
+  "華紙": {
+    "stockId": "1905",
+    "name": "華紙",
+    "PEratio": "90.16",
+    "DividendYield": "1.07",
+    "PBratio": "1.99"
+  },
+  "寶隆": {
+    "stockId": "1906",
+    "name": "寶隆",
+    "PEratio": "6.99",
+    "DividendYield": "3.13",
+    "PBratio": "0.48"
+  },
+  "永豐餘": {
+    "stockId": "1907",
+    "name": "永豐餘",
+    "PEratio": "31.16",
+    "DividendYield": "2.49",
+    "PBratio": "1.13"
+  },
+  "榮成": {
+    "stockId": "1909",
+    "name": "榮成",
+    "PEratio": "",
+    "DividendYield": "1.54",
+    "PBratio": "0.91"
+  },
+  "中鋼": {
+    "stockId": "2002",
+    "name": "中鋼",
+    "PEratio": "71.10",
+    "DividendYield": "3.43",
+    "PBratio": "1.39"
+  },
+  "東和鋼鐵": {
+    "stockId": "2006",
+    "name": "東和鋼鐵",
+    "PEratio": "10.82",
+    "DividendYield": "6.15",
+    "PBratio": "1.51"
+  },
+  "燁興": {
+    "stockId": "2007",
+    "name": "燁興",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.77"
+  },
+  "高興昌": {
+    "stockId": "2008",
+    "name": "高興昌",
+    "PEratio": "23.02",
+    "DividendYield": "2.68",
+    "PBratio": "1.28"
+  },
+  "第一銅": {
+    "stockId": "2009",
+    "name": "第一銅",
+    "PEratio": "60.19",
+    "DividendYield": "1.25",
+    "PBratio": "2.42"
+  },
+  "春源": {
+    "stockId": "2010",
+    "name": "春源",
+    "PEratio": "18.32",
+    "DividendYield": "3.34",
+    "PBratio": "1.05"
+  },
+  "春雨": {
+    "stockId": "2012",
+    "name": "春雨",
+    "PEratio": "16.19",
+    "DividendYield": "5.79",
+    "PBratio": "1.76"
+  },
+  "中鋼構": {
+    "stockId": "2013",
+    "name": "中鋼構",
+    "PEratio": "23.82",
+    "DividendYield": "3.06",
+    "PBratio": "2.06"
+  },
+  "中鴻": {
+    "stockId": "2014",
+    "name": "中鴻",
+    "PEratio": "",
+    "DividendYield": "1.47",
+    "PBratio": "1.94"
+  },
+  "豐興": {
+    "stockId": "2015",
+    "name": "豐興",
+    "PEratio": "14.43",
+    "DividendYield": "5.79",
+    "PBratio": "1.99"
+  },
+  "官田鋼": {
+    "stockId": "2017",
+    "name": "官田鋼",
+    "PEratio": "37.95",
+    "DividendYield": "4.79",
+    "PBratio": "1.26"
+  },
+  "美亞": {
+    "stockId": "2020",
+    "name": "美亞",
+    "PEratio": "22.46",
+    "DividendYield": "3.91",
+    "PBratio": "1.81"
+  },
+  "聚亨": {
+    "stockId": "2022",
+    "name": "聚亨",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.26"
+  },
+  "燁輝": {
+    "stockId": "2023",
+    "name": "燁輝",
+    "PEratio": "",
+    "DividendYield": "1.99",
+    "PBratio": "0.94"
+  },
+  "志聯": {
+    "stockId": "2024",
+    "name": "志聯",
+    "PEratio": "285.00",
+    "DividendYield": "2.05",
+    "PBratio": "1.42"
+  },
+  "千興": {
+    "stockId": "2025",
+    "name": "千興",
+    "PEratio": "3.74",
+    "DividendYield": "",
+    "PBratio": "1.03"
+  },
+  "大成鋼": {
+    "stockId": "2027",
+    "name": "大成鋼",
+    "PEratio": "8.78",
+    "DividendYield": "9.21",
+    "PBratio": "1.33"
+  },
+  "威致": {
+    "stockId": "2028",
+    "name": "威致",
+    "PEratio": "12.44",
+    "DividendYield": "5.42",
+    "PBratio": "1.78"
+  },
+  "盛餘": {
+    "stockId": "2029",
+    "name": "盛餘",
+    "PEratio": "18.95",
+    "DividendYield": "4.21",
+    "PBratio": "0.82"
+  },
+  "彰源": {
+    "stockId": "2030",
+    "name": "彰源",
+    "PEratio": "10.67",
+    "DividendYield": "7.28",
+    "PBratio": "1.07"
+  },
+  "新光鋼": {
+    "stockId": "2031",
+    "name": "新光鋼",
+    "PEratio": "23.05",
+    "DividendYield": "2.32",
+    "PBratio": "1.39"
+  },
+  "新鋼": {
+    "stockId": "2032",
+    "name": "新鋼",
+    "PEratio": "",
+    "DividendYield": "1.17",
+    "PBratio": "1.34"
+  },
+  "佳大": {
+    "stockId": "2033",
+    "name": "佳大",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.11"
+  },
+  "允強": {
+    "stockId": "2034",
+    "name": "允強",
+    "PEratio": "67.21",
+    "DividendYield": "5.19",
+    "PBratio": "1.18"
+  },
+  "海光": {
+    "stockId": "2038",
+    "name": "海光",
+    "PEratio": "19.29",
+    "DividendYield": "2.62",
+    "PBratio": "0.93"
+  },
+  "上銀": {
+    "stockId": "2049",
+    "name": "上銀",
+    "PEratio": "21.99",
+    "DividendYield": "2.49",
+    "PBratio": "2.33"
+  },
+  "川湖": {
+    "stockId": "2059",
+    "name": "川湖",
+    "PEratio": "21.15",
+    "DividendYield": "2.50",
+    "PBratio": "4.74"
+  },
+  "橋椿": {
+    "stockId": "2062",
+    "name": "橋椿",
+    "PEratio": "8.04",
+    "DividendYield": "4.35",
+    "PBratio": "0.65"
+  },
+  "運錩": {
+    "stockId": "2069",
+    "name": "運錩",
+    "PEratio": "36.20",
+    "DividendYield": "5.52",
+    "PBratio": "0.73"
+  },
+  "南港": {
+    "stockId": "2101",
+    "name": "南港",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.07"
+  },
+  "泰豐": {
+    "stockId": "2102",
+    "name": "泰豐",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.34"
+  },
+  "台橡": {
+    "stockId": "2103",
+    "name": "台橡",
+    "PEratio": "15.03",
+    "DividendYield": "4.28",
+    "PBratio": "1.15"
+  },
+  "國際中橡": {
+    "stockId": "2104",
+    "name": "國際中橡",
+    "PEratio": "40.50",
+    "DividendYield": "0.49",
+    "PBratio": "0.58"
+  },
+  "正新": {
+    "stockId": "2105",
+    "name": "正新",
+    "PEratio": "24.62",
+    "DividendYield": "3.58",
+    "PBratio": "1.56"
+  },
+  "建大": {
+    "stockId": "2106",
+    "name": "建大",
+    "PEratio": "",
+    "DividendYield": "3.35",
+    "PBratio": "1.47"
+  },
+  "厚生": {
+    "stockId": "2107",
+    "name": "厚生",
+    "PEratio": "11.78",
+    "DividendYield": "5.76",
+    "PBratio": "0.58"
+  },
+  "南帝": {
+    "stockId": "2108",
+    "name": "南帝",
+    "PEratio": "22.42",
+    "DividendYield": "5.54",
+    "PBratio": "1.31"
+  },
+  "華豐": {
+    "stockId": "2109",
+    "name": "華豐",
+    "PEratio": "15.53",
+    "DividendYield": "6.16",
+    "PBratio": "1.29"
+  },
+  "鑫永銓": {
+    "stockId": "2114",
+    "name": "鑫永銓",
+    "PEratio": "21.99",
+    "DividendYield": "4.81",
+    "PBratio": "2.62"
+  },
+  "六暉-KY": {
+    "stockId": "2115",
+    "name": "六暉-KY",
+    "PEratio": "10.43",
+    "DividendYield": "4.15",
+    "PBratio": "0.98"
+  },
+  "裕隆": {
+    "stockId": "2201",
+    "name": "裕隆",
+    "PEratio": "",
+    "DividendYield": "1.17",
+    "PBratio": "1.71"
+  },
+  "中華": {
+    "stockId": "2204",
+    "name": "中華",
+    "PEratio": "",
+    "DividendYield": "4.31",
+    "PBratio": "1.64"
+  },
+  "三陽工業": {
+    "stockId": "2206",
+    "name": "三陽工業",
+    "PEratio": "18.25",
+    "DividendYield": "2.25",
+    "PBratio": "3.30"
+  },
+  "和泰車": {
+    "stockId": "2207",
+    "name": "和泰車",
+    "PEratio": "",
+    "DividendYield": "0.27",
+    "PBratio": "9.51"
+  },
+  "台船": {
+    "stockId": "2208",
+    "name": "台船",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.72"
+  },
+  "長榮鋼": {
+    "stockId": "2211",
+    "name": "長榮鋼",
+    "PEratio": "9.59",
+    "DividendYield": "7.94",
+    "PBratio": "1.21"
+  },
+  "裕日車": {
+    "stockId": "2227",
+    "name": "裕日車",
+    "PEratio": "29.86",
+    "DividendYield": "3.65",
+    "PBratio": "3.02"
+  },
+  "劍麟": {
+    "stockId": "2228",
+    "name": "劍麟",
+    "PEratio": "16.98",
+    "DividendYield": "3.74",
+    "PBratio": "1.90"
+  },
+  "為升": {
+    "stockId": "2231",
+    "name": "為升",
+    "PEratio": "35.42",
+    "DividendYield": "1.71",
+    "PBratio": "5.19"
+  },
+  "宇隆": {
+    "stockId": "2233",
+    "name": "宇隆",
+    "PEratio": "12.53",
+    "DividendYield": "5.36",
+    "PBratio": "1.91"
+  },
+  "百達-KY": {
+    "stockId": "2236",
+    "name": "百達-KY",
+    "PEratio": "30.46",
+    "DividendYield": "0.42",
+    "PBratio": "2.59"
+  },
+  "英利-KY": {
+    "stockId": "2239",
+    "name": "英利-KY",
+    "PEratio": "60.08",
+    "DividendYield": "0.64",
+    "PBratio": "0.77"
+  },
+  "艾姆勒": {
+    "stockId": "2241",
+    "name": "艾姆勒",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.51"
+  },
+  "宏旭-KY": {
+    "stockId": "2243",
+    "name": "宏旭-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.49"
+  },
+  "汎德永業": {
+    "stockId": "2247",
+    "name": "汎德永業",
+    "PEratio": "17.07",
+    "DividendYield": "4.55",
+    "PBratio": "2.33"
+  },
+  "IKKA-KY": {
+    "stockId": "2250",
+    "name": "IKKA-KY",
+    "PEratio": "35.77",
+    "DividendYield": "4.28",
+    "PBratio": "1.24"
+  },
+  "光寶科": {
+    "stockId": "2301",
+    "name": "光寶科",
+    "PEratio": "23.00",
+    "DividendYield": "3.13",
+    "PBratio": "4.32"
+  },
+  "麗正": {
+    "stockId": "2302",
+    "name": "麗正",
+    "PEratio": "20.77",
+    "DividendYield": "4.23",
+    "PBratio": "1.82"
+  },
+  "聯電": {
+    "stockId": "2303",
+    "name": "聯電",
+    "PEratio": "7.22",
+    "DividendYield": "7.46",
+    "PBratio": "1.70"
+  },
+  "全友": {
+    "stockId": "2305",
+    "name": "全友",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.00"
+  },
+  "台達電": {
+    "stockId": "2308",
+    "name": "台達電",
+    "PEratio": "28.53",
+    "DividendYield": "2.67",
+    "PBratio": "4.95"
+  },
+  "金寶": {
+    "stockId": "2312",
+    "name": "金寶",
+    "PEratio": "26.27",
+    "DividendYield": "1.81",
+    "PBratio": "1.37"
+  },
+  "華通": {
+    "stockId": "2313",
+    "name": "華通",
+    "PEratio": "8.42",
+    "DividendYield": "5.91",
+    "PBratio": "1.52"
+  },
+  "台揚": {
+    "stockId": "2314",
+    "name": "台揚",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "5.38"
+  },
+  "楠梓電": {
+    "stockId": "2316",
+    "name": "楠梓電",
+    "PEratio": "16.16",
+    "DividendYield": "1.79",
+    "PBratio": "0.63"
+  },
+  "鴻海": {
+    "stockId": "2317",
+    "name": "鴻海",
+    "PEratio": "12.15",
+    "DividendYield": "4.84",
+    "PBratio": "1.08"
+  },
+  "東訊": {
+    "stockId": "2321",
+    "name": "東訊",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.63"
+  },
+  "中環": {
+    "stockId": "2323",
+    "name": "中環",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.91"
+  },
+  "仁寶": {
+    "stockId": "2324",
+    "name": "仁寶",
+    "PEratio": "20.33",
+    "DividendYield": "3.93",
+    "PBratio": "1.19"
+  },
+  "國巨": {
+    "stockId": "2327",
+    "name": "國巨",
+    "PEratio": "10.03",
+    "DividendYield": "2.02",
+    "PBratio": "1.71"
+  },
+  "廣宇": {
+    "stockId": "2328",
+    "name": "廣宇",
+    "PEratio": "16.76",
+    "DividendYield": "3.09",
+    "PBratio": "1.74"
+  },
+  "華泰": {
+    "stockId": "2329",
+    "name": "華泰",
+    "PEratio": "17.81",
+    "DividendYield": "2.79",
+    "PBratio": "2.21"
+  },
+  "台積電": {
+    "stockId": "2330",
+    "name": "台積電",
+    "PEratio": "15.02",
+    "DividendYield": "1.86",
+    "PBratio": "4.98"
+  },
+  "精英": {
+    "stockId": "2331",
+    "name": "精英",
+    "PEratio": "24.48",
+    "DividendYield": "2.59",
+    "PBratio": "1.55"
+  },
+  "友訊": {
+    "stockId": "2332",
+    "name": "友訊",
+    "PEratio": "30.70",
+    "DividendYield": "1.01",
+    "PBratio": "1.46"
+  },
+  "旺宏": {
+    "stockId": "2337",
+    "name": "旺宏",
+    "PEratio": "10.47",
+    "DividendYield": "5.60",
+    "PBratio": "1.13"
+  },
+  "光罩": {
+    "stockId": "2338",
+    "name": "光罩",
+    "PEratio": "14.32",
+    "DividendYield": "3.10",
+    "PBratio": "3.98"
+  },
+  "台亞": {
+    "stockId": "2340",
+    "name": "台亞",
+    "PEratio": "78.97",
+    "DividendYield": "1.86",
+    "PBratio": "2.73"
+  },
+  "茂矽": {
+    "stockId": "2342",
+    "name": "茂矽",
+    "PEratio": "17.24",
+    "DividendYield": "4.90",
+    "PBratio": "2.59"
+  },
+  "華邦電": {
+    "stockId": "2344",
+    "name": "華邦電",
+    "PEratio": "15.32",
+    "DividendYield": "3.53",
+    "PBratio": "1.24"
+  },
+  "智邦": {
+    "stockId": "2345",
+    "name": "智邦",
+    "PEratio": "25.22",
+    "DividendYield": "1.86",
+    "PBratio": "9.98"
+  },
+  "聯強": {
+    "stockId": "2347",
+    "name": "聯強",
+    "PEratio": "6.53",
+    "DividendYield": "5.99",
+    "PBratio": "1.45"
+  },
+  "海悅": {
+    "stockId": "2348",
+    "name": "海悅",
+    "PEratio": "16.01",
+    "DividendYield": "7.08",
+    "PBratio": "1.76"
+  },
+  "錸德": {
+    "stockId": "2349",
+    "name": "錸德",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.13"
+  },
+  "順德": {
+    "stockId": "2351",
+    "name": "順德",
+    "PEratio": "25.30",
+    "DividendYield": "2.53",
+    "PBratio": "3.36"
+  },
+  "佳世達": {
+    "stockId": "2352",
+    "name": "佳世達",
+    "PEratio": "13.15",
+    "DividendYield": "3.72",
+    "PBratio": "2.69"
+  },
+  "宏碁": {
+    "stockId": "2353",
+    "name": "宏碁",
+    "PEratio": "31.28",
+    "DividendYield": "4.40",
+    "PBratio": "1.62"
+  },
+  "鴻準": {
+    "stockId": "2354",
+    "name": "鴻準",
+    "PEratio": "18.99",
+    "DividendYield": "2.85",
+    "PBratio": "0.77"
+  },
+  "敬鵬": {
+    "stockId": "2355",
+    "name": "敬鵬",
+    "PEratio": "25.93",
+    "DividendYield": "2.43",
+    "PBratio": "0.87"
+  },
+  "英業達": {
+    "stockId": "2356",
+    "name": "英業達",
+    "PEratio": "36.23",
+    "DividendYield": "2.69",
+    "PBratio": "3.60"
+  },
+  "華碩": {
+    "stockId": "2357",
+    "name": "華碩",
+    "PEratio": "85.88",
+    "DividendYield": "5.03",
+    "PBratio": "1.01"
+  },
+  "廷鑫": {
+    "stockId": "2358",
+    "name": "廷鑫",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.78"
+  },
+  "所羅門": {
+    "stockId": "2359",
+    "name": "所羅門",
+    "PEratio": "17.06",
+    "DividendYield": "3.86",
+    "PBratio": "1.42"
+  },
+  "致茂": {
+    "stockId": "2360",
+    "name": "致茂",
+    "PEratio": "23.02",
+    "DividendYield": "2.84",
+    "PBratio": "6.32"
+  },
+  "藍天": {
+    "stockId": "2362",
+    "name": "藍天",
+    "PEratio": "34.01",
+    "DividendYield": "4.37",
+    "PBratio": "0.48"
+  },
+  "矽統": {
+    "stockId": "2363",
+    "name": "矽統",
+    "PEratio": "33.50",
+    "DividendYield": "5.97",
+    "PBratio": "0.66"
+  },
+  "倫飛": {
+    "stockId": "2364",
+    "name": "倫飛",
+    "PEratio": "26.08",
+    "DividendYield": "2.70",
+    "PBratio": "6.30"
+  },
+  "昆盈": {
+    "stockId": "2365",
+    "name": "昆盈",
+    "PEratio": "40.34",
+    "DividendYield": "1.71",
+    "PBratio": "0.88"
+  },
+  "燿華": {
+    "stockId": "2367",
+    "name": "燿華",
+    "PEratio": "45.51",
+    "DividendYield": "1.69",
+    "PBratio": "1.17"
+  },
+  "金像電": {
+    "stockId": "2368",
+    "name": "金像電",
+    "PEratio": "21.16",
+    "DividendYield": "1.92",
+    "PBratio": "6.78"
+  },
+  "菱生": {
+    "stockId": "2369",
+    "name": "菱生",
+    "PEratio": "",
+    "DividendYield": "1.68",
+    "PBratio": "1.19"
+  },
+  "大同": {
+    "stockId": "2371",
+    "name": "大同",
+    "PEratio": "13.54",
+    "DividendYield": "",
+    "PBratio": "2.44"
+  },
+  "震旦行": {
+    "stockId": "2373",
+    "name": "震旦行",
+    "PEratio": "13.37",
+    "DividendYield": "6.14",
+    "PBratio": "2.56"
+  },
+  "佳能": {
+    "stockId": "2374",
+    "name": "佳能",
+    "PEratio": "63.55",
+    "DividendYield": "2.28",
+    "PBratio": "0.91"
+  },
+  "凱美": {
+    "stockId": "2375",
+    "name": "凱美",
+    "PEratio": "19.47",
+    "DividendYield": "2.27",
+    "PBratio": "0.81"
+  },
+  "技嘉": {
+    "stockId": "2376",
+    "name": "技嘉",
+    "PEratio": "41.87",
+    "DividendYield": "2.09",
+    "PBratio": "5.07"
+  },
+  "微星": {
+    "stockId": "2377",
+    "name": "微星",
+    "PEratio": "20.40",
+    "DividendYield": "3.57",
+    "PBratio": "3.45"
+  },
+  "瑞昱": {
+    "stockId": "2379",
+    "name": "瑞昱",
+    "PEratio": "16.33",
+    "DividendYield": "6.62",
+    "PBratio": "4.35"
+  },
+  "虹光": {
+    "stockId": "2380",
+    "name": "虹光",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.07"
+  },
+  "廣達": {
+    "stockId": "2382",
+    "name": "廣達",
+    "PEratio": "26.61",
+    "DividendYield": "3.03",
+    "PBratio": "4.99"
+  },
+  "台光電": {
+    "stockId": "2383",
+    "name": "台光電",
+    "PEratio": "24.13",
+    "DividendYield": "2.77",
+    "PBratio": "5.15"
+  },
+  "群光": {
+    "stockId": "2385",
+    "name": "群光",
+    "PEratio": "10.46",
+    "DividendYield": "7.32",
+    "PBratio": "2.27"
+  },
+  "精元": {
+    "stockId": "2387",
+    "name": "精元",
+    "PEratio": "6.48",
+    "DividendYield": "8.59",
+    "PBratio": "0.87"
+  },
+  "威盛": {
+    "stockId": "2388",
+    "name": "威盛",
+    "PEratio": "",
+    "DividendYield": "0.12",
+    "PBratio": "4.92"
+  },
+  "云辰": {
+    "stockId": "2390",
+    "name": "云辰",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.96"
+  },
+  "正崴": {
+    "stockId": "2392",
+    "name": "正崴",
+    "PEratio": "23.50",
+    "DividendYield": "5.12",
+    "PBratio": "0.90"
+  },
+  "億光": {
+    "stockId": "2393",
+    "name": "億光",
+    "PEratio": "19.42",
+    "DividendYield": "4.65",
+    "PBratio": "1.27"
+  },
+  "研華": {
+    "stockId": "2395",
+    "name": "研華",
+    "PEratio": "27.95",
+    "DividendYield": "2.75",
+    "PBratio": "7.93"
+  },
+  "友通": {
+    "stockId": "2397",
+    "name": "友通",
+    "PEratio": "16.08",
+    "DividendYield": "4.99",
+    "PBratio": "3.12"
+  },
+  "映泰": {
+    "stockId": "2399",
+    "name": "映泰",
+    "PEratio": "2670.00",
+    "DividendYield": "",
+    "PBratio": "2.09"
+  },
+  "凌陽": {
+    "stockId": "2401",
+    "name": "凌陽",
+    "PEratio": "",
+    "DividendYield": "2.02",
+    "PBratio": "1.89"
+  },
+  "毅嘉": {
+    "stockId": "2402",
+    "name": "毅嘉",
+    "PEratio": "30.57",
+    "DividendYield": "2.87",
+    "PBratio": "1.78"
+  },
+  "漢唐": {
+    "stockId": "2404",
+    "name": "漢唐",
+    "PEratio": "8.60",
+    "DividendYield": "7.13",
+    "PBratio": "4.60"
+  },
+  "輔信": {
+    "stockId": "2405",
+    "name": "輔信",
+    "PEratio": "105.00",
+    "DividendYield": "1.47",
+    "PBratio": "1.27"
+  },
+  "國碩": {
+    "stockId": "2406",
+    "name": "國碩",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.37"
+  },
+  "南亞科": {
+    "stockId": "2408",
+    "name": "南亞科",
+    "PEratio": "34.81",
+    "DividendYield": "2.97",
+    "PBratio": "1.29"
+  },
+  "友達": {
+    "stockId": "2409",
+    "name": "友達",
+    "PEratio": "",
+    "DividendYield": "4.19",
+    "PBratio": "0.87"
+  },
+  "中華電": {
+    "stockId": "2412",
+    "name": "中華電",
+    "PEratio": "24.37",
+    "DividendYield": "4.03",
+    "PBratio": "2.31"
+  },
+  "環科": {
+    "stockId": "2413",
+    "name": "環科",
+    "PEratio": "15.95",
+    "DividendYield": "1.45",
+    "PBratio": "2.10"
+  },
+  "精技": {
+    "stockId": "2414",
+    "name": "精技",
+    "PEratio": "12.25",
+    "DividendYield": "6.92",
+    "PBratio": "1.85"
+  },
+  "錩新": {
+    "stockId": "2415",
+    "name": "錩新",
+    "PEratio": "",
+    "DividendYield": "2.30",
+    "PBratio": "1.56"
+  },
+  "圓剛": {
+    "stockId": "2417",
+    "name": "圓剛",
+    "PEratio": "",
+    "DividendYield": "0.96",
+    "PBratio": "0.98"
+  },
+  "仲琦": {
+    "stockId": "2419",
+    "name": "仲琦",
+    "PEratio": "34.49",
+    "DividendYield": "3.20",
+    "PBratio": "3.11"
+  },
+  "新巨": {
+    "stockId": "2420",
+    "name": "新巨",
+    "PEratio": "10.84",
+    "DividendYield": "7.41",
+    "PBratio": "1.90"
+  },
+  "建準": {
+    "stockId": "2421",
+    "name": "建準",
+    "PEratio": "20.87",
+    "DividendYield": "2.57",
+    "PBratio": "4.61"
+  },
+  "固緯": {
+    "stockId": "2423",
+    "name": "固緯",
+    "PEratio": "13.22",
+    "DividendYield": "5.60",
+    "PBratio": "2.13"
+  },
+  "隴華": {
+    "stockId": "2424",
+    "name": "隴華",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "9.15"
+  },
+  "承啟": {
+    "stockId": "2425",
+    "name": "承啟",
+    "PEratio": "14.76",
+    "DividendYield": "1.83",
+    "PBratio": "2.01"
+  },
+  "鼎元": {
+    "stockId": "2426",
+    "name": "鼎元",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.41"
+  },
+  "三商電": {
+    "stockId": "2427",
+    "name": "三商電",
+    "PEratio": "25.30",
+    "DividendYield": "1.20",
+    "PBratio": "2.12"
+  },
+  "興勤": {
+    "stockId": "2428",
+    "name": "興勤",
+    "PEratio": "16.75",
+    "DividendYield": "3.23",
+    "PBratio": "2.34"
+  },
+  "銘旺科": {
+    "stockId": "2429",
+    "name": "銘旺科",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.95"
+  },
+  "燦坤": {
+    "stockId": "2430",
+    "name": "燦坤",
+    "PEratio": "9.46",
+    "DividendYield": "9.36",
+    "PBratio": "1.14"
+  },
+  "聯昌": {
+    "stockId": "2431",
+    "name": "聯昌",
+    "PEratio": "283.75",
+    "DividendYield": "0.88",
+    "PBratio": "0.88"
+  },
+  "倚天酷碁-創": {
+    "stockId": "2432",
+    "name": "倚天酷碁-創",
+    "PEratio": "22.07",
+    "DividendYield": "3.37",
+    "PBratio": "2.71"
+  },
+  "互盛電": {
+    "stockId": "2433",
+    "name": "互盛電",
+    "PEratio": "13.25",
+    "DividendYield": "7.11",
+    "PBratio": "2.05"
+  },
+  "統懋": {
+    "stockId": "2434",
+    "name": "統懋",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.34"
+  },
+  "偉詮電": {
+    "stockId": "2436",
+    "name": "偉詮電",
+    "PEratio": "209.33",
+    "DividendYield": "1.91",
+    "PBratio": "3.37"
+  },
+  "翔耀": {
+    "stockId": "2438",
+    "name": "翔耀",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.49"
+  },
+  "美律": {
+    "stockId": "2439",
+    "name": "美律",
+    "PEratio": "14.54",
+    "DividendYield": "4.81",
+    "PBratio": "1.78"
+  },
+  "太空梭": {
+    "stockId": "2440",
+    "name": "太空梭",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.17"
+  },
+  "超豐": {
+    "stockId": "2441",
+    "name": "超豐",
+    "PEratio": "14.29",
+    "DividendYield": "6.27",
+    "PBratio": "1.57"
+  },
+  "新美齊": {
+    "stockId": "2442",
+    "name": "新美齊",
+    "PEratio": "98.06",
+    "DividendYield": "0.96",
+    "PBratio": "1.16"
+  },
+  "昶虹": {
+    "stockId": "2443",
+    "name": "昶虹",
+    "PEratio": "3.48",
+    "DividendYield": "",
+    "PBratio": "1.03"
+  },
+  "兆勁": {
+    "stockId": "2444",
+    "name": "兆勁",
+    "PEratio": "15.05",
+    "DividendYield": "",
+    "PBratio": "1.41"
+  },
+  "京元電子": {
+    "stockId": "2449",
+    "name": "京元電子",
+    "PEratio": "11.85",
+    "DividendYield": "5.82",
+    "PBratio": "1.94"
+  },
+  "神腦": {
+    "stockId": "2450",
+    "name": "神腦",
+    "PEratio": "13.49",
+    "DividendYield": "6.25",
+    "PBratio": "1.53"
+  },
+  "創見": {
+    "stockId": "2451",
+    "name": "創見",
+    "PEratio": "16.40",
+    "DividendYield": "7.67",
+    "PBratio": "1.80"
+  },
+  "凌群": {
+    "stockId": "2453",
+    "name": "凌群",
+    "PEratio": "23.95",
+    "DividendYield": "3.45",
+    "PBratio": "2.98"
+  },
+  "聯發科": {
+    "stockId": "2454",
+    "name": "聯發科",
+    "PEratio": "10.83",
+    "DividendYield": "10.98",
+    "PBratio": "3.27"
+  },
+  "全新": {
+    "stockId": "2455",
+    "name": "全新",
+    "PEratio": "63.11",
+    "DividendYield": "1.99",
+    "PBratio": "6.90"
+  },
+  "飛宏": {
+    "stockId": "2457",
+    "name": "飛宏",
+    "PEratio": "139.62",
+    "DividendYield": "",
+    "PBratio": "4.36"
+  },
+  "義隆": {
+    "stockId": "2458",
+    "name": "義隆",
+    "PEratio": "18.95",
+    "DividendYield": "5.49",
+    "PBratio": "4.22"
+  },
+  "敦吉": {
+    "stockId": "2459",
+    "name": "敦吉",
+    "PEratio": "10.63",
+    "DividendYield": "6.59",
+    "PBratio": "1.23"
+  },
+  "建通": {
+    "stockId": "2460",
+    "name": "建通",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.74"
+  },
+  "光群雷": {
+    "stockId": "2461",
+    "name": "光群雷",
+    "PEratio": "13.89",
+    "DividendYield": "8.17",
+    "PBratio": "1.26"
+  },
+  "良得電": {
+    "stockId": "2462",
+    "name": "良得電",
+    "PEratio": "19.87",
+    "DividendYield": "2.00",
+    "PBratio": "1.58"
+  },
+  "盟立": {
+    "stockId": "2464",
+    "name": "盟立",
+    "PEratio": "20.08",
+    "DividendYield": "4.90",
+    "PBratio": "1.80"
+  },
+  "麗臺": {
+    "stockId": "2465",
+    "name": "麗臺",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.98"
+  },
+  "冠西電": {
+    "stockId": "2466",
+    "name": "冠西電",
+    "PEratio": "88.72",
+    "DividendYield": "0.50",
+    "PBratio": "3.38"
+  },
+  "志聖": {
+    "stockId": "2467",
+    "name": "志聖",
+    "PEratio": "10.68",
+    "DividendYield": "7.63",
+    "PBratio": "2.54"
+  },
+  "華經": {
+    "stockId": "2468",
+    "name": "華經",
+    "PEratio": "33.35",
+    "DividendYield": "1.91",
+    "PBratio": "1.81"
+  },
+  "資通": {
+    "stockId": "2471",
+    "name": "資通",
+    "PEratio": "21.04",
+    "DividendYield": "4.84",
+    "PBratio": "3.14"
+  },
+  "立隆電": {
+    "stockId": "2472",
+    "name": "立隆電",
+    "PEratio": "8.89",
+    "DividendYield": "5.73",
+    "PBratio": "1.43"
+  },
+  "可成": {
+    "stockId": "2474",
+    "name": "可成",
+    "PEratio": "12.31",
+    "DividendYield": "5.68",
+    "PBratio": "0.74"
+  },
+  "鉅祥": {
+    "stockId": "2476",
+    "name": "鉅祥",
+    "PEratio": "13.10",
+    "DividendYield": "4.67",
+    "PBratio": "1.59"
+  },
+  "美隆電": {
+    "stockId": "2477",
+    "name": "美隆電",
+    "PEratio": "64.22",
+    "DividendYield": "3.89",
+    "PBratio": "0.85"
+  },
+  "大毅": {
+    "stockId": "2478",
+    "name": "大毅",
+    "PEratio": "14.17",
+    "DividendYield": "4.25",
+    "PBratio": "1.03"
+  },
+  "敦陽科": {
+    "stockId": "2480",
+    "name": "敦陽科",
+    "PEratio": "16.71",
+    "DividendYield": "5.22",
+    "PBratio": "4.74"
+  },
+  "強茂": {
+    "stockId": "2481",
+    "name": "強茂",
+    "PEratio": "23.35",
+    "DividendYield": "3.85",
+    "PBratio": "2.36"
+  },
+  "連宇": {
+    "stockId": "2482",
+    "name": "連宇",
+    "PEratio": "20.88",
+    "DividendYield": "2.25",
+    "PBratio": "4.18"
+  },
+  "百容": {
+    "stockId": "2483",
+    "name": "百容",
+    "PEratio": "25.20",
+    "DividendYield": "3.97",
+    "PBratio": "1.10"
+  },
+  "希華": {
+    "stockId": "2484",
+    "name": "希華",
+    "PEratio": "8.03",
+    "DividendYield": "6.33",
+    "PBratio": "1.35"
+  },
+  "兆赫": {
+    "stockId": "2485",
+    "name": "兆赫",
+    "PEratio": "254.38",
+    "DividendYield": "",
+    "PBratio": "1.05"
+  },
+  "一詮": {
+    "stockId": "2486",
+    "name": "一詮",
+    "PEratio": "113.84",
+    "DividendYield": "0.82",
+    "PBratio": "2.64"
+  },
+  "漢平": {
+    "stockId": "2488",
+    "name": "漢平",
+    "PEratio": "8.65",
+    "DividendYield": "7.35",
+    "PBratio": "1.15"
+  },
+  "瑞軒": {
+    "stockId": "2489",
+    "name": "瑞軒",
+    "PEratio": "13.95",
+    "DividendYield": "",
+    "PBratio": "0.79"
+  },
+  "吉祥全": {
+    "stockId": "2491",
+    "name": "吉祥全",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.48"
+  },
+  "華新科": {
+    "stockId": "2492",
+    "name": "華新科",
+    "PEratio": "44.70",
+    "DividendYield": "2.45",
+    "PBratio": "1.05"
+  },
+  "揚博": {
+    "stockId": "2493",
+    "name": "揚博",
+    "PEratio": "10.90",
+    "DividendYield": "6.75",
+    "PBratio": "2.73"
+  },
+  "普安": {
+    "stockId": "2495",
+    "name": "普安",
+    "PEratio": "28.37",
+    "DividendYield": "2.46",
+    "PBratio": "1.59"
+  },
+  "卓越": {
+    "stockId": "2496",
+    "name": "卓越",
+    "PEratio": "12.24",
+    "DividendYield": "6.30",
+    "PBratio": "1.30"
+  },
+  "怡利電": {
+    "stockId": "2497",
+    "name": "怡利電",
+    "PEratio": "26.90",
+    "DividendYield": "0.97",
+    "PBratio": "4.21"
+  },
+  "宏達電": {
+    "stockId": "2498",
+    "name": "宏達電",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.93"
+  },
+  "國建": {
+    "stockId": "2501",
+    "name": "國建",
+    "PEratio": "11.78",
+    "DividendYield": "3.14",
+    "PBratio": "0.75"
+  },
+  "國產": {
+    "stockId": "2504",
+    "name": "國產",
+    "PEratio": "10.69",
+    "DividendYield": "7.60",
+    "PBratio": "1.27"
+  },
+  "國揚": {
+    "stockId": "2505",
+    "name": "國揚",
+    "PEratio": "19.17",
+    "DividendYield": "",
+    "PBratio": "0.67"
+  },
+  "太設": {
+    "stockId": "2506",
+    "name": "太設",
+    "PEratio": "4.93",
+    "DividendYield": "3.27",
+    "PBratio": "0.46"
+  },
+  "全坤建": {
+    "stockId": "2509",
+    "name": "全坤建",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.84"
+  },
+  "太子": {
+    "stockId": "2511",
+    "name": "太子",
+    "PEratio": "16.01",
+    "DividendYield": "4.22",
+    "PBratio": "0.74"
+  },
+  "龍邦": {
+    "stockId": "2514",
+    "name": "龍邦",
+    "PEratio": "22.99",
+    "DividendYield": "",
+    "PBratio": "0.56"
+  },
+  "中工": {
+    "stockId": "2515",
+    "name": "中工",
+    "PEratio": "35.16",
+    "DividendYield": "4.71",
+    "PBratio": "0.76"
+  },
+  "新建": {
+    "stockId": "2516",
+    "name": "新建",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.84"
+  },
+  "冠德": {
+    "stockId": "2520",
+    "name": "冠德",
+    "PEratio": "8.20",
+    "DividendYield": "5.83",
+    "PBratio": "0.86"
+  },
+  "京城": {
+    "stockId": "2524",
+    "name": "京城",
+    "PEratio": "14.03",
+    "DividendYield": "",
+    "PBratio": "0.67"
+  },
+  "宏璟": {
+    "stockId": "2527",
+    "name": "宏璟",
+    "PEratio": "45.77",
+    "DividendYield": "4.20",
+    "PBratio": "0.62"
+  },
+  "皇普": {
+    "stockId": "2528",
+    "name": "皇普",
+    "PEratio": "22.58",
+    "DividendYield": "1.88",
+    "PBratio": "1.91"
+  },
+  "華建": {
+    "stockId": "2530",
+    "name": "華建",
+    "PEratio": "48.78",
+    "DividendYield": "1.72",
+    "PBratio": "2.02"
+  },
+  "宏盛": {
+    "stockId": "2534",
+    "name": "宏盛",
+    "PEratio": "5.42",
+    "DividendYield": "7.95",
+    "PBratio": "0.68"
+  },
+  "達欣工": {
+    "stockId": "2535",
+    "name": "達欣工",
+    "PEratio": "9.13",
+    "DividendYield": "7.59",
+    "PBratio": "1.23"
+  },
+  "宏普": {
+    "stockId": "2536",
+    "name": "宏普",
+    "PEratio": "",
+    "DividendYield": "1.90",
+    "PBratio": "0.76"
+  },
+  "聯上發": {
+    "stockId": "2537",
+    "name": "聯上發",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.52"
+  },
+  "基泰": {
+    "stockId": "2538",
+    "name": "基泰",
+    "PEratio": "6.97",
+    "DividendYield": "4.15",
+    "PBratio": "0.82"
+  },
+  "櫻花建": {
+    "stockId": "2539",
+    "name": "櫻花建",
+    "PEratio": "16.75",
+    "DividendYield": "3.92",
+    "PBratio": "3.23"
+  },
+  "愛山林": {
+    "stockId": "2540",
+    "name": "愛山林",
+    "PEratio": "47.50",
+    "DividendYield": "4.68",
+    "PBratio": "3.09"
+  },
+  "興富發": {
+    "stockId": "2542",
+    "name": "興富發",
+    "PEratio": "18.42",
+    "DividendYield": "3.53",
+    "PBratio": "1.55"
+  },
+  "皇昌": {
+    "stockId": "2543",
+    "name": "皇昌",
+    "PEratio": "9.59",
+    "DividendYield": "3.01",
+    "PBratio": "0.90"
+  },
+  "皇翔": {
+    "stockId": "2545",
+    "name": "皇翔",
+    "PEratio": "16.09",
+    "DividendYield": "11.57",
+    "PBratio": "1.07"
+  },
+  "根基": {
+    "stockId": "2546",
+    "name": "根基",
+    "PEratio": "7.91",
+    "DividendYield": "6.20",
+    "PBratio": "1.94"
+  },
+  "日勝生": {
+    "stockId": "2547",
+    "name": "日勝生",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.74"
+  },
+  "華固": {
+    "stockId": "2548",
+    "name": "華固",
+    "PEratio": "7.22",
+    "DividendYield": "8.31",
+    "PBratio": "1.22"
+  },
+  "潤弘": {
+    "stockId": "2597",
+    "name": "潤弘",
+    "PEratio": "9.35",
+    "DividendYield": "9.90",
+    "PBratio": "3.00"
+  },
+  "益航": {
+    "stockId": "2601",
+    "name": "益航",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.68"
+  },
+  "長榮": {
+    "stockId": "2603",
+    "name": "長榮",
+    "PEratio": "0.86",
+    "DividendYield": "72.54",
+    "PBratio": "0.37"
+  },
+  "新興": {
+    "stockId": "2605",
+    "name": "新興",
+    "PEratio": "33.93",
+    "DividendYield": "2.63",
+    "PBratio": "0.72"
+  },
+  "裕民": {
+    "stockId": "2606",
+    "name": "裕民",
+    "PEratio": "9.13",
+    "DividendYield": "6.85",
+    "PBratio": "1.12"
+  },
+  "榮運": {
+    "stockId": "2607",
+    "name": "榮運",
+    "PEratio": "8.71",
+    "DividendYield": "4.61",
+    "PBratio": "0.96"
+  },
+  "嘉里大榮": {
+    "stockId": "2608",
+    "name": "嘉里大榮",
+    "PEratio": "14.23",
+    "DividendYield": "4.46",
+    "PBratio": "1.46"
+  },
+  "陽明": {
+    "stockId": "2609",
+    "name": "陽明",
+    "PEratio": "1.26",
+    "DividendYield": "44.84",
+    "PBratio": "0.45"
+  },
+  "華航": {
+    "stockId": "2610",
+    "name": "華航",
+    "PEratio": "139.17",
+    "DividendYield": "1.84",
+    "PBratio": "2.11"
+  },
+  "志信": {
+    "stockId": "2611",
+    "name": "志信",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.98"
+  },
+  "中航": {
+    "stockId": "2612",
+    "name": "中航",
+    "PEratio": "10.22",
+    "DividendYield": "5.60",
+    "PBratio": "0.68"
+  },
+  "中櫃": {
+    "stockId": "2613",
+    "name": "中櫃",
+    "PEratio": "33.77",
+    "DividendYield": "5.10",
+    "PBratio": "0.93"
+  },
+  "東森": {
+    "stockId": "2614",
+    "name": "東森",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.23"
+  },
+  "萬海": {
+    "stockId": "2615",
+    "name": "萬海",
+    "PEratio": "2.81",
+    "DividendYield": "9.92",
+    "PBratio": "0.64"
+  },
+  "山隆": {
+    "stockId": "2616",
+    "name": "山隆",
+    "PEratio": "16.17",
+    "DividendYield": "4.92",
+    "PBratio": "0.90"
+  },
+  "台航": {
+    "stockId": "2617",
+    "name": "台航",
+    "PEratio": "6.69",
+    "DividendYield": "7.18",
+    "PBratio": "0.81"
+  },
+  "長榮航": {
+    "stockId": "2618",
+    "name": "長榮航",
+    "PEratio": "24.06",
+    "DividendYield": "2.16",
+    "PBratio": "2.22"
+  },
+  "亞航": {
+    "stockId": "2630",
+    "name": "亞航",
+    "PEratio": "252.63",
+    "DividendYield": "0.75",
+    "PBratio": "4.16"
+  },
+  "台灣高鐵": {
+    "stockId": "2633",
+    "name": "台灣高鐵",
+    "PEratio": "31.84",
+    "DividendYield": "2.21",
+    "PBratio": "2.45"
+  },
+  "漢翔": {
+    "stockId": "2634",
+    "name": "漢翔",
+    "PEratio": "26.65",
+    "DividendYield": "1.94",
+    "PBratio": "3.20"
+  },
+  "台驊投控": {
+    "stockId": "2636",
+    "name": "台驊投控",
+    "PEratio": "4.85",
+    "DividendYield": "15.26",
+    "PBratio": "1.10"
+  },
+  "慧洋-KY": {
+    "stockId": "2637",
+    "name": "慧洋-KY",
+    "PEratio": "4.43",
+    "DividendYield": "14.12",
+    "PBratio": "0.74"
+  },
+  "宅配通": {
+    "stockId": "2642",
+    "name": "宅配通",
+    "PEratio": "27.85",
+    "DividendYield": "3.61",
+    "PBratio": "1.59"
+  },
+  "長榮航太": {
+    "stockId": "2645",
+    "name": "長榮航太",
+    "PEratio": "25.12",
+    "DividendYield": "3.77",
+    "PBratio": "3.46"
+  },
+  "萬企": {
+    "stockId": "2701",
+    "name": "萬企",
+    "PEratio": "28.85",
+    "DividendYield": "1.81",
+    "PBratio": "0.78"
+  },
+  "華園": {
+    "stockId": "2702",
+    "name": "華園",
+    "PEratio": "10.10",
+    "DividendYield": "2.87",
+    "PBratio": "1.17"
+  },
+  "國賓": {
+    "stockId": "2704",
+    "name": "國賓",
+    "PEratio": "14.93",
+    "DividendYield": "0.95",
+    "PBratio": "1.25"
+  },
+  "六福": {
+    "stockId": "2705",
+    "name": "六福",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.86"
+  },
+  "第一店": {
+    "stockId": "2706",
+    "name": "第一店",
+    "PEratio": "27.92",
+    "DividendYield": "2.09",
+    "PBratio": "0.87"
+  },
+  "晶華": {
+    "stockId": "2707",
+    "name": "晶華",
+    "PEratio": "31.95",
+    "DividendYield": "3.55",
+    "PBratio": "9.15"
+  },
+  "遠雄來": {
+    "stockId": "2712",
+    "name": "遠雄來",
+    "PEratio": "117.58",
+    "DividendYield": "0.23",
+    "PBratio": "3.30"
+  },
+  "夏都": {
+    "stockId": "2722",
+    "name": "夏都",
+    "PEratio": "51.29",
+    "DividendYield": "1.59",
+    "PBratio": "4.18"
+  },
+  "美食-KY": {
+    "stockId": "2723",
+    "name": "美食-KY",
+    "PEratio": "47.07",
+    "DividendYield": "1.95",
+    "PBratio": "2.07"
+  },
+  "王品": {
+    "stockId": "2727",
+    "name": "王品",
+    "PEratio": "34.91",
+    "DividendYield": "1.63",
+    "PBratio": "6.65"
+  },
+  "雄獅": {
+    "stockId": "2731",
+    "name": "雄獅",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "6.02"
+  },
+  "寒舍": {
+    "stockId": "2739",
+    "name": "寒舍",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "6.95"
+  },
+  "雲品": {
+    "stockId": "2748",
+    "name": "雲品",
+    "PEratio": "39.19",
+    "DividendYield": "1.54",
+    "PBratio": "3.43"
+  },
+  "八方雲集": {
+    "stockId": "2753",
+    "name": "八方雲集",
+    "PEratio": "18.12",
+    "DividendYield": "4.29",
+    "PBratio": "3.77"
+  },
+  "彰銀": {
+    "stockId": "2801",
+    "name": "彰銀",
+    "PEratio": "16.36",
+    "DividendYield": "4.29",
+    "PBratio": "1.13"
+  },
+  "京城銀": {
+    "stockId": "2809",
+    "name": "京城銀",
+    "PEratio": "13.34",
+    "DividendYield": "3.04",
+    "PBratio": "0.91"
+  },
+  "台中銀": {
+    "stockId": "2812",
+    "name": "台中銀",
+    "PEratio": "14.14",
+    "DividendYield": "4.63",
+    "PBratio": "1.09"
+  },
+  "旺旺保": {
+    "stockId": "2816",
+    "name": "旺旺保",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.83"
+  },
+  "華票": {
+    "stockId": "2820",
+    "name": "華票",
+    "PEratio": "17.65",
+    "DividendYield": "3.41",
+    "PBratio": "0.85"
+  },
+  "台產": {
+    "stockId": "2832",
+    "name": "台產",
+    "PEratio": "9.85",
+    "DividendYield": "4.38",
+    "PBratio": "0.79"
+  },
+  "臺企銀": {
+    "stockId": "2834",
+    "name": "臺企銀",
+    "PEratio": "9.86",
+    "DividendYield": "2.41",
+    "PBratio": "1.04"
+  },
+  "高雄銀": {
+    "stockId": "2836",
+    "name": "高雄銀",
+    "PEratio": "17.71",
+    "DividendYield": "",
+    "PBratio": "0.90"
+  },
+  "聯邦銀": {
+    "stockId": "2838",
+    "name": "聯邦銀",
+    "PEratio": "15.05",
+    "DividendYield": "3.63",
+    "PBratio": "0.99"
+  },
+  "遠東銀": {
+    "stockId": "2845",
+    "name": "遠東銀",
+    "PEratio": "12.21",
+    "DividendYield": "3.53",
+    "PBratio": "0.84"
+  },
+  "安泰銀": {
+    "stockId": "2849",
+    "name": "安泰銀",
+    "PEratio": "",
+    "DividendYield": "2.59",
+    "PBratio": "0.93"
+  },
+  "新產": {
+    "stockId": "2850",
+    "name": "新產",
+    "PEratio": "8.90",
+    "DividendYield": "4.77",
+    "PBratio": "1.06"
+  },
+  "中再保": {
+    "stockId": "2851",
+    "name": "中再保",
+    "PEratio": "64.71",
+    "DividendYield": "",
+    "PBratio": "1.01"
+  },
+  "第一保": {
+    "stockId": "2852",
+    "name": "第一保",
+    "PEratio": "9.59",
+    "DividendYield": "4.36",
+    "PBratio": "0.63"
+  },
+  "統一證": {
+    "stockId": "2855",
+    "name": "統一證",
+    "PEratio": "15.75",
+    "DividendYield": "2.06",
+    "PBratio": "0.91"
+  },
+  "三商壽": {
+    "stockId": "2867",
+    "name": "三商壽",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.64"
+  },
+  "華南金": {
+    "stockId": "2880",
+    "name": "華南金",
+    "PEratio": "16.21",
+    "DividendYield": "2.68",
+    "PBratio": "1.56"
+  },
+  "富邦金": {
+    "stockId": "2881",
+    "name": "富邦金",
+    "PEratio": "60.68",
+    "DividendYield": "2.40",
+    "PBratio": "1.23"
+  },
+  "國泰金": {
+    "stockId": "2882",
+    "name": "國泰金",
+    "PEratio": "70.00",
+    "DividendYield": "2.04",
+    "PBratio": "1.05"
+  },
+  "開發金": {
+    "stockId": "2883",
+    "name": "開發金",
+    "PEratio": "22.36",
+    "DividendYield": "",
+    "PBratio": "0.97"
+  },
+  "玉山金": {
+    "stockId": "2884",
+    "name": "玉山金",
+    "PEratio": "21.56",
+    "DividendYield": "2.17",
+    "PBratio": "1.83"
+  },
+  "元大金": {
+    "stockId": "2885",
+    "name": "元大金",
+    "PEratio": "14.14",
+    "DividendYield": "4.00",
+    "PBratio": "1.11"
+  },
+  "兆豐金": {
+    "stockId": "2886",
+    "name": "兆豐金",
+    "PEratio": "23.58",
+    "DividendYield": "3.39",
+    "PBratio": "1.72"
+  },
+  "台新金": {
+    "stockId": "2887",
+    "name": "台新金",
+    "PEratio": "14.01",
+    "DividendYield": "4.88",
+    "PBratio": "1.18"
+  },
+  "新光金": {
+    "stockId": "2888",
+    "name": "新光金",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.63"
+  },
+  "國票金": {
+    "stockId": "2889",
+    "name": "國票金",
+    "PEratio": "27.67",
+    "DividendYield": "",
+    "PBratio": "1.08"
+  },
+  "永豐金": {
+    "stockId": "2890",
+    "name": "永豐金",
+    "PEratio": "13.25",
+    "DividendYield": "4.51",
+    "PBratio": "1.24"
+  },
+  "中信金": {
+    "stockId": "2891",
+    "name": "中信金",
+    "PEratio": "18.27",
+    "DividendYield": "3.94",
+    "PBratio": "1.27"
+  },
+  "第一金": {
+    "stockId": "2892",
+    "name": "第一金",
+    "PEratio": "16.76",
+    "DividendYield": "3.91",
+    "PBratio": "1.57"
+  },
+  "王道銀行": {
+    "stockId": "2897",
+    "name": "王道銀行",
+    "PEratio": "5.91",
+    "DividendYield": "3.76",
+    "PBratio": "0.79"
+  },
+  "欣欣": {
+    "stockId": "2901",
+    "name": "欣欣",
+    "PEratio": "114.13",
+    "DividendYield": "0.80",
+    "PBratio": "2.20"
+  },
+  "遠百": {
+    "stockId": "2903",
+    "name": "遠百",
+    "PEratio": "15.29",
+    "DividendYield": "4.64",
+    "PBratio": "1.03"
+  },
+  "匯僑": {
+    "stockId": "2904",
+    "name": "匯僑",
+    "PEratio": "14.74",
+    "DividendYield": "3.29",
+    "PBratio": "1.27"
+  },
+  "三商": {
+    "stockId": "2905",
+    "name": "三商",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.99"
+  },
+  "高林": {
+    "stockId": "2906",
+    "name": "高林",
+    "PEratio": "39.04",
+    "DividendYield": "3.27",
+    "PBratio": "1.22"
+  },
+  "特力": {
+    "stockId": "2908",
+    "name": "特力",
+    "PEratio": "30.61",
+    "DividendYield": "6.34",
+    "PBratio": "1.56"
+  },
+  "統領": {
+    "stockId": "2910",
+    "name": "統領",
+    "PEratio": "36.34",
+    "DividendYield": "",
+    "PBratio": "2.14"
+  },
+  "麗嬰房": {
+    "stockId": "2911",
+    "name": "麗嬰房",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.14"
+  },
+  "統一超": {
+    "stockId": "2912",
+    "name": "統一超",
+    "PEratio": "29.79",
+    "DividendYield": "3.16",
+    "PBratio": "7.55"
+  },
+  "農林": {
+    "stockId": "2913",
+    "name": "農林",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.35"
+  },
+  "潤泰全": {
+    "stockId": "2915",
+    "name": "潤泰全",
+    "PEratio": "8.14",
+    "DividendYield": "3.26",
+    "PBratio": "0.75"
+  },
+  "鼎固-KY": {
+    "stockId": "2923",
+    "name": "鼎固-KY",
+    "PEratio": "",
+    "DividendYield": "2.27",
+    "PBratio": "0.90"
+  },
+  "淘帝-KY": {
+    "stockId": "2929",
+    "name": "淘帝-KY",
+    "PEratio": "11.88",
+    "DividendYield": "",
+    "PBratio": "0.41"
+  },
+  "凱羿-KY": {
+    "stockId": "2939",
+    "name": "凱羿-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.48"
+  },
+  "三商家購": {
+    "stockId": "2945",
+    "name": "三商家購",
+    "PEratio": "44.73",
+    "DividendYield": "1.75",
+    "PBratio": "1.56"
+  },
+  "歐格": {
+    "stockId": "3002",
+    "name": "歐格",
+    "PEratio": "",
+    "DividendYield": "1.08",
+    "PBratio": "1.15"
+  },
+  "健和興": {
+    "stockId": "3003",
+    "name": "健和興",
+    "PEratio": "16.04",
+    "DividendYield": "2.48",
+    "PBratio": "2.13"
+  },
+  "豐達科": {
+    "stockId": "3004",
+    "name": "豐達科",
+    "PEratio": "20.88",
+    "DividendYield": "1.07",
+    "PBratio": "2.55"
+  },
+  "神基": {
+    "stockId": "3005",
+    "name": "神基",
+    "PEratio": "14.66",
+    "DividendYield": "5.56",
+    "PBratio": "2.25"
+  },
+  "晶豪科": {
+    "stockId": "3006",
+    "name": "晶豪科",
+    "PEratio": "",
+    "DividendYield": "2.32",
+    "PBratio": "1.90"
+  },
+  "大立光": {
+    "stockId": "3008",
+    "name": "大立光",
+    "PEratio": "15.11",
+    "DividendYield": "3.70",
+    "PBratio": "2.02"
+  },
+  "華立": {
+    "stockId": "3010",
+    "name": "華立",
+    "PEratio": "9.59",
+    "DividendYield": "7.48",
+    "PBratio": "1.19"
+  },
+  "今皓": {
+    "stockId": "3011",
+    "name": "今皓",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.51"
+  },
+  "晟銘電": {
+    "stockId": "3013",
+    "name": "晟銘電",
+    "PEratio": "36.90",
+    "DividendYield": "0.67",
+    "PBratio": "2.87"
+  },
+  "聯陽": {
+    "stockId": "3014",
+    "name": "聯陽",
+    "PEratio": "17.29",
+    "DividendYield": "4.84",
+    "PBratio": "3.34"
+  },
+  "全漢": {
+    "stockId": "3015",
+    "name": "全漢",
+    "PEratio": "13.75",
+    "DividendYield": "7.70",
+    "PBratio": "0.69"
+  },
+  "嘉晶": {
+    "stockId": "3016",
+    "name": "嘉晶",
+    "PEratio": "38.86",
+    "DividendYield": "2.80",
+    "PBratio": "4.34"
+  },
+  "奇鋐": {
+    "stockId": "3017",
+    "name": "奇鋐",
+    "PEratio": "24.28",
+    "DividendYield": "1.85",
+    "PBratio": "6.69"
+  },
+  "隆銘綠能": {
+    "stockId": "3018",
+    "name": "隆銘綠能",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "6.46"
+  },
+  "亞光": {
+    "stockId": "3019",
+    "name": "亞光",
+    "PEratio": "21.77",
+    "DividendYield": "2.81",
+    "PBratio": "1.59"
+  },
+  "鴻名": {
+    "stockId": "3021",
+    "name": "鴻名",
+    "PEratio": "12.74",
+    "DividendYield": "3.27",
+    "PBratio": "1.41"
+  },
+  "威強電": {
+    "stockId": "3022",
+    "name": "威強電",
+    "PEratio": "9.50",
+    "DividendYield": "4.00",
+    "PBratio": "1.59"
+  },
+  "信邦": {
+    "stockId": "3023",
+    "name": "信邦",
+    "PEratio": "28.68",
+    "DividendYield": "2.28",
+    "PBratio": "6.48"
+  },
+  "憶聲": {
+    "stockId": "3024",
+    "name": "憶聲",
+    "PEratio": "45.00",
+    "DividendYield": "1.36",
+    "PBratio": "1.57"
+  },
+  "星通": {
+    "stockId": "3025",
+    "name": "星通",
+    "PEratio": "40.24",
+    "DividendYield": "1.96",
+    "PBratio": "4.05"
+  },
+  "禾伸堂": {
+    "stockId": "3026",
+    "name": "禾伸堂",
+    "PEratio": "15.13",
+    "DividendYield": "5.16",
+    "PBratio": "1.80"
+  },
+  "盛達": {
+    "stockId": "3027",
+    "name": "盛達",
+    "PEratio": "4865.00",
+    "DividendYield": "0.62",
+    "PBratio": "2.66"
+  },
+  "增你強": {
+    "stockId": "3028",
+    "name": "增你強",
+    "PEratio": "11.31",
+    "DividendYield": "9.49",
+    "PBratio": "1.31"
+  },
+  "零壹": {
+    "stockId": "3029",
+    "name": "零壹",
+    "PEratio": "14.68",
+    "DividendYield": "5.83",
+    "PBratio": "2.64"
+  },
+  "德律": {
+    "stockId": "3030",
+    "name": "德律",
+    "PEratio": "8.79",
+    "DividendYield": "7.55",
+    "PBratio": "1.87"
+  },
+  "佰鴻": {
+    "stockId": "3031",
+    "name": "佰鴻",
+    "PEratio": "13.91",
+    "DividendYield": "4.59",
+    "PBratio": "1.16"
+  },
+  "偉訓": {
+    "stockId": "3032",
+    "name": "偉訓",
+    "PEratio": "18.43",
+    "DividendYield": "3.12",
+    "PBratio": "2.64"
+  },
+  "威健": {
+    "stockId": "3033",
+    "name": "威健",
+    "PEratio": "11.13",
+    "DividendYield": "8.65",
+    "PBratio": "1.63"
+  },
+  "聯詠": {
+    "stockId": "3034",
+    "name": "聯詠",
+    "PEratio": "11.53",
+    "DividendYield": "9.05",
+    "PBratio": "3.51"
+  },
+  "智原": {
+    "stockId": "3035",
+    "name": "智原",
+    "PEratio": "32.07",
+    "DividendYield": "1.69",
+    "PBratio": "7.67"
+  },
+  "文曄": {
+    "stockId": "3036",
+    "name": "文曄",
+    "PEratio": "11.61",
+    "DividendYield": "6.15",
+    "PBratio": "1.20"
+  },
+  "欣興": {
+    "stockId": "3037",
+    "name": "欣興",
+    "PEratio": "10.15",
+    "DividendYield": "4.27",
+    "PBratio": "2.99"
+  },
+  "全台": {
+    "stockId": "3038",
+    "name": "全台",
+    "PEratio": "12.59",
+    "DividendYield": "4.37",
+    "PBratio": "2.55"
+  },
+  "遠見": {
+    "stockId": "3040",
+    "name": "遠見",
+    "PEratio": "22.35",
+    "DividendYield": "6.58",
+    "PBratio": "1.27"
+  },
+  "揚智": {
+    "stockId": "3041",
+    "name": "揚智",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.13"
+  },
+  "晶技": {
+    "stockId": "3042",
+    "name": "晶技",
+    "PEratio": "11.64",
+    "DividendYield": "7.69",
+    "PBratio": "2.20"
+  },
+  "科風": {
+    "stockId": "3043",
+    "name": "科風",
+    "PEratio": "13.59",
+    "DividendYield": "",
+    "PBratio": "3.27"
+  },
+  "健鼎": {
+    "stockId": "3044",
+    "name": "健鼎",
+    "PEratio": "10.34",
+    "DividendYield": "6.42",
+    "PBratio": "1.42"
+  },
+  "台灣大": {
+    "stockId": "3045",
+    "name": "台灣大",
+    "PEratio": "24.32",
+    "DividendYield": "4.52",
+    "PBratio": "3.99"
+  },
+  "建碁": {
+    "stockId": "3046",
+    "name": "建碁",
+    "PEratio": "24.32",
+    "DividendYield": "1.99",
+    "PBratio": "6.96"
+  },
+  "訊舟": {
+    "stockId": "3047",
+    "name": "訊舟",
+    "PEratio": "15.19",
+    "DividendYield": "6.10",
+    "PBratio": "1.30"
+  },
+  "益登": {
+    "stockId": "3048",
+    "name": "益登",
+    "PEratio": "14.71",
+    "DividendYield": "7.19",
+    "PBratio": "1.37"
+  },
+  "和鑫": {
+    "stockId": "3049",
+    "name": "和鑫",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.86"
+  },
+  "鈺德": {
+    "stockId": "3050",
+    "name": "鈺德",
+    "PEratio": "18.39",
+    "DividendYield": "3.24",
+    "PBratio": "0.96"
+  },
+  "力特": {
+    "stockId": "3051",
+    "name": "力特",
+    "PEratio": "10.87",
+    "DividendYield": "5.81",
+    "PBratio": "1.41"
+  },
+  "夆典": {
+    "stockId": "3052",
+    "name": "夆典",
+    "PEratio": "12.34",
+    "DividendYield": "4.55",
+    "PBratio": "0.81"
+  },
+  "立萬利": {
+    "stockId": "3054",
+    "name": "立萬利",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.00"
+  },
+  "蔚華科": {
+    "stockId": "3055",
+    "name": "蔚華科",
+    "PEratio": "9.02",
+    "DividendYield": "2.90",
+    "PBratio": "1.43"
+  },
+  "總太": {
+    "stockId": "3056",
+    "name": "總太",
+    "PEratio": "4.80",
+    "DividendYield": "18.24",
+    "PBratio": "1.65"
+  },
+  "喬鼎": {
+    "stockId": "3057",
+    "name": "喬鼎",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.50"
+  },
+  "立德": {
+    "stockId": "3058",
+    "name": "立德",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.55"
+  },
+  "華晶科": {
+    "stockId": "3059",
+    "name": "華晶科",
+    "PEratio": "23.06",
+    "DividendYield": "3.01",
+    "PBratio": "1.06"
+  },
+  "銘異": {
+    "stockId": "3060",
+    "name": "銘異",
+    "PEratio": "",
+    "DividendYield": "1.34",
+    "PBratio": "1.13"
+  },
+  "建漢": {
+    "stockId": "3062",
+    "name": "建漢",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.45"
+  },
+  "日電貿": {
+    "stockId": "3090",
+    "name": "日電貿",
+    "PEratio": "8.35",
+    "DividendYield": "10.38",
+    "PBratio": "1.65"
+  },
+  "鴻碩": {
+    "stockId": "3092",
+    "name": "鴻碩",
+    "PEratio": "",
+    "DividendYield": "2.14",
+    "PBratio": "1.70"
+  },
+  "聯傑": {
+    "stockId": "3094",
+    "name": "聯傑",
+    "PEratio": "41.17",
+    "DividendYield": "3.15",
+    "PBratio": "2.43"
+  },
+  "一零四": {
+    "stockId": "3130",
+    "name": "一零四",
+    "PEratio": "16.07",
+    "DividendYield": "6.64",
+    "PBratio": "3.84"
+  },
+  "耀登": {
+    "stockId": "3138",
+    "name": "耀登",
+    "PEratio": "20.20",
+    "DividendYield": "2.36",
+    "PBratio": "4.63"
+  },
+  "正達": {
+    "stockId": "3149",
+    "name": "正達",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.88"
+  },
+  "景岳": {
+    "stockId": "3164",
+    "name": "景岳",
+    "PEratio": "50.41",
+    "DividendYield": "2.83",
+    "PBratio": "1.64"
+  },
+  "大量": {
+    "stockId": "3167",
+    "name": "大量",
+    "PEratio": "16.34",
+    "DividendYield": "5.63",
+    "PBratio": "1.43"
+  },
+  "景碩": {
+    "stockId": "3189",
+    "name": "景碩",
+    "PEratio": "9.28",
+    "DividendYield": "5.81",
+    "PBratio": "1.61"
+  },
+  "全科": {
+    "stockId": "3209",
+    "name": "全科",
+    "PEratio": "9.65",
+    "DividendYield": "9.49",
+    "PBratio": "2.18"
+  },
+  "晟鈦": {
+    "stockId": "3229",
+    "name": "晟鈦",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.88"
+  },
+  "緯創": {
+    "stockId": "3231",
+    "name": "緯創",
+    "PEratio": "33.18",
+    "DividendYield": "1.83",
+    "PBratio": "4.17"
+  },
+  "虹冠電": {
+    "stockId": "3257",
+    "name": "虹冠電",
+    "PEratio": "77.05",
+    "DividendYield": "1.37",
+    "PBratio": "4.10"
+  },
+  "昇陽": {
+    "stockId": "3266",
+    "name": "昇陽",
+    "PEratio": "",
+    "DividendYield": "3.52",
+    "PBratio": "0.92"
+  },
+  "勝德": {
+    "stockId": "3296",
+    "name": "勝德",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.30"
+  },
+  "昇貿": {
+    "stockId": "3305",
+    "name": "昇貿",
+    "PEratio": "46.97",
+    "DividendYield": "2.98",
+    "PBratio": "1.82"
+  },
+  "聯德": {
+    "stockId": "3308",
+    "name": "聯德",
+    "PEratio": "7.27",
+    "DividendYield": "",
+    "PBratio": "2.80"
+  },
+  "閎暉": {
+    "stockId": "3311",
+    "name": "閎暉",
+    "PEratio": "23.46",
+    "DividendYield": "1.75",
+    "PBratio": "0.90"
+  },
+  "弘憶股": {
+    "stockId": "3312",
+    "name": "弘憶股",
+    "PEratio": "9.76",
+    "DividendYield": "8.79",
+    "PBratio": "1.37"
+  },
+  "同泰": {
+    "stockId": "3321",
+    "name": "同泰",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.22"
+  },
+  "泰碩": {
+    "stockId": "3338",
+    "name": "泰碩",
+    "PEratio": "20.79",
+    "DividendYield": "3.63",
+    "PBratio": "2.56"
+  },
+  "麗清": {
+    "stockId": "3346",
+    "name": "麗清",
+    "PEratio": "118.60",
+    "DividendYield": "0.59",
+    "PBratio": "1.95"
+  },
+  "奇偶": {
+    "stockId": "3356",
+    "name": "奇偶",
+    "PEratio": "35.09",
+    "DividendYield": "2.48",
+    "PBratio": "2.78"
+  },
+  "新日興": {
+    "stockId": "3376",
+    "name": "新日興",
+    "PEratio": "11.51",
+    "DividendYield": "6.72",
+    "PBratio": "1.05"
+  },
+  "明泰": {
+    "stockId": "3380",
+    "name": "明泰",
+    "PEratio": "27.18",
+    "DividendYield": "3.51",
+    "PBratio": "2.70"
+  },
+  "玉晶光": {
+    "stockId": "3406",
+    "name": "玉晶光",
+    "PEratio": "14.27",
+    "DividendYield": "2.98",
+    "PBratio": "2.43"
+  },
+  "京鼎": {
+    "stockId": "3413",
+    "name": "京鼎",
+    "PEratio": "8.24",
+    "DividendYield": "7.39",
+    "PBratio": "1.82"
+  },
+  "融程電": {
+    "stockId": "3416",
+    "name": "融程電",
+    "PEratio": "19.51",
+    "DividendYield": "3.75",
+    "PBratio": "3.67"
+  },
+  "譁裕": {
+    "stockId": "3419",
+    "name": "譁裕",
+    "PEratio": "82.08",
+    "DividendYield": "1.02",
+    "PBratio": "1.64"
+  },
+  "台端": {
+    "stockId": "3432",
+    "name": "台端",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.68"
+  },
+  "榮創": {
+    "stockId": "3437",
+    "name": "榮創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.06"
+  },
+  "創意": {
+    "stockId": "3443",
+    "name": "創意",
+    "PEratio": "61.13",
+    "DividendYield": "0.75",
+    "PBratio": "27.86"
+  },
+  "展達": {
+    "stockId": "3447",
+    "name": "展達",
+    "PEratio": "16.21",
+    "DividendYield": "4.17",
+    "PBratio": "3.51"
+  },
+  "聯鈞": {
+    "stockId": "3450",
+    "name": "聯鈞",
+    "PEratio": "66.45",
+    "DividendYield": "1.21",
+    "PBratio": "1.53"
+  },
+  "晶睿": {
+    "stockId": "3454",
+    "name": "晶睿",
+    "PEratio": "23.49",
+    "DividendYield": "2.76",
+    "PBratio": "4.71"
+  },
+  "群創": {
+    "stockId": "3481",
+    "name": "群創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.62"
+  },
+  "誠研": {
+    "stockId": "3494",
+    "name": "誠研",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.30"
+  },
+  "維熹": {
+    "stockId": "3501",
+    "name": "維熹",
+    "PEratio": "8.82",
+    "DividendYield": "7.26",
+    "PBratio": "1.05"
+  },
+  "揚明光": {
+    "stockId": "3504",
+    "name": "揚明光",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.64"
+  },
+  "華擎": {
+    "stockId": "3515",
+    "name": "華擎",
+    "PEratio": "54.44",
+    "DividendYield": "3.11",
+    "PBratio": "4.29"
+  },
+  "柏騰": {
+    "stockId": "3518",
+    "name": "柏騰",
+    "PEratio": "130.31",
+    "DividendYield": "1.20",
+    "PBratio": "2.37"
+  },
+  "安馳": {
+    "stockId": "3528",
+    "name": "安馳",
+    "PEratio": "10.44",
+    "DividendYield": "7.58",
+    "PBratio": "2.04"
+  },
+  "晶相光": {
+    "stockId": "3530",
+    "name": "晶相光",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.27"
+  },
+  "台勝科": {
+    "stockId": "3532",
+    "name": "台勝科",
+    "PEratio": "13.93",
+    "DividendYield": "4.32",
+    "PBratio": "2.86"
+  },
+  "嘉澤": {
+    "stockId": "3533",
+    "name": "嘉澤",
+    "PEratio": "14.55",
+    "DividendYield": "3.27",
+    "PBratio": "3.35"
+  },
+  "晶彩科": {
+    "stockId": "3535",
+    "name": "晶彩科",
+    "PEratio": "8.08",
+    "DividendYield": "4.99",
+    "PBratio": "1.30"
+  },
+  "州巧": {
+    "stockId": "3543",
+    "name": "州巧",
+    "PEratio": "",
+    "DividendYield": "4.60",
+    "PBratio": "0.69"
+  },
+  "敦泰": {
+    "stockId": "3545",
+    "name": "敦泰",
+    "PEratio": "",
+    "DividendYield": "0.70",
+    "PBratio": "1.69"
+  },
+  "聯穎": {
+    "stockId": "3550",
+    "name": "聯穎",
+    "PEratio": "",
+    "DividendYield": "3.08",
+    "PBratio": "0.74"
+  },
+  "嘉威": {
+    "stockId": "3557",
+    "name": "嘉威",
+    "PEratio": "10.13",
+    "DividendYield": "13.14",
+    "PBratio": "2.26"
+  },
+  "牧德": {
+    "stockId": "3563",
+    "name": "牧德",
+    "PEratio": "18.61",
+    "DividendYield": "4.20",
+    "PBratio": "3.92"
+  },
+  "聯合再生": {
+    "stockId": "3576",
+    "name": "聯合再生",
+    "PEratio": "66.48",
+    "DividendYield": "0.56",
+    "PBratio": "1.77"
+  },
+  "辛耘": {
+    "stockId": "3583",
+    "name": "辛耘",
+    "PEratio": "24.46",
+    "DividendYield": "1.99",
+    "PBratio": "4.18"
+  },
+  "通嘉": {
+    "stockId": "3588",
+    "name": "通嘉",
+    "PEratio": "63.90",
+    "DividendYield": "2.59",
+    "PBratio": "1.62"
+  },
+  "艾笛森": {
+    "stockId": "3591",
+    "name": "艾笛森",
+    "PEratio": "158.44",
+    "DividendYield": "1.14",
+    "PBratio": "1.25"
+  },
+  "瑞鼎": {
+    "stockId": "3592",
+    "name": "瑞鼎",
+    "PEratio": "10.01",
+    "DividendYield": "12.65",
+    "PBratio": "2.45"
+  },
+  "力銘": {
+    "stockId": "3593",
+    "name": "力銘",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.28"
+  },
+  "智易": {
+    "stockId": "3596",
+    "name": "智易",
+    "PEratio": "13.15",
+    "DividendYield": "5.14",
+    "PBratio": "2.17"
+  },
+  "宏致": {
+    "stockId": "3605",
+    "name": "宏致",
+    "PEratio": "",
+    "DividendYield": "1.85",
+    "PBratio": "0.74"
+  },
+  "谷崧": {
+    "stockId": "3607",
+    "name": "谷崧",
+    "PEratio": "",
+    "DividendYield": "5.78",
+    "PBratio": "1.05"
+  },
+  "碩天": {
+    "stockId": "3617",
+    "name": "碩天",
+    "PEratio": "17.06",
+    "DividendYield": "2.19",
+    "PBratio": "3.99"
+  },
+  "洋華": {
+    "stockId": "3622",
+    "name": "洋華",
+    "PEratio": "13.03",
+    "DividendYield": "4.01",
+    "PBratio": "0.98"
+  },
+  "達邁": {
+    "stockId": "3645",
+    "name": "達邁",
+    "PEratio": "",
+    "DividendYield": "1.27",
+    "PBratio": "2.14"
+  },
+  "精聯": {
+    "stockId": "3652",
+    "name": "精聯",
+    "PEratio": "33.65",
+    "DividendYield": "2.07",
+    "PBratio": "1.33"
+  },
+  "健策": {
+    "stockId": "3653",
+    "name": "健策",
+    "PEratio": "35.19",
+    "DividendYield": "1.78",
+    "PBratio": "10.56"
+  },
+  "世芯-KY": {
+    "stockId": "3661",
+    "name": "世芯-KY",
+    "PEratio": "72.77",
+    "DividendYield": "0.65",
+    "PBratio": "10.46"
+  },
+  "貿聯-KY": {
+    "stockId": "3665",
+    "name": "貿聯-KY",
+    "PEratio": "13.06",
+    "DividendYield": "3.06",
+    "PBratio": "2.34"
+  },
+  "圓展": {
+    "stockId": "3669",
+    "name": "圓展",
+    "PEratio": "15.63",
+    "DividendYield": "3.69",
+    "PBratio": "1.28"
+  },
+  "TPK-KY": {
+    "stockId": "3673",
+    "name": "TPK-KY",
+    "PEratio": "40.84",
+    "DividendYield": "1.21",
+    "PBratio": "0.46"
+  },
+  "新至陞": {
+    "stockId": "3679",
+    "name": "新至陞",
+    "PEratio": "8.88",
+    "DividendYield": "12.17",
+    "PBratio": "1.11"
+  },
+  "亞太電": {
+    "stockId": "3682",
+    "name": "亞太電",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.23"
+  },
+  "達能": {
+    "stockId": "3686",
+    "name": "達能",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.56"
+  },
+  "海華": {
+    "stockId": "3694",
+    "name": "海華",
+    "PEratio": "16.40",
+    "DividendYield": "",
+    "PBratio": "1.99"
+  },
+  "大眾控": {
+    "stockId": "3701",
+    "name": "大眾控",
+    "PEratio": "34.13",
+    "DividendYield": "0.76",
+    "PBratio": "4.18"
+  },
+  "大聯大": {
+    "stockId": "3702",
+    "name": "大聯大",
+    "PEratio": "14.12",
+    "DividendYield": "6.60",
+    "PBratio": "1.34"
+  },
+  "欣陸": {
+    "stockId": "3703",
+    "name": "欣陸",
+    "PEratio": "11.97",
+    "DividendYield": "9.24",
+    "PBratio": "0.91"
+  },
+  "合勤控": {
+    "stockId": "3704",
+    "name": "合勤控",
+    "PEratio": "13.92",
+    "DividendYield": "2.02",
+    "PBratio": "2.35"
+  },
+  "永信": {
+    "stockId": "3705",
+    "name": "永信",
+    "PEratio": "14.68",
+    "DividendYield": "5.31",
+    "PBratio": "1.72"
+  },
+  "神達": {
+    "stockId": "3706",
+    "name": "神達",
+    "PEratio": "6.38",
+    "DividendYield": "2.74",
+    "PBratio": "0.97"
+  },
+  "上緯投控": {
+    "stockId": "3708",
+    "name": "上緯投控",
+    "PEratio": "10.06",
+    "DividendYield": "5.61",
+    "PBratio": "1.30"
+  },
+  "日月光投控": {
+    "stockId": "3711",
+    "name": "日月光投控",
+    "PEratio": "8.99",
+    "DividendYield": "7.64",
+    "PBratio": "1.83"
+  },
+  "永崴投控": {
+    "stockId": "3712",
+    "name": "永崴投控",
+    "PEratio": "22.83",
+    "DividendYield": "5.51",
+    "PBratio": "1.19"
+  },
+  "富采": {
+    "stockId": "3714",
+    "name": "富采",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.69"
+  },
+  "定穎投控": {
+    "stockId": "3715",
+    "name": "定穎投控",
+    "PEratio": "17.16",
+    "DividendYield": "2.37",
+    "PBratio": "1.58"
+  },
+  "佳醫": {
+    "stockId": "4104",
+    "name": "佳醫",
+    "PEratio": "20.21",
+    "DividendYield": "4.34",
+    "PBratio": "1.79"
+  },
+  "雃博": {
+    "stockId": "4106",
+    "name": "雃博",
+    "PEratio": "17.61",
+    "DividendYield": "2.68",
+    "PBratio": "1.40"
+  },
+  "懷特": {
+    "stockId": "4108",
+    "name": "懷特",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.37"
+  },
+  "旭富": {
+    "stockId": "4119",
+    "name": "旭富",
+    "PEratio": "31.12",
+    "DividendYield": "1.39",
+    "PBratio": "2.79"
+  },
+  "亞諾法": {
+    "stockId": "4133",
+    "name": "亞諾法",
+    "PEratio": "29.87",
+    "DividendYield": "2.37",
+    "PBratio": "1.63"
+  },
+  "麗豐-KY": {
+    "stockId": "4137",
+    "name": "麗豐-KY",
+    "PEratio": "19.41",
+    "DividendYield": "3.64",
+    "PBratio": "3.01"
+  },
+  "國光生": {
+    "stockId": "4142",
+    "name": "國光生",
+    "PEratio": "53.64",
+    "DividendYield": "",
+    "PBratio": "2.54"
+  },
+  "全宇生技-KY": {
+    "stockId": "4148",
+    "name": "全宇生技-KY",
+    "PEratio": "10.30",
+    "DividendYield": "4.57",
+    "PBratio": "1.58"
+  },
+  "訊映": {
+    "stockId": "4155",
+    "name": "訊映",
+    "PEratio": "36.12",
+    "DividendYield": "6.50",
+    "PBratio": "1.82"
+  },
+  "承業醫": {
+    "stockId": "4164",
+    "name": "承業醫",
+    "PEratio": "28.03",
+    "DividendYield": "3.07",
+    "PBratio": "1.75"
+  },
+  "佐登-KY": {
+    "stockId": "4190",
+    "name": "佐登-KY",
+    "PEratio": "505.00",
+    "DividendYield": "1.23",
+    "PBratio": "2.32"
+  },
+  "炎洲": {
+    "stockId": "4306",
+    "name": "炎洲",
+    "PEratio": "11.91",
+    "DividendYield": "6.28",
+    "PBratio": "0.87"
+  },
+  "如興": {
+    "stockId": "4414",
+    "name": "如興",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.12"
+  },
+  "利勤": {
+    "stockId": "4426",
+    "name": "利勤",
+    "PEratio": "240.56",
+    "DividendYield": "",
+    "PBratio": "1.38"
+  },
+  "廣越": {
+    "stockId": "4438",
+    "name": "廣越",
+    "PEratio": "11.54",
+    "DividendYield": "5.44",
+    "PBratio": "1.63"
+  },
+  "冠星-KY": {
+    "stockId": "4439",
+    "name": "冠星-KY",
+    "PEratio": "12.08",
+    "DividendYield": "4.76",
+    "PBratio": "1.77"
+  },
+  "宜新實業": {
+    "stockId": "4440",
+    "name": "宜新實業",
+    "PEratio": "13.81",
+    "DividendYield": "9.97",
+    "PBratio": "1.38"
+  },
+  "東台": {
+    "stockId": "4526",
+    "name": "東台",
+    "PEratio": "65.47",
+    "DividendYield": "0.95",
+    "PBratio": "1.05"
+  },
+  "瑞智": {
+    "stockId": "4532",
+    "name": "瑞智",
+    "PEratio": "18.02",
+    "DividendYield": "3.81",
+    "PBratio": "1.28"
+  },
+  "拓凱": {
+    "stockId": "4536",
+    "name": "拓凱",
+    "PEratio": "6.87",
+    "DividendYield": "6.32",
+    "PBratio": "1.98"
+  },
+  "全球傳動": {
+    "stockId": "4540",
+    "name": "全球傳動",
+    "PEratio": "16.23",
+    "DividendYield": "3.87",
+    "PBratio": "1.04"
+  },
+  "銘鈺": {
+    "stockId": "4545",
+    "name": "銘鈺",
+    "PEratio": "18.48",
+    "DividendYield": "4.92",
+    "PBratio": "1.24"
+  },
+  "智伸科": {
+    "stockId": "4551",
+    "name": "智伸科",
+    "PEratio": "13.38",
+    "DividendYield": "4.17",
+    "PBratio": "2.16"
+  },
+  "力達-KY": {
+    "stockId": "4552",
+    "name": "力達-KY",
+    "PEratio": "8.57",
+    "DividendYield": "3.99",
+    "PBratio": "0.64"
+  },
+  "氣立": {
+    "stockId": "4555",
+    "name": "氣立",
+    "PEratio": "30.22",
+    "DividendYield": "2.76",
+    "PBratio": "1.33"
+  },
+  "永新-KY": {
+    "stockId": "4557",
+    "name": "永新-KY",
+    "PEratio": "8.56",
+    "DividendYield": "6.76",
+    "PBratio": "2.10"
+  },
+  "強信-KY": {
+    "stockId": "4560",
+    "name": "強信-KY",
+    "PEratio": "13.04",
+    "DividendYield": "5.64",
+    "PBratio": "1.43"
+  },
+  "穎漢": {
+    "stockId": "4562",
+    "name": "穎漢",
+    "PEratio": "540.00",
+    "DividendYield": "",
+    "PBratio": "1.27"
+  },
+  "元翎": {
+    "stockId": "4564",
+    "name": "元翎",
+    "PEratio": "",
+    "DividendYield": "0.72",
+    "PBratio": "1.22"
+  },
+  "時碩工業": {
+    "stockId": "4566",
+    "name": "時碩工業",
+    "PEratio": "14.19",
+    "DividendYield": "3.37",
+    "PBratio": "1.55"
+  },
+  "鈞興-KY": {
+    "stockId": "4571",
+    "name": "鈞興-KY",
+    "PEratio": "11.87",
+    "DividendYield": "4.85",
+    "PBratio": "1.47"
+  },
+  "駐龍": {
+    "stockId": "4572",
+    "name": "駐龍",
+    "PEratio": "31.36",
+    "DividendYield": "1.17",
+    "PBratio": "3.62"
+  },
+  "大銀微系統": {
+    "stockId": "4576",
+    "name": "大銀微系統",
+    "PEratio": "40.84",
+    "DividendYield": "1.37",
+    "PBratio": "2.31"
+  },
+  "光隆精密-KY": {
+    "stockId": "4581",
+    "name": "光隆精密-KY",
+    "PEratio": "16.64",
+    "DividendYield": "3.65",
+    "PBratio": "2.30"
+  },
+  "台灣精銳": {
+    "stockId": "4583",
+    "name": "台灣精銳",
+    "PEratio": "21.72",
+    "DividendYield": "3.88",
+    "PBratio": "2.25"
+  },
+  "德淵": {
+    "stockId": "4720",
+    "name": "德淵",
+    "PEratio": "165.56",
+    "DividendYield": "1.34",
+    "PBratio": "1.19"
+  },
+  "國精化": {
+    "stockId": "4722",
+    "name": "國精化",
+    "PEratio": "17.45",
+    "DividendYield": "5.44",
+    "PBratio": "1.28"
+  },
+  "華廣": {
+    "stockId": "4737",
+    "name": "華廣",
+    "PEratio": "65.51",
+    "DividendYield": "2.72",
+    "PBratio": "2.42"
+  },
+  "康普": {
+    "stockId": "4739",
+    "name": "康普",
+    "PEratio": "35.90",
+    "DividendYield": "3.42",
+    "PBratio": "1.85"
+  },
+  "台耀": {
+    "stockId": "4746",
+    "name": "台耀",
+    "PEratio": "15.15",
+    "DividendYield": "1.01",
+    "PBratio": "1.59"
+  },
+  "三福化": {
+    "stockId": "4755",
+    "name": "三福化",
+    "PEratio": "23.29",
+    "DividendYield": "4.13",
+    "PBratio": "3.36"
+  },
+  "材料-KY": {
+    "stockId": "4763",
+    "name": "材料-KY",
+    "PEratio": "38.72",
+    "DividendYield": "1.38",
+    "PBratio": "12.63"
+  },
+  "雙鍵": {
+    "stockId": "4764",
+    "name": "雙鍵",
+    "PEratio": "240.25",
+    "DividendYield": "1.04",
+    "PBratio": "1.80"
+  },
+  "南寶": {
+    "stockId": "4766",
+    "name": "南寶",
+    "PEratio": "11.55",
+    "DividendYield": "6.12",
+    "PBratio": "1.47"
+  },
+  "上品": {
+    "stockId": "4770",
+    "name": "上品",
+    "PEratio": "12.19",
+    "DividendYield": "3.98",
+    "PBratio": "3.76"
+  },
+  "日成-KY": {
+    "stockId": "4807",
+    "name": "日成-KY",
+    "PEratio": "",
+    "DividendYield": "2.42",
+    "PBratio": "0.83"
+  },
+  "遠傳": {
+    "stockId": "4904",
+    "name": "遠傳",
+    "PEratio": "23.34",
+    "DividendYield": "4.52",
+    "PBratio": "3.54"
+  },
+  "正文": {
+    "stockId": "4906",
+    "name": "正文",
+    "PEratio": "19.49",
+    "DividendYield": "4.58",
+    "PBratio": "0.96"
+  },
+  "聯德控股-KY": {
+    "stockId": "4912",
+    "name": "聯德控股-KY",
+    "PEratio": "19.13",
+    "DividendYield": "2.99",
+    "PBratio": "1.60"
+  },
+  "致伸": {
+    "stockId": "4915",
+    "name": "致伸",
+    "PEratio": "10.65",
+    "DividendYield": "6.13",
+    "PBratio": "1.72"
+  },
+  "事欣科": {
+    "stockId": "4916",
+    "name": "事欣科",
+    "PEratio": "33.07",
+    "DividendYield": "0.94",
+    "PBratio": "2.17"
+  },
+  "新唐": {
+    "stockId": "4919",
+    "name": "新唐",
+    "PEratio": "15.59",
+    "DividendYield": "5.11",
+    "PBratio": "3.76"
+  },
+  "泰鼎-KY": {
+    "stockId": "4927",
+    "name": "泰鼎-KY",
+    "PEratio": "34.20",
+    "DividendYield": "3.03",
+    "PBratio": "1.66"
+  },
+  "燦星網": {
+    "stockId": "4930",
+    "name": "燦星網",
+    "PEratio": "8.51",
+    "DividendYield": "7.71",
+    "PBratio": "0.69"
+  },
+  "太極": {
+    "stockId": "4934",
+    "name": "太極",
+    "PEratio": "37.60",
+    "DividendYield": "",
+    "PBratio": "3.81"
+  },
+  "茂林-KY": {
+    "stockId": "4935",
+    "name": "茂林-KY",
+    "PEratio": "10.65",
+    "DividendYield": "7.02",
+    "PBratio": "0.90"
+  },
+  "和碩": {
+    "stockId": "4938",
+    "name": "和碩",
+    "PEratio": "12.09",
+    "DividendYield": "5.37",
+    "PBratio": "1.14"
+  },
+  "嘉彰": {
+    "stockId": "4942",
+    "name": "嘉彰",
+    "PEratio": "9.61",
+    "DividendYield": "6.01",
+    "PBratio": "0.73"
+  },
+  "康控-KY": {
+    "stockId": "4943",
+    "name": "康控-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "9.93"
+  },
+  "凌通": {
+    "stockId": "4952",
+    "name": "凌通",
+    "PEratio": "13.58",
+    "DividendYield": "10.26",
+    "PBratio": "2.09"
+  },
+  "光鋐": {
+    "stockId": "4956",
+    "name": "光鋐",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.84"
+  },
+  "臻鼎-KY": {
+    "stockId": "4958",
+    "name": "臻鼎-KY",
+    "PEratio": "7.81",
+    "DividendYield": "5.66",
+    "PBratio": "1.08"
+  },
+  "誠美材": {
+    "stockId": "4960",
+    "name": "誠美材",
+    "PEratio": "46.92",
+    "DividendYield": "2.46",
+    "PBratio": "0.73"
+  },
+  "天鈺": {
+    "stockId": "4961",
+    "name": "天鈺",
+    "PEratio": "13.02",
+    "DividendYield": "6.14",
+    "PBratio": "1.44"
+  },
+  "十銓": {
+    "stockId": "4967",
+    "name": "十銓",
+    "PEratio": "",
+    "DividendYield": "1.53",
+    "PBratio": "2.36"
+  },
+  "立積": {
+    "stockId": "4968",
+    "name": "立積",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "6.98"
+  },
+  "佳凌": {
+    "stockId": "4976",
+    "name": "佳凌",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.23"
+  },
+  "眾達-KY": {
+    "stockId": "4977",
+    "name": "眾達-KY",
+    "PEratio": "11.47",
+    "DividendYield": "3.00",
+    "PBratio": "1.67"
+  },
+  "榮科": {
+    "stockId": "4989",
+    "name": "榮科",
+    "PEratio": "68.33",
+    "DividendYield": "1.88",
+    "PBratio": "1.59"
+  },
+  "傳奇": {
+    "stockId": "4994",
+    "name": "傳奇",
+    "PEratio": "128.16",
+    "DividendYield": "1.03",
+    "PBratio": "3.46"
+  },
+  "鑫禾": {
+    "stockId": "4999",
+    "name": "鑫禾",
+    "PEratio": "27.99",
+    "DividendYield": "4.92",
+    "PBratio": "0.78"
+  },
+  "三星": {
+    "stockId": "5007",
+    "name": "三星",
+    "PEratio": "16.60",
+    "DividendYield": "5.12",
+    "PBratio": "2.78"
+  },
+  "訊連": {
+    "stockId": "5203",
+    "name": "訊連",
+    "PEratio": "39.11",
+    "DividendYield": "2.37",
+    "PBratio": "1.63"
+  },
+  "科嘉-KY": {
+    "stockId": "5215",
+    "name": "科嘉-KY",
+    "PEratio": "11.73",
+    "DividendYield": "4.35",
+    "PBratio": "0.93"
+  },
+  "全訊": {
+    "stockId": "5222",
+    "name": "全訊",
+    "PEratio": "51.99",
+    "DividendYield": "1.64",
+    "PBratio": "6.67"
+  },
+  "東科-KY": {
+    "stockId": "5225",
+    "name": "東科-KY",
+    "PEratio": "6.35",
+    "DividendYield": "7.03",
+    "PBratio": "1.30"
+  },
+  "達興材料": {
+    "stockId": "5234",
+    "name": "達興材料",
+    "PEratio": "40.77",
+    "DividendYield": "2.30",
+    "PBratio": "5.44"
+  },
+  "乙盛-KY": {
+    "stockId": "5243",
+    "name": "乙盛-KY",
+    "PEratio": "15.53",
+    "DividendYield": "2.14",
+    "PBratio": "1.76"
+  },
+  "弘凱": {
+    "stockId": "5244",
+    "name": "弘凱",
+    "PEratio": "14.44",
+    "DividendYield": "4.68",
+    "PBratio": "1.32"
+  },
+  "虹堡": {
+    "stockId": "5258",
+    "name": "虹堡",
+    "PEratio": "15.72",
+    "DividendYield": "0.98",
+    "PBratio": "4.32"
+  },
+  "祥碩": {
+    "stockId": "5269",
+    "name": "祥碩",
+    "PEratio": "32.30",
+    "DividendYield": "1.99",
+    "PBratio": "4.60"
+  },
+  "禾聯碩": {
+    "stockId": "5283",
+    "name": "禾聯碩",
+    "PEratio": "12.34",
+    "DividendYield": "7.08",
+    "PBratio": "2.07"
+  },
+  "jpp-KY": {
+    "stockId": "5284",
+    "name": "jpp-KY",
+    "PEratio": "20.06",
+    "DividendYield": "2.12",
+    "PBratio": "2.88"
+  },
+  "界霖": {
+    "stockId": "5285",
+    "name": "界霖",
+    "PEratio": "26.24",
+    "DividendYield": "4.29",
+    "PBratio": "3.01"
+  },
+  "豐祥-KY": {
+    "stockId": "5288",
+    "name": "豐祥-KY",
+    "PEratio": "12.20",
+    "DividendYield": "3.84",
+    "PBratio": "2.93"
+  },
+  "桂盟": {
+    "stockId": "5306",
+    "name": "桂盟",
+    "PEratio": "11.82",
+    "DividendYield": "5.75",
+    "PBratio": "2.62"
+  },
+  "中磊": {
+    "stockId": "5388",
+    "name": "中磊",
+    "PEratio": "14.36",
+    "DividendYield": "3.85",
+    "PBratio": "3.22"
+  },
+  "崇越": {
+    "stockId": "5434",
+    "name": "崇越",
+    "PEratio": "10.73",
+    "DividendYield": "5.46",
+    "PBratio": "2.81"
+  },
+  "瀚宇博": {
+    "stockId": "5469",
+    "name": "瀚宇博",
+    "PEratio": "8.35",
+    "DividendYield": "4.85",
+    "PBratio": "0.90"
+  },
+  "松翰": {
+    "stockId": "5471",
+    "name": "松翰",
+    "PEratio": "22.40",
+    "DividendYield": "5.01",
+    "PBratio": "2.28"
+  },
+  "慧友": {
+    "stockId": "5484",
+    "name": "慧友",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.94"
+  },
+  "建國": {
+    "stockId": "5515",
+    "name": "建國",
+    "PEratio": "16.69",
+    "DividendYield": "6.97",
+    "PBratio": "0.75"
+  },
+  "隆大": {
+    "stockId": "5519",
+    "name": "隆大",
+    "PEratio": "5.53",
+    "DividendYield": "9.11",
+    "PBratio": "1.08"
+  },
+  "工信": {
+    "stockId": "5521",
+    "name": "工信",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.70"
+  },
+  "遠雄": {
+    "stockId": "5522",
+    "name": "遠雄",
+    "PEratio": "9.06",
+    "DividendYield": "8.39",
+    "PBratio": "1.07"
+  },
+  "順天": {
+    "stockId": "5525",
+    "name": "順天",
+    "PEratio": "23.17",
+    "DividendYield": "7.88",
+    "PBratio": "1.42"
+  },
+  "鄉林": {
+    "stockId": "5531",
+    "name": "鄉林",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.95"
+  },
+  "皇鼎": {
+    "stockId": "5533",
+    "name": "皇鼎",
+    "PEratio": "6.66",
+    "DividendYield": "6.65",
+    "PBratio": "0.57"
+  },
+  "長虹": {
+    "stockId": "5534",
+    "name": "長虹",
+    "PEratio": "13.19",
+    "DividendYield": "6.94",
+    "PBratio": "1.16"
+  },
+  "東明-KY": {
+    "stockId": "5538",
+    "name": "東明-KY",
+    "PEratio": "11.80",
+    "DividendYield": "5.35",
+    "PBratio": "1.08"
+  },
+  "永固-KY": {
+    "stockId": "5546",
+    "name": "永固-KY",
+    "PEratio": "",
+    "DividendYield": "3.78",
+    "PBratio": "1.27"
+  },
+  "遠雄港": {
+    "stockId": "5607",
+    "name": "遠雄港",
+    "PEratio": "20.84",
+    "DividendYield": "2.69",
+    "PBratio": "2.72"
+  },
+  "四維航": {
+    "stockId": "5608",
+    "name": "四維航",
+    "PEratio": "6.14",
+    "DividendYield": "6.73",
+    "PBratio": "0.89"
+  },
+  "鳳凰": {
+    "stockId": "5706",
+    "name": "鳳凰",
+    "PEratio": "",
+    "DividendYield": "0.34",
+    "PBratio": "5.16"
+  },
+  "中租-KY": {
+    "stockId": "5871",
+    "name": "中租-KY",
+    "PEratio": "13.63",
+    "DividendYield": "3.11",
+    "PBratio": "2.48"
+  },
+  "上海商銀": {
+    "stockId": "5876",
+    "name": "上海商銀",
+    "PEratio": "13.83",
+    "DividendYield": "4.05",
+    "PBratio": "1.22"
+  },
+  "合庫金": {
+    "stockId": "5880",
+    "name": "合庫金",
+    "PEratio": "18.99",
+    "DividendYield": "1.77",
+    "PBratio": "1.75"
+  },
+  "台南-KY": {
+    "stockId": "5906",
+    "name": "台南-KY",
+    "PEratio": "21.29",
+    "DividendYield": "2.42",
+    "PBratio": "3.83"
+  },
+  "大洋-KY": {
+    "stockId": "5907",
+    "name": "大洋-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.40"
+  },
+  "群益證": {
+    "stockId": "6005",
+    "name": "群益證",
+    "PEratio": "19.03",
+    "DividendYield": "2.66",
+    "PBratio": "0.85"
+  },
+  "群益期": {
+    "stockId": "6024",
+    "name": "群益期",
+    "PEratio": "10.34",
+    "DividendYield": "7.07",
+    "PBratio": "1.28"
+  },
+  "競國": {
+    "stockId": "6108",
+    "name": "競國",
+    "PEratio": "",
+    "DividendYield": "2.83",
+    "PBratio": "0.80"
+  },
+  "邁達特": {
+    "stockId": "6112",
+    "name": "邁達特",
+    "PEratio": "23.59",
+    "DividendYield": "2.92",
+    "PBratio": "3.17"
+  },
+  "鎰勝": {
+    "stockId": "6115",
+    "name": "鎰勝",
+    "PEratio": "11.45",
+    "DividendYield": "7.10",
+    "PBratio": "1.59"
+  },
+  "彩晶": {
+    "stockId": "6116",
+    "name": "彩晶",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.84"
+  },
+  "迎廣": {
+    "stockId": "6117",
+    "name": "迎廣",
+    "PEratio": "70.27",
+    "DividendYield": "",
+    "PBratio": "2.12"
+  },
+  "達運": {
+    "stockId": "6120",
+    "name": "達運",
+    "PEratio": "",
+    "DividendYield": "0.80",
+    "PBratio": "1.38"
+  },
+  "上福": {
+    "stockId": "6128",
+    "name": "上福",
+    "PEratio": "6.10",
+    "DividendYield": "6.68",
+    "PBratio": "1.10"
+  },
+  "金橋": {
+    "stockId": "6133",
+    "name": "金橋",
+    "PEratio": "26.25",
+    "DividendYield": "2.98",
+    "PBratio": "1.62"
+  },
+  "富爾特": {
+    "stockId": "6136",
+    "name": "富爾特",
+    "PEratio": "21.12",
+    "DividendYield": "6.12",
+    "PBratio": "0.78"
+  },
+  "亞翔": {
+    "stockId": "6139",
+    "name": "亞翔",
+    "PEratio": "17.14",
+    "DividendYield": "4.30",
+    "PBratio": "2.03"
+  },
+  "柏承": {
+    "stockId": "6141",
+    "name": "柏承",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.89"
+  },
+  "友勁": {
+    "stockId": "6142",
+    "name": "友勁",
+    "PEratio": "24.04",
+    "DividendYield": "1.76",
+    "PBratio": "1.27"
+  },
+  "百一": {
+    "stockId": "6152",
+    "name": "百一",
+    "PEratio": "19.00",
+    "DividendYield": "",
+    "PBratio": "1.18"
+  },
+  "嘉聯益": {
+    "stockId": "6153",
+    "name": "嘉聯益",
+    "PEratio": "",
+    "DividendYield": "0.99",
+    "PBratio": "0.94"
+  },
+  "鈞寶": {
+    "stockId": "6155",
+    "name": "鈞寶",
+    "PEratio": "14.91",
+    "DividendYield": "5.88",
+    "PBratio": "1.42"
+  },
+  "華興": {
+    "stockId": "6164",
+    "name": "華興",
+    "PEratio": "20.34",
+    "DividendYield": "4.58",
+    "PBratio": "1.02"
+  },
+  "浪凡": {
+    "stockId": "6165",
+    "name": "浪凡",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.54"
+  },
+  "凌華": {
+    "stockId": "6166",
+    "name": "凌華",
+    "PEratio": "19.38",
+    "DividendYield": "3.35",
+    "PBratio": "3.18"
+  },
+  "宏齊": {
+    "stockId": "6168",
+    "name": "宏齊",
+    "PEratio": "19.09",
+    "DividendYield": "5.95",
+    "PBratio": "1.69"
+  },
+  "瑞儀": {
+    "stockId": "6176",
+    "name": "瑞儀",
+    "PEratio": "9.37",
+    "DividendYield": "9.22",
+    "PBratio": "1.45"
+  },
+  "達麗": {
+    "stockId": "6177",
+    "name": "達麗",
+    "PEratio": "16.99",
+    "DividendYield": "4.75",
+    "PBratio": "1.65"
+  },
+  "關貿": {
+    "stockId": "6183",
+    "name": "關貿",
+    "PEratio": "24.79",
+    "DividendYield": "3.78",
+    "PBratio": "3.85"
+  },
+  "大豐電": {
+    "stockId": "6184",
+    "name": "大豐電",
+    "PEratio": "15.84",
+    "DividendYield": "5.92",
+    "PBratio": "1.84"
+  },
+  "豐藝": {
+    "stockId": "6189",
+    "name": "豐藝",
+    "PEratio": "13.84",
+    "DividendYield": "7.67",
+    "PBratio": "1.75"
+  },
+  "精成科": {
+    "stockId": "6191",
+    "name": "精成科",
+    "PEratio": "9.62",
+    "DividendYield": "5.30",
+    "PBratio": "1.25"
+  },
+  "巨路": {
+    "stockId": "6192",
+    "name": "巨路",
+    "PEratio": "9.14",
+    "DividendYield": "4.94",
+    "PBratio": "1.33"
+  },
+  "帆宣": {
+    "stockId": "6196",
+    "name": "帆宣",
+    "PEratio": "11.84",
+    "DividendYield": "4.06",
+    "PBratio": "2.75"
+  },
+  "佳必琪": {
+    "stockId": "6197",
+    "name": "佳必琪",
+    "PEratio": "16.83",
+    "DividendYield": "4.64",
+    "PBratio": "2.98"
+  },
+  "亞弘電": {
+    "stockId": "6201",
+    "name": "亞弘電",
+    "PEratio": "13.36",
+    "DividendYield": "6.34",
+    "PBratio": "1.73"
+  },
+  "盛群": {
+    "stockId": "6202",
+    "name": "盛群",
+    "PEratio": "24.62",
+    "DividendYield": "5.82",
+    "PBratio": "3.21"
+  },
+  "詮欣": {
+    "stockId": "6205",
+    "name": "詮欣",
+    "PEratio": "15.68",
+    "DividendYield": "4.47",
+    "PBratio": "2.33"
+  },
+  "飛捷": {
+    "stockId": "6206",
+    "name": "飛捷",
+    "PEratio": "12.65",
+    "DividendYield": "7.59",
+    "PBratio": "2.08"
+  },
+  "今國光": {
+    "stockId": "6209",
+    "name": "今國光",
+    "PEratio": "265.00",
+    "DividendYield": "2.40",
+    "PBratio": "1.65"
+  },
+  "聯茂": {
+    "stockId": "6213",
+    "name": "聯茂",
+    "PEratio": "23.30",
+    "DividendYield": "4.17",
+    "PBratio": "1.36"
+  },
+  "精誠": {
+    "stockId": "6214",
+    "name": "精誠",
+    "PEratio": "21.28",
+    "DividendYield": "4.78",
+    "PBratio": "1.81"
+  },
+  "和椿": {
+    "stockId": "6215",
+    "name": "和椿",
+    "PEratio": "11.99",
+    "DividendYield": "6.86",
+    "PBratio": "1.60"
+  },
+  "居易": {
+    "stockId": "6216",
+    "name": "居易",
+    "PEratio": "21.18",
+    "DividendYield": "5.87",
+    "PBratio": "1.55"
+  },
+  "聚鼎": {
+    "stockId": "6224",
+    "name": "聚鼎",
+    "PEratio": "331.67",
+    "DividendYield": "2.51",
+    "PBratio": "2.04"
+  },
+  "天瀚": {
+    "stockId": "6225",
+    "name": "天瀚",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.00"
+  },
+  "光鼎": {
+    "stockId": "6226",
+    "name": "光鼎",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.06"
+  },
+  "尼得科超眾": {
+    "stockId": "6230",
+    "name": "尼得科超眾",
+    "PEratio": "17.99",
+    "DividendYield": "0.69",
+    "PBratio": "2.43"
+  },
+  "華孚": {
+    "stockId": "6235",
+    "name": "華孚",
+    "PEratio": "73.33",
+    "DividendYield": "0.42",
+    "PBratio": "9.36"
+  },
+  "力成": {
+    "stockId": "6239",
+    "name": "力成",
+    "PEratio": "10.75",
+    "DividendYield": "6.39",
+    "PBratio": "1.53"
+  },
+  "迅杰": {
+    "stockId": "6243",
+    "name": "迅杰",
+    "PEratio": "35.28",
+    "DividendYield": "2.40",
+    "PBratio": "2.79"
+  },
+  "矽格": {
+    "stockId": "6257",
+    "name": "矽格",
+    "PEratio": "10.92",
+    "DividendYield": "7.20",
+    "PBratio": "1.78"
+  },
+  "台郡": {
+    "stockId": "6269",
+    "name": "台郡",
+    "PEratio": "10.51",
+    "DividendYield": "5.41",
+    "PBratio": "1.27"
+  },
+  "同欣電": {
+    "stockId": "6271",
+    "name": "同欣電",
+    "PEratio": "10.68",
+    "DividendYield": "6.23",
+    "PBratio": "1.12"
+  },
+  "宏正": {
+    "stockId": "6277",
+    "name": "宏正",
+    "PEratio": "13.35",
+    "DividendYield": "6.51",
+    "PBratio": "2.27"
+  },
+  "台表科": {
+    "stockId": "6278",
+    "name": "台表科",
+    "PEratio": "8.43",
+    "DividendYield": "7.82",
+    "PBratio": "1.48"
+  },
+  "全國電": {
+    "stockId": "6281",
+    "name": "全國電",
+    "PEratio": "15.00",
+    "DividendYield": "5.85",
+    "PBratio": "3.43"
+  },
+  "康舒": {
+    "stockId": "6282",
+    "name": "康舒",
+    "PEratio": "47.85",
+    "DividendYield": "0.39",
+    "PBratio": "2.67"
+  },
+  "淳安": {
+    "stockId": "6283",
+    "name": "淳安",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.60"
+  },
+  "啟碁": {
+    "stockId": "6285",
+    "name": "啟碁",
+    "PEratio": "14.15",
+    "DividendYield": "4.14",
+    "PBratio": "2.21"
+  },
+  "聯嘉": {
+    "stockId": "6288",
+    "name": "聯嘉",
+    "PEratio": "677.00",
+    "DividendYield": "0.53",
+    "PBratio": "2.42"
+  },
+  "悅城": {
+    "stockId": "6405",
+    "name": "悅城",
+    "PEratio": "",
+    "DividendYield": "0.43",
+    "PBratio": "0.61"
+  },
+  "旭隼": {
+    "stockId": "6409",
+    "name": "旭隼",
+    "PEratio": "34.61",
+    "DividendYield": "2.36",
+    "PBratio": "17.54"
+  },
+  "群電": {
+    "stockId": "6412",
+    "name": "群電",
+    "PEratio": "11.69",
+    "DividendYield": "6.56",
+    "PBratio": "3.19"
+  },
+  "樺漢": {
+    "stockId": "6414",
+    "name": "樺漢",
+    "PEratio": "9.55",
+    "DividendYield": "4.70",
+    "PBratio": "2.32"
+  },
+  "矽力*-KY": {
+    "stockId": "6415",
+    "name": "矽力*-KY",
+    "PEratio": "27.18",
+    "DividendYield": "1.35",
+    "PBratio": "4.28"
+  },
+  "瑞祺電通": {
+    "stockId": "6416",
+    "name": "瑞祺電通",
+    "PEratio": "15.68",
+    "DividendYield": "3.67",
+    "PBratio": "2.26"
+  },
+  "統新": {
+    "stockId": "6426",
+    "name": "統新",
+    "PEratio": "76.44",
+    "DividendYield": "3.01",
+    "PBratio": "2.02"
+  },
+  "光麗-KY": {
+    "stockId": "6431",
+    "name": "光麗-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.06"
+  },
+  "迅得": {
+    "stockId": "6438",
+    "name": "迅得",
+    "PEratio": "11.55",
+    "DividendYield": "5.29",
+    "PBratio": "2.37"
+  },
+  "光聖": {
+    "stockId": "6442",
+    "name": "光聖",
+    "PEratio": "17.03",
+    "DividendYield": "3.27",
+    "PBratio": "2.29"
+  },
+  "元晶": {
+    "stockId": "6443",
+    "name": "元晶",
+    "PEratio": "46.48",
+    "DividendYield": "0.30",
+    "PBratio": "2.48"
+  },
+  "鈺邦": {
+    "stockId": "6449",
+    "name": "鈺邦",
+    "PEratio": "16.99",
+    "DividendYield": "4.20",
+    "PBratio": "1.74"
+  },
+  "訊芯-KY": {
+    "stockId": "6451",
+    "name": "訊芯-KY",
+    "PEratio": "36.40",
+    "DividendYield": "0.94",
+    "PBratio": "2.07"
+  },
+  "GIS-KY": {
+    "stockId": "6456",
+    "name": "GIS-KY",
+    "PEratio": "12.00",
+    "DividendYield": "5.07",
+    "PBratio": "0.72"
+  },
+  "台數科": {
+    "stockId": "6464",
+    "name": "台數科",
+    "PEratio": "14.07",
+    "DividendYield": "5.28",
+    "PBratio": "1.49"
+  },
+  "安集": {
+    "stockId": "6477",
+    "name": "安集",
+    "PEratio": "22.19",
+    "DividendYield": "2.06",
+    "PBratio": "1.81"
+  },
+  "晶碩": {
+    "stockId": "6491",
+    "name": "晶碩",
+    "PEratio": "17.03",
+    "DividendYield": "2.70",
+    "PBratio": "4.27"
+  },
+  "南六": {
+    "stockId": "6504",
+    "name": "南六",
+    "PEratio": "98.46",
+    "DividendYield": "1.30",
+    "PBratio": "1.58"
+  },
+  "台塑化": {
+    "stockId": "6505",
+    "name": "台塑化",
+    "PEratio": "148.36",
+    "DividendYield": "1.35",
+    "PBratio": "2.47"
+  },
+  "穎崴": {
+    "stockId": "6515",
+    "name": "穎崴",
+    "PEratio": "27.73",
+    "DividendYield": "2.44",
+    "PBratio": "10.06"
+  },
+  "捷敏-KY": {
+    "stockId": "6525",
+    "name": "捷敏-KY",
+    "PEratio": "10.83",
+    "DividendYield": "7.82",
+    "PBratio": "2.39"
+  },
+  "愛普*": {
+    "stockId": "6531",
+    "name": "愛普*",
+    "PEratio": "35.23",
+    "DividendYield": "2.22",
+    "PBratio": "5.15"
+  },
+  "晶心科": {
+    "stockId": "6533",
+    "name": "晶心科",
+    "PEratio": "136.68",
+    "DividendYield": "0.31",
+    "PBratio": "4.97"
+  },
+  "泰福-KY": {
+    "stockId": "6541",
+    "name": "泰福-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "8.21"
+  },
+  "北極星藥業-KY": {
+    "stockId": "6550",
+    "name": "北極星藥業-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "7.48"
+  },
+  "易華電": {
+    "stockId": "6552",
+    "name": "易華電",
+    "PEratio": "3605.00",
+    "DividendYield": "1.25",
+    "PBratio": "1.09"
+  },
+  "興能高": {
+    "stockId": "6558",
+    "name": "興能高",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.67"
+  },
+  "虹揚-KY": {
+    "stockId": "6573",
+    "name": "虹揚-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.41"
+  },
+  "研揚": {
+    "stockId": "6579",
+    "name": "研揚",
+    "PEratio": "19.27",
+    "DividendYield": "2.89",
+    "PBratio": "2.68"
+  },
+  "鋼聯": {
+    "stockId": "6581",
+    "name": "鋼聯",
+    "PEratio": "10.97",
+    "DividendYield": "7.21",
+    "PBratio": "2.72"
+  },
+  "申豐": {
+    "stockId": "6582",
+    "name": "申豐",
+    "PEratio": "297.89",
+    "DividendYield": "2.65",
+    "PBratio": "1.03"
+  },
+  "鼎基": {
+    "stockId": "6585",
+    "name": "鼎基",
+    "PEratio": "19.79",
+    "DividendYield": "3.99",
+    "PBratio": "1.86"
+  },
+  "動力-KY": {
+    "stockId": "6591",
+    "name": "動力-KY",
+    "PEratio": "14.11",
+    "DividendYield": "8.17",
+    "PBratio": "1.02"
+  },
+  "和潤企業": {
+    "stockId": "6592",
+    "name": "和潤企業",
+    "PEratio": "22.80",
+    "DividendYield": "3.05",
+    "PBratio": "2.93"
+  },
+  "ABC-KY": {
+    "stockId": "6598",
+    "name": "ABC-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.82"
+  },
+  "帝寶": {
+    "stockId": "6605",
+    "name": "帝寶",
+    "PEratio": "10.34",
+    "DividendYield": "4.50",
+    "PBratio": "1.16"
+  },
+  "建德工業": {
+    "stockId": "6606",
+    "name": "建德工業",
+    "PEratio": "20.23",
+    "DividendYield": "7.55",
+    "PBratio": "1.82"
+  },
+  "必應": {
+    "stockId": "6625",
+    "name": "必應",
+    "PEratio": "165.94",
+    "DividendYield": "",
+    "PBratio": "8.69"
+  },
+  "基士德-KY": {
+    "stockId": "6641",
+    "name": "基士德-KY",
+    "PEratio": "12.55",
+    "DividendYield": "7.11",
+    "PBratio": "1.18"
+  },
+  "科定": {
+    "stockId": "6655",
+    "name": "科定",
+    "PEratio": "26.05",
+    "DividendYield": "",
+    "PBratio": "4.33"
+  },
+  "華安": {
+    "stockId": "6657",
+    "name": "華安",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "8.88"
+  },
+  "羅麗芬-KY": {
+    "stockId": "6666",
+    "name": "羅麗芬-KY",
+    "PEratio": "73.19",
+    "DividendYield": "1.33",
+    "PBratio": "2.42"
+  },
+  "中揚光": {
+    "stockId": "6668",
+    "name": "中揚光",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.85"
+  },
+  "緯穎": {
+    "stockId": "6669",
+    "name": "緯穎",
+    "PEratio": "22.48",
+    "DividendYield": "2.57",
+    "PBratio": "8.09"
+  },
+  "復盛應用": {
+    "stockId": "6670",
+    "name": "復盛應用",
+    "PEratio": "6.35",
+    "DividendYield": "10.05",
+    "PBratio": "2.29"
+  },
+  "三能-KY": {
+    "stockId": "6671",
+    "name": "三能-KY",
+    "PEratio": "16.59",
+    "DividendYield": "4.73",
+    "PBratio": "1.61"
+  },
+  "騰輝電子-KY": {
+    "stockId": "6672",
+    "name": "騰輝電子-KY",
+    "PEratio": "14.97",
+    "DividendYield": "4.06",
+    "PBratio": "2.16"
+  },
+  "鋐寶科技": {
+    "stockId": "6674",
+    "name": "鋐寶科技",
+    "PEratio": "",
+    "DividendYield": "1.72",
+    "PBratio": "1.39"
+  },
+  "伊雲谷": {
+    "stockId": "6689",
+    "name": "伊雲谷",
+    "PEratio": "108.13",
+    "DividendYield": "2.11",
+    "PBratio": "3.19"
+  },
+  "洋基工程": {
+    "stockId": "6691",
+    "name": "洋基工程",
+    "PEratio": "14.89",
+    "DividendYield": "5.57",
+    "PBratio": "6.32"
+  },
+  "芯鼎": {
+    "stockId": "6695",
+    "name": "芯鼎",
+    "PEratio": "192.27",
+    "DividendYield": "",
+    "PBratio": "2.35"
+  },
+  "旭暉應材": {
+    "stockId": "6698",
+    "name": "旭暉應材",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.77"
+  },
+  "惠特": {
+    "stockId": "6706",
+    "name": "惠特",
+    "PEratio": "11.43",
+    "DividendYield": "4.58",
+    "PBratio": "1.44"
+  },
+  "嘉基": {
+    "stockId": "6715",
+    "name": "嘉基",
+    "PEratio": "13.97",
+    "DividendYield": "3.39",
+    "PBratio": "2.88"
+  },
+  "力智": {
+    "stockId": "6719",
+    "name": "力智",
+    "PEratio": "28.36",
+    "DividendYield": "3.87",
+    "PBratio": "2.36"
+  },
+  "安普新": {
+    "stockId": "6743",
+    "name": "安普新",
+    "PEratio": "585.45",
+    "DividendYield": "0.78",
+    "PBratio": "3.43"
+  },
+  "龍德造船": {
+    "stockId": "6753",
+    "name": "龍德造船",
+    "PEratio": "37.64",
+    "DividendYield": "1.00",
+    "PBratio": "3.99"
+  },
+  "匯僑設計": {
+    "stockId": "6754",
+    "name": "匯僑設計",
+    "PEratio": "10.51",
+    "DividendYield": "7.17",
+    "PBratio": "1.74"
+  },
+  "威鋒電子": {
+    "stockId": "6756",
+    "name": "威鋒電子",
+    "PEratio": "35.81",
+    "DividendYield": "3.21",
+    "PBratio": "6.01"
+  },
+  "志強-KY": {
+    "stockId": "6768",
+    "name": "志強-KY",
+    "PEratio": "8.32",
+    "DividendYield": "7.84",
+    "PBratio": "0.88"
+  },
+  "力積電": {
+    "stockId": "6770",
+    "name": "力積電",
+    "PEratio": "8.05",
+    "DividendYield": "3.42",
+    "PBratio": "1.29"
+  },
+  "展碁國際": {
+    "stockId": "6776",
+    "name": "展碁國際",
+    "PEratio": "10.82",
+    "DividendYield": "6.34",
+    "PBratio": "2.13"
+  },
+  "AES-KY": {
+    "stockId": "6781",
+    "name": "AES-KY",
+    "PEratio": "19.90",
+    "DividendYield": "2.64",
+    "PBratio": "4.60"
+  },
+  "視陽": {
+    "stockId": "6782",
+    "name": "視陽",
+    "PEratio": "23.21",
+    "DividendYield": "2.97",
+    "PBratio": "4.21"
+  },
+  "采鈺": {
+    "stockId": "6789",
+    "name": "采鈺",
+    "PEratio": "60.41",
+    "DividendYield": "0.79",
+    "PBratio": "4.70"
+  },
+  "永豐實": {
+    "stockId": "6790",
+    "name": "永豐實",
+    "PEratio": "18.97",
+    "DividendYield": "5.67",
+    "PBratio": "1.99"
+  },
+  "詠業": {
+    "stockId": "6792",
+    "name": "詠業",
+    "PEratio": "17.01",
+    "DividendYield": "5.90",
+    "PBratio": "2.63"
+  },
+  "晉弘": {
+    "stockId": "6796",
+    "name": "晉弘",
+    "PEratio": "53.38",
+    "DividendYield": "1.63",
+    "PBratio": "5.55"
+  },
+  "來頡": {
+    "stockId": "6799",
+    "name": "來頡",
+    "PEratio": "23.87",
+    "DividendYield": "2.03",
+    "PBratio": "4.97"
+  },
+  "森崴能源": {
+    "stockId": "6806",
+    "name": "森崴能源",
+    "PEratio": "100.45",
+    "DividendYield": "0.45",
+    "PBratio": "2.30"
+  },
+  "峰源-KY": {
+    "stockId": "6807",
+    "name": "峰源-KY",
+    "PEratio": "8.01",
+    "DividendYield": "6.73",
+    "PBratio": "0.80"
+  },
+  "汎銓": {
+    "stockId": "6830",
+    "name": "汎銓",
+    "PEratio": "29.17",
+    "DividendYield": "3.14",
+    "PBratio": "3.13"
+  },
+  "天二科技": {
+    "stockId": "6834",
+    "name": "天二科技",
+    "PEratio": "188.57",
+    "DividendYield": "4.17",
+    "PBratio": "1.48"
+  },
+  "圓裕": {
+    "stockId": "6835",
+    "name": "圓裕",
+    "PEratio": "11.26",
+    "DividendYield": "4.76",
+    "PBratio": "1.92"
+  },
+  "錼創科技-KY創": {
+    "stockId": "6854",
+    "name": "錼創科技-KY創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.87"
+  },
+  "睿生光電": {
+    "stockId": "6861",
+    "name": "睿生光電",
+    "PEratio": "22.23",
+    "DividendYield": "1.20",
+    "PBratio": "3.44"
+  },
+  "永道-KY": {
+    "stockId": "6863",
+    "name": "永道-KY",
+    "PEratio": "35.64",
+    "DividendYield": "1.22",
+    "PBratio": "2.36"
+  },
+  "雲豹能源-創": {
+    "stockId": "6869",
+    "name": "雲豹能源-創",
+    "PEratio": "24.12",
+    "DividendYield": "2.12",
+    "PBratio": "3.57"
+  },
+  "泓德能源-創": {
+    "stockId": "6873",
+    "name": "泓德能源-創",
+    "PEratio": "17.69",
+    "DividendYield": "3.48",
+    "PBratio": "2.27"
+  },
+  "走著瞧-創": {
+    "stockId": "6902",
+    "name": "走著瞧-創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": ""
+  },
+  "台通": {
+    "stockId": "8011",
+    "name": "台通",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.08"
+  },
+  "矽創": {
+    "stockId": "8016",
+    "name": "矽創",
+    "PEratio": "10.57",
+    "DividendYield": "10.00",
+    "PBratio": "2.87"
+  },
+  "尖點": {
+    "stockId": "8021",
+    "name": "尖點",
+    "PEratio": "19.62",
+    "DividendYield": "5.89",
+    "PBratio": "1.08"
+  },
+  "昇陽半導體": {
+    "stockId": "8028",
+    "name": "昇陽半導體",
+    "PEratio": "30.91",
+    "DividendYield": "2.79",
+    "PBratio": "3.23"
+  },
+  "雷虎": {
+    "stockId": "8033",
+    "name": "雷虎",
+    "PEratio": "6050.00",
+    "DividendYield": "",
+    "PBratio": "7.11"
+  },
+  "台虹": {
+    "stockId": "8039",
+    "name": "台虹",
+    "PEratio": "19.72",
+    "DividendYield": "5.95",
+    "PBratio": "1.18"
+  },
+  "南電": {
+    "stockId": "8046",
+    "name": "南電",
+    "PEratio": "9.62",
+    "DividendYield": "6.77",
+    "PBratio": "3.86"
+  },
+  "長華*": {
+    "stockId": "8070",
+    "name": "長華*",
+    "PEratio": "12.05",
+    "DividendYield": "7.96",
+    "PBratio": "1.75"
+  },
+  "陞泰": {
+    "stockId": "8072",
+    "name": "陞泰",
+    "PEratio": "26.20",
+    "DividendYield": "3.67",
+    "PBratio": "1.00"
+  },
+  "致新": {
+    "stockId": "8081",
+    "name": "致新",
+    "PEratio": "11.26",
+    "DividendYield": "7.14",
+    "PBratio": "3.00"
+  },
+  "華冠": {
+    "stockId": "8101",
+    "name": "華冠",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.69"
+  },
+  "瀚荃": {
+    "stockId": "8103",
+    "name": "瀚荃",
+    "PEratio": "10.55",
+    "DividendYield": "5.46",
+    "PBratio": "0.98"
+  },
+  "錸寶": {
+    "stockId": "8104",
+    "name": "錸寶",
+    "PEratio": "42.45",
+    "DividendYield": "3.68",
+    "PBratio": "1.43"
+  },
+  "凌巨": {
+    "stockId": "8105",
+    "name": "凌巨",
+    "PEratio": "14.32",
+    "DividendYield": "1.27",
+    "PBratio": "0.90"
+  },
+  "華東": {
+    "stockId": "8110",
+    "name": "華東",
+    "PEratio": "30.11",
+    "DividendYield": "1.08",
+    "PBratio": "0.69"
+  },
+  "至上": {
+    "stockId": "8112",
+    "name": "至上",
+    "PEratio": "14.28",
+    "DividendYield": "9.28",
+    "PBratio": "1.79"
+  },
+  "振樺電": {
+    "stockId": "8114",
+    "name": "振樺電",
+    "PEratio": "12.39",
+    "DividendYield": "6.00",
+    "PBratio": "2.30"
+  },
+  "福懋科": {
+    "stockId": "8131",
+    "name": "福懋科",
+    "PEratio": "9.90",
+    "DividendYield": "8.07",
+    "PBratio": "1.56"
+  },
+  "南茂": {
+    "stockId": "8150",
+    "name": "南茂",
+    "PEratio": "10.98",
+    "DividendYield": "6.49",
+    "PBratio": "1.03"
+  },
+  "達方": {
+    "stockId": "8163",
+    "name": "達方",
+    "PEratio": "12.05",
+    "DividendYield": "6.59",
+    "PBratio": "1.28"
+  },
+  "無敵": {
+    "stockId": "8201",
+    "name": "無敵",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.05"
+  },
+  "勤誠": {
+    "stockId": "8210",
+    "name": "勤誠",
+    "PEratio": "26.27",
+    "DividendYield": "2.04",
+    "PBratio": "4.77"
+  },
+  "志超": {
+    "stockId": "8213",
+    "name": "志超",
+    "PEratio": "9.91",
+    "DividendYield": "5.95",
+    "PBratio": "0.76"
+  },
+  "明基材": {
+    "stockId": "8215",
+    "name": "明基材",
+    "PEratio": "12.71",
+    "DividendYield": "4.80",
+    "PBratio": "2.44"
+  },
+  "寶一": {
+    "stockId": "8222",
+    "name": "寶一",
+    "PEratio": "109.13",
+    "DividendYield": "",
+    "PBratio": "4.44"
+  },
+  "菱光": {
+    "stockId": "8249",
+    "name": "菱光",
+    "PEratio": "11.90",
+    "DividendYield": "5.83",
+    "PBratio": "0.97"
+  },
+  "富鼎": {
+    "stockId": "8261",
+    "name": "富鼎",
+    "PEratio": "17.15",
+    "DividendYield": "5.10",
+    "PBratio": "2.06"
+  },
+  "宇瞻": {
+    "stockId": "8271",
+    "name": "宇瞻",
+    "PEratio": "12.55",
+    "DividendYield": "6.10",
+    "PBratio": "1.71"
+  },
+  "日友": {
+    "stockId": "8341",
+    "name": "日友",
+    "PEratio": "22.67",
+    "DividendYield": "5.32",
+    "PBratio": "4.69"
+  },
+  "建新國際": {
+    "stockId": "8367",
+    "name": "建新國際",
+    "PEratio": "13.67",
+    "DividendYield": "5.73",
+    "PBratio": "1.25"
+  },
+  "羅昇": {
+    "stockId": "8374",
+    "name": "羅昇",
+    "PEratio": "85.97",
+    "DividendYield": "1.62",
+    "PBratio": "1.74"
+  },
+  "百和興業-KY": {
+    "stockId": "8404",
+    "name": "百和興業-KY",
+    "PEratio": "27.26",
+    "DividendYield": "3.06",
+    "PBratio": "1.32"
+  },
+  "福貞-KY": {
+    "stockId": "8411",
+    "name": "福貞-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.57"
+  },
+  "可寧衛": {
+    "stockId": "8422",
+    "name": "可寧衛",
+    "PEratio": "15.12",
+    "DividendYield": "5.16",
+    "PBratio": "3.81"
+  },
+  "金麗-KY": {
+    "stockId": "8429",
+    "name": "金麗-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.32"
+  },
+  "昶昕": {
+    "stockId": "8438",
+    "name": "昶昕",
+    "PEratio": "24.86",
+    "DividendYield": "3.87",
+    "PBratio": "1.05"
+  },
+  "威宏-KY": {
+    "stockId": "8442",
+    "name": "威宏-KY",
+    "PEratio": "7.49",
+    "DividendYield": "6.20",
+    "PBratio": "1.95"
+  },
+  "阿瘦": {
+    "stockId": "8443",
+    "name": "阿瘦",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.98"
+  },
+  "富邦媒": {
+    "stockId": "8454",
+    "name": "富邦媒",
+    "PEratio": "41.54",
+    "DividendYield": "2.26",
+    "PBratio": "13.64"
+  },
+  "柏文": {
+    "stockId": "8462",
+    "name": "柏文",
+    "PEratio": "",
+    "DividendYield": "1.00",
+    "PBratio": "7.27"
+  },
+  "潤泰材": {
+    "stockId": "8463",
+    "name": "潤泰材",
+    "PEratio": "33.42",
+    "DividendYield": "0.91",
+    "PBratio": "1.78"
+  },
+  "億豐": {
+    "stockId": "8464",
+    "name": "億豐",
+    "PEratio": "17.34",
+    "DividendYield": "3.21",
+    "PBratio": "4.43"
+  },
+  "美吉吉-KY": {
+    "stockId": "8466",
+    "name": "美吉吉-KY",
+    "PEratio": "60.61",
+    "DividendYield": "3.02",
+    "PBratio": "1.33"
+  },
+  "波力-KY": {
+    "stockId": "8467",
+    "name": "波力-KY",
+    "PEratio": "8.61",
+    "DividendYield": "7.22",
+    "PBratio": "2.09"
+  },
+  "山林水": {
+    "stockId": "8473",
+    "name": "山林水",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.82"
+  },
+  "東哥遊艇": {
+    "stockId": "8478",
+    "name": "東哥遊艇",
+    "PEratio": "26.14",
+    "DividendYield": "1.70",
+    "PBratio": "9.85"
+  },
+  "政伸": {
+    "stockId": "8481",
+    "name": "政伸",
+    "PEratio": "14.97",
+    "DividendYield": "6.93",
+    "PBratio": "2.41"
+  },
+  "商億-KY": {
+    "stockId": "8482",
+    "name": "商億-KY",
+    "PEratio": "10.61",
+    "DividendYield": "8.99",
+    "PBratio": "2.02"
+  },
+  "吉源-KY": {
+    "stockId": "8488",
+    "name": "吉源-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.48"
+  },
+  "鼎炫-KY": {
+    "stockId": "8499",
+    "name": "鼎炫-KY",
+    "PEratio": "7.74",
+    "DividendYield": "1.92",
+    "PBratio": "0.71"
+  },
+  "台汽電": {
+    "stockId": "8926",
+    "name": "台汽電",
+    "PEratio": "23.76",
+    "DividendYield": "2.86",
+    "PBratio": "2.50"
+  },
+  "新天地": {
+    "stockId": "8940",
+    "name": "新天地",
+    "PEratio": "80.00",
+    "DividendYield": "",
+    "PBratio": "2.91"
+  },
+  "高力": {
+    "stockId": "8996",
+    "name": "高力",
+    "PEratio": "80.16",
+    "DividendYield": "0.44",
+    "PBratio": "14.85"
+  },
+  "鈺齊-KY": {
+    "stockId": "9802",
+    "name": "鈺齊-KY",
+    "PEratio": "6.94",
+    "DividendYield": "5.93",
+    "PBratio": "1.93"
+  },
+  "台火": {
+    "stockId": "9902",
+    "name": "台火",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.98"
+  },
+  "寶成": {
+    "stockId": "9904",
+    "name": "寶成",
+    "PEratio": "9.89",
+    "DividendYield": "4.31",
+    "PBratio": "0.78"
+  },
+  "大華": {
+    "stockId": "9905",
+    "name": "大華",
+    "PEratio": "17.60",
+    "DividendYield": "4.67",
+    "PBratio": "1.03"
+  },
+  "欣巴巴": {
+    "stockId": "9906",
+    "name": "欣巴巴",
+    "PEratio": "14.86",
+    "DividendYield": "8.03",
+    "PBratio": "4.71"
+  },
+  "統一實": {
+    "stockId": "9907",
+    "name": "統一實",
+    "PEratio": "14.84",
+    "DividendYield": "8.18",
+    "PBratio": "1.34"
+  },
+  "大台北": {
+    "stockId": "9908",
+    "name": "大台北",
+    "PEratio": "19.34",
+    "DividendYield": "3.27",
+    "PBratio": "1.33"
+  },
+  "豐泰": {
+    "stockId": "9910",
+    "name": "豐泰",
+    "PEratio": "22.33",
+    "DividendYield": "4.53",
+    "PBratio": "6.77"
+  },
+  "櫻花": {
+    "stockId": "9911",
+    "name": "櫻花",
+    "PEratio": "14.71",
+    "DividendYield": "5.89",
+    "PBratio": "2.33"
+  },
+  "偉聯": {
+    "stockId": "9912",
+    "name": "偉聯",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.32"
+  },
+  "美利達": {
+    "stockId": "9914",
+    "name": "美利達",
+    "PEratio": "24.32",
+    "DividendYield": "3.13",
+    "PBratio": "3.18"
+  },
+  "中保科": {
+    "stockId": "9917",
+    "name": "中保科",
+    "PEratio": "20.02",
+    "DividendYield": "4.44",
+    "PBratio": "3.91"
+  },
+  "欣天然": {
+    "stockId": "9918",
+    "name": "欣天然",
+    "PEratio": "39.17",
+    "DividendYield": "2.34",
+    "PBratio": "2.57"
+  },
+  "康那香": {
+    "stockId": "9919",
+    "name": "康那香",
+    "PEratio": "",
+    "DividendYield": "0.80",
+    "PBratio": "1.63"
+  },
+  "巨大": {
+    "stockId": "9921",
+    "name": "巨大",
+    "PEratio": "19.37",
+    "DividendYield": "3.25",
+    "PBratio": "2.74"
+  },
+  "福興": {
+    "stockId": "9924",
+    "name": "福興",
+    "PEratio": "9.13",
+    "DividendYield": "6.74",
+    "PBratio": "1.30"
+  },
+  "新保": {
+    "stockId": "9925",
+    "name": "新保",
+    "PEratio": "16.75",
+    "DividendYield": "4.80",
+    "PBratio": "1.49"
+  },
+  "新海": {
+    "stockId": "9926",
+    "name": "新海",
+    "PEratio": "21.69",
+    "DividendYield": "3.62",
+    "PBratio": "2.67"
+  },
+  "泰銘": {
+    "stockId": "9927",
+    "name": "泰銘",
+    "PEratio": "12.36",
+    "DividendYield": "8.45",
+    "PBratio": "1.43"
+  },
+  "中視": {
+    "stockId": "9928",
+    "name": "中視",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.87"
+  },
+  "秋雨": {
+    "stockId": "9929",
+    "name": "秋雨",
+    "PEratio": "45.00",
+    "DividendYield": "",
+    "PBratio": "1.14"
+  },
+  "中聯資源": {
+    "stockId": "9930",
+    "name": "中聯資源",
+    "PEratio": "17.82",
+    "DividendYield": "4.63",
+    "PBratio": "2.20"
+  },
+  "欣高": {
+    "stockId": "9931",
+    "name": "欣高",
+    "PEratio": "27.91",
+    "DividendYield": "2.91",
+    "PBratio": "1.89"
+  },
+  "中鼎": {
+    "stockId": "9933",
+    "name": "中鼎",
+    "PEratio": "19.95",
+    "DividendYield": "4.76",
+    "PBratio": "1.94"
+  },
+  "成霖": {
+    "stockId": "9934",
+    "name": "成霖",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.02"
+  },
+  "慶豐富": {
+    "stockId": "9935",
+    "name": "慶豐富",
+    "PEratio": "17.05",
+    "DividendYield": "4.51",
+    "PBratio": "1.58"
+  },
+  "全國": {
+    "stockId": "9937",
+    "name": "全國",
+    "PEratio": "29.04",
+    "DividendYield": "3.17",
+    "PBratio": "3.67"
+  },
+  "百和": {
+    "stockId": "9938",
+    "name": "百和",
+    "PEratio": "13.63",
+    "DividendYield": "4.59",
+    "PBratio": "1.36"
+  },
+  "宏全": {
+    "stockId": "9939",
+    "name": "宏全",
+    "PEratio": "14.09",
+    "DividendYield": "4.62",
+    "PBratio": "2.11"
+  },
+  "信義": {
+    "stockId": "9940",
+    "name": "信義",
+    "PEratio": "17.46",
+    "DividendYield": "4.07",
+    "PBratio": "1.76"
+  },
+  "裕融": {
+    "stockId": "9941",
+    "name": "裕融",
+    "PEratio": "21.54",
+    "DividendYield": "3.07",
+    "PBratio": "3.71"
+  },
+  "茂順": {
+    "stockId": "9942",
+    "name": "茂順",
+    "PEratio": "17.43",
+    "DividendYield": "3.70",
+    "PBratio": "3.42"
+  },
+  "好樂迪": {
+    "stockId": "9943",
+    "name": "好樂迪",
+    "PEratio": "20.74",
+    "DividendYield": "3.58",
+    "PBratio": "3.27"
+  },
+  "新麗": {
+    "stockId": "9944",
+    "name": "新麗",
+    "PEratio": "4.70",
+    "DividendYield": "4.95",
+    "PBratio": "0.62"
+  },
+  "潤泰新": {
+    "stockId": "9945",
+    "name": "潤泰新",
+    "PEratio": "20.08",
+    "DividendYield": "",
+    "PBratio": "1.30"
+  },
+  "三發地產": {
+    "stockId": "9946",
+    "name": "三發地產",
+    "PEratio": "35.51",
+    "DividendYield": "3.10",
+    "PBratio": "0.69"
+  },
+  "佳龍": {
+    "stockId": "9955",
+    "name": "佳龍",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.78"
+  },
+  "世紀鋼": {
+    "stockId": "9958",
+    "name": "世紀鋼",
+    "PEratio": "436.36",
+    "DividendYield": "0.35",
+    "PBratio": "4.80"
+  }
+}

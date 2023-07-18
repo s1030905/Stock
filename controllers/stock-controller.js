@@ -6,6 +6,7 @@ const {
 } = require("../helpers/stock");
 const fiftyData = require("../fifty.json");
 const fiftySixData = require("../fiftysix.json");
+const stockNameList = require("../stock-name-list.json");
 const { Stock } = require("../models");
 const { formattedDate } = require("../helpers/date");
 
@@ -133,7 +134,6 @@ const stockController = {
     try {
       const { id } = req.params;
       const stock = await Stock.findOne({ where: { stockId: id } });
-      console.log(stock);
       if (!stock) {
         req.flash(
           "error_messages",
@@ -158,8 +158,16 @@ const stockController = {
         req.flash("error_messages", "請輸入正確股票代號");
         return res.redirect("/");
       }
+      // 輸入值為中文
+      if (stockId[0].charCodeAt() < 49 || stockId[0].charCodeAt() > 57) {
+        stockId = stockNameList[stockId]["stockId"];
+        if (!stockId) {
+          req.flash("error_messages", "請輸入正確股票代號");
+          return res.redirect("/");
+        }
+        return res.redirect(`/stock/search?stockId=${stockId}`);
+      }
       const { response, timestamp, price } = await getStock(stockId);
-
       const date = timestamp.map((e) => {
         const str = formattedDate(e);
         const year = str.slice(0, 4);
@@ -187,7 +195,8 @@ const stockController = {
       }
       return res.render("getStock", { data, title, stockId });
     } catch (error) {
-      next(error.response.status);
+      // next(error.response.status);
+      next(error);
     }
   },
 };

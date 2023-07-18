@@ -13,7 +13,7 @@ const handlebarsHelpers = require("./helpers/handlebars-helpers");
 const passport = require("./config/passport");
 
 // 變數軒高
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const app = express();
 
 // view engine設定
@@ -42,8 +42,6 @@ app.use(passport.session());
 // flash
 app.use(flash());
 app.use((req, res, next) => {
-  // console.log("----------------------------------req.user");
-  // console.log(req.user);
   res.locals.user = req.user;
   res.locals.isAuthenticated = req.isAuthenticated();
   res.locals.error_messages = req.flash("error_messages");
@@ -55,5 +53,5 @@ app.use(pages);
 
 // listen on port
 app.listen(port, () => {
-  console.log(`listening on ${port}`);
+  console.log(`listening on http://localhost:${port}`);
 });

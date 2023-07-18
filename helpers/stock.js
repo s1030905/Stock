@@ -32,6 +32,7 @@ const getForeignBuy = async function () {
     let n = 1;
     let response = await axios.get(url);
     let data = response.data;
+
     while (data.total === 0) {
       tradeDay = taiwanTime.clone().subtract(n, "day").format("YYYYMMDD");
       url =
@@ -91,7 +92,6 @@ const stockList = async function () {
   });
   return dic;
 };
-
 module.exports = {
   getStock,
   getForeignBuy,

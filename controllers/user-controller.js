@@ -27,8 +27,6 @@ const userController = {
   },
   login: (req, res, next) => {
     try {
-      // console.log("login--------------------");
-      // console.log(req.user);
       return res.redirect("/");
     } catch (error) {
       next(error);

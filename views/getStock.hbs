@@ -10,7 +10,15 @@
 
 <br>
 <br>
-
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/stock/search?stockId={{stockId}}">Price</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="news" href="#">News</a>
+  </li>
+</ul>
+<div id="table-container">
 <table class="table">
   <thead>
     <tr>
@@ -39,5 +47,7 @@
     {{/each}}
   </tbody>
 </table>
+</div>
 
+<script src="/javascripts/news.js"></script>
 <script src="/javascripts/chart.js"></script>
