@@ -3,6 +3,7 @@ const { getStock, stockList } = require("../../helpers/stock");
 const { formattedDate } = require("../../helpers/date");
 const { authenticator } = require("../../middleware/auth");
 const { apiErrorHandler } = require("../../middleware/error-handler");
+const { crawler } = require("../../helpers/news");
 
 router.get("/stock/userStock", authenticator, async (req, res, next) => {
   try {
@@ -43,6 +44,21 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
       compare.push(ratio);
     }
     return res.json({ compare, date, stockId, stockName });
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get("/stock/:id/news", authenticator, async (req, res, next) => {
+  try {
+    // http://localhost:3000/api/stock/userStock
+    // http://localhost:3000/api/stock/2330/news
+    const { id } = req.params;
+    console.log(id);
+    const dic = await stockList();
+    const stockName = dic[id]["name"];
+    const news = await crawler(stockName);
+    res.json(news);
   } catch (error) {
     next(error);
   }
