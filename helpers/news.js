@@ -41,6 +41,9 @@ const getStockNews = async (stockName, page = 1) => {
     let url = `https://money.udn.com/search/result/1001/${keyword}/${page}`;
     let pageNews = await crawler(stockName, url);
     data = data.concat(pageNews);
+    if (page >= 5 && data.length < target) {
+      return data;
+    }
     if (data.length > target) {
       data.splice(target - data.length);
     }

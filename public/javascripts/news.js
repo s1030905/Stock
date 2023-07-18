@@ -12,7 +12,6 @@ const getStockNews = async () => {
   // 發送 API 請求
   const response = await fetch(`/api/stock/${stockId}/news`);
   const data = await response.json();
-
   // 解析資料，生成新聞列表的 HTML 內容
   let newsList = ``;
   let index = 1;
@@ -26,13 +25,13 @@ const getStockNews = async () => {
     index++;
   }
 
-  // 將新聞列表插入到網頁中的某個容器元素中
+  // 將新聞列表插入到table
   const newsContainer = document.querySelector("#table-container");
   newsContainer.innerHTML = `<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">標題</th>
+      <th scope="col">標題 (資料來源: 經濟日報)</th>
       <th scope="col">時間</th>
     </tr>
   </thead>
@@ -40,6 +39,23 @@ const getStockNews = async () => {
     ${newsList}
   </tbody>
 </table>`;
+
+  // 重新載入頁面
+  if (data.length < 10) {
+    const navTab = document.querySelector(".nav-tabs");
+    const error_messages = `
+      <br/>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      "近期與新聞標題包含該股票相關新聞少於 10 則"
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>`;
+    navTab.insertAdjacentHTML("afterend", error_messages);
+  }
 };
 
 newsBtn.addEventListener("click", (event) => {

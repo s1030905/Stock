@@ -51,8 +51,6 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
 
 router.get("/stock/:id/news", authenticator, async (req, res, next) => {
   try {
-    // http://localhost:3000/api/stock/userStock
-    // http://localhost:3000/api/stock/2330/news
     const { id } = req.params;
     const dic = await stockList();
     const stockName = dic[id]["name"];
