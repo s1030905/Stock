@@ -48,12 +48,4 @@ const getStockNews = async (stockName, page = 1) => {
   }
   return data;
 };
-(async () => {
-  try {
-    const data = await getStockNews("黑松");
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-})();
 module.exports = { getStockNews };

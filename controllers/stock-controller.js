@@ -134,7 +134,6 @@ const stockController = {
     try {
       const { id } = req.params;
       const stock = await Stock.findOne({ where: { stockId: id } });
-      console.log(stock);
       if (!stock) {
         req.flash(
           "error_messages",

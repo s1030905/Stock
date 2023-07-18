@@ -31,12 +31,5 @@ const ctx = document.getElementById("container");
       labels: date,
       datasets: datasets,
     },
-    options: {
-      plugins: {
-        rough: {
-          enabled: true,
-        },
-      },
-    },
   });
 })();
