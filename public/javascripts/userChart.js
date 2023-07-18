@@ -31,5 +31,29 @@ const ctx = document.getElementById("container");
       labels: date,
       datasets: datasets,
     },
+    options: {
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "日期",
+            font: {
+              size: 14,
+              weight: "bold",
+            },
+          },
+        },
+        y: {
+          title: {
+            display: true,
+            text: "%",
+            font: {
+              size: 14,
+              weight: "bold",
+            },
+          },
+        },
+      },
+    },
   });
 })();

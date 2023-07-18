@@ -23,8 +23,8 @@
     {{#each data}}
       <tr>
         <th scope="row">{{addIndex @index}}</th>
-        <td><a href="http://localhost:3000/stock/search?stockId={{this.stockId}}">{{this.stockId}}</a></td>
-        <td>{{this.name}}</td>
+        <td><a href="/stock/search?stockId={{this.stockId}}">{{this.stockId}}</a></td>
+        <td><a href="/stock/search?stockId={{this.stockId}}">{{this.name}}</a></td>
         <td>{{this.PEratio}}</td>
         <td>{{this.PBratio}}</td>
         <td>{{this.DividendYield}}</td>

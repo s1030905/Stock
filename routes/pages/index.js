@@ -10,7 +10,7 @@ const axios = require("axios");
 //簡易選股策略頁面
 router.use("/stock", authenticator, stock);
 
-//login
+//登入
 router.get("/login", (req, res) => {
   res.render("login");
 });
@@ -24,6 +24,7 @@ router.post(
   userController.login
 );
 
+//登出
 router.get("/logout", (req, res, next) => {
   try {
     req.logout((err) => {
