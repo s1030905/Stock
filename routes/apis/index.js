@@ -40,7 +40,7 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
         return acc + curr;
       }, 0);
       const avg = sum / price[0].close.length;
-      const ratio = price[0].close.map((e) => (e / avg).toFixed(2));
+      const ratio = price[0].close.map((e) => (e / avg).toFixed(4) * 100 - 100);
       compare.push(ratio);
     }
     return res.json({ compare, date, stockId, stockName });

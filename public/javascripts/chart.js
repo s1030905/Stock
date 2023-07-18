@@ -1,7 +1,8 @@
 const ctx = document.getElementById("myChart");
 (async () => {
   const queryString = window.location.search;
-  const stockId = queryString.slice(-4);
+  const index = queryString.indexOf("=");
+  const stockId = queryString.slice(index + 1);
   const response = await fetch(`/api/stock/${stockId}`);
   const records = await response.json();
   const { highLow, date, color, openEnd, max, min } = records;

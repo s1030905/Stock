@@ -159,7 +159,7 @@ const stockController = {
         return res.redirect("/");
       }
       // 輸入值為中文
-      if (stockId[0].charCodeAt() < 49 || stockId[0].charCodeAt() > 57) {
+      if (stockId[0].charCodeAt() < 48 || stockId[0].charCodeAt() > 57) {
         stockId = stockNameList[stockId]["stockId"];
         if (!stockId) {
           req.flash("error_messages", "請輸入正確股票代號");
