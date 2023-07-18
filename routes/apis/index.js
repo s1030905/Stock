@@ -52,8 +52,10 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
 router.get("/stock/:id/news", authenticator, async (req, res, next) => {
   try {
     const { id } = req.params;
+    // 取得中文名稱
     const dic = await stockList();
     const stockName = dic[id]["name"];
+    // 取得相關新聞
     const news = await getStockNews(stockName);
     return res.json(news);
   } catch (error) {

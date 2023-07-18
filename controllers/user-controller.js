@@ -6,6 +6,7 @@ const userController = {
     try {
       const errors = [];
       const { name, account, password, passwordCheck } = req.body;
+      // 錯誤處理
       if ((!name || !account, !password, !passwordCheck))
         errors.push = "每個欄位都必填";
       if (password !== passwordCheck) errors.push("密碼與確認密碼不一致");
@@ -15,6 +16,7 @@ const userController = {
         req.flash("error_messages", errors);
         return res.redirect("/signup");
       }
+      // 帳號建立
       await User.create({
         name,
         account,
