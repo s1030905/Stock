@@ -190,6 +190,7 @@ const stockController = {
       const data = {};
       const dic = await stockList(stockId);
       const title = dic[stockId].name;
+      console.log(price[0]);
       for (let i = 0; i < date.length; i++) {
         data[date[i]] = {
           date: date[i],
@@ -203,7 +204,7 @@ const stockController = {
       }
       return res.render("getStock", { data, title, stockId });
     } catch (error) {
-      next(error.response.status);
+      next(error);
     }
   },
 };
