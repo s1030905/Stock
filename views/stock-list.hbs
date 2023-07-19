@@ -16,8 +16,8 @@
     {{#each data}}
       <tr>
         <th scope="row">{{addIndex @index}}</th>
-        <td>{{this.id}}</td>
-        <td>{{this.name}}</td>
+        <td><a href="/stock/search?stockId={{this.id}}">{{this.id}}</a></td>
+        <td><a href="/stock/search?stockId={{this.id}}">{{this.name}}</a></td>
         <td>{{this.weight}}</td>
         <td>
           <form action="/stock/{{this.id}}" method="post">
