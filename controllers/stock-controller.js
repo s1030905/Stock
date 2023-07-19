@@ -184,7 +184,8 @@ const stockController = {
       // 與昨日價格差
       const diff = ["N/A"];
       for (let i = 1; i < date.length; i++) {
-        diff.push((price[0].close[i] - price[0].close[i - 1]).toFixed(2));
+        if (!price[0].close[i]) diff.push("N/A");
+        else diff.push((price[0].close[i] - price[0].close[i - 1]).toFixed(2));
       }
       // 輸出資料格式整理
       const data = {};
@@ -203,7 +204,7 @@ const stockController = {
       }
       return res.render("getStock", { data, title, stockId });
     } catch (error) {
-      next(error.response.status);
+      next(error);
     }
   },
 };
