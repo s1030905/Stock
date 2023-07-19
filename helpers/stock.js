@@ -21,6 +21,7 @@ const getStock = async function (stockNo) {
 
   return { response, timestamp, price };
 };
+
 // 外資今日買超
 const getForeignBuy = async function () {
   //日期
