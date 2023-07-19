@@ -1,5 +1,4 @@
 const axios = require("axios");
-const url = "https://openapi.twse.com.tw/v1/get_exchangeReport/BWIBBU_ALL";
 // 大盤行情
 //  "https://openapi.twse.com.tw/v1/get_exchangeReport_BWIBBU_ALL"
 // 大盤行情
@@ -16,22 +15,25 @@ const url = "https://openapi.twse.com.tw/v1/get_exchangeReport/BWIBBU_ALL";
 //   data = res.data.slice(0, 10);
 //   console.log(data);
 // })();
-const yahooFinance = require("yahoo-finance2").default;
-require = require("esm")(module);
-const stockChart = require("./helpers/stockChart.mjs");
-console.log(stockChart());
 
-async function getStockInfo() {
-  try {
-    // const stockInfo = await yahooFinance.quote({
-    //   symbol: "2330.TW", // 股票代號.TW
-    //   modules: ["price", "summaryDetail"],
-    // });
-    const stockInfo = await yahooFinance.quote("AAPL");
-    // console.log(stockInfo);
-  } catch (error) {
-    console.error(error);
-  }
-}
+// async function getStockInfo() {
+//   try {
+//     let url =
+//       "https://query1.finance.yahoo.com/v8/finance/chart/2330.TW?period1=1686153600&period2=1688745600&interval=1d&events=history";
+//     const stockInfo = await axios.get(url);
+//     console.log(stockInfo.data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
-getStockInfo();
+// getStockInfo();
+const a = "?stockId=00878";
+const b = "台積電";
+const l = a.indexOf("=");
+console.log(a.indexOf("="));
+console.log(a.slice(l));
+// -------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------
+
+// let url = `https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=${tradeDay}&stockNo=${stockNo}&response=json`;
