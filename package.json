@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "repository": "https://github.com/s1030905/Stock",
+  "private": false,
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
@@ -10,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@line/bot-sdk": "^7.5.2",
     "axios": "^1.4.0",
