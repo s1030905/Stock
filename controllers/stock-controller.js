@@ -4,9 +4,9 @@ const {
   getStock,
   stockList,
 } = require("../helpers/stock");
-const fiftyData = require("../fifty.json");
-const fiftySixData = require("../fiftysix.json");
-const stockNameList = require("../stock-name-list.json");
+const fiftyData = require("../public/data/fifty.json");
+const fiftySixData = require("../public/data/fiftySix.json");
+const stockNameList = require("../public/data/stock-name-list.json");
 const { Stock } = require("../models");
 const { formattedDate } = require("../helpers/date");
 
