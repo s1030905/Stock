@@ -3,25 +3,65 @@ const btn = document.querySelector("#col");
 btn.addEventListener("click", async (event) => {
   const response = await fetch(`/api/stock/index`);
   const result = await response.json();
+  let data;
+  // 漲跌點數排序
   if (event.target.id === "fluctuations") {
-    let data = result["data"].sort((a, b) => {
-      return (
-        Number(a["漲跌"] + a["漲跌點數"]) - Number(b["漲跌"] + b["漲跌點數"])
+    const sortDirection = event.target.getAttribute("data-sort");
+    // 由大到小
+    if (sortDirection === "desc") {
+      data = result["data"].sort(
+        (a, b) =>
+          Number(b["漲跌"] + b["漲跌點數"]) - Number(a["漲跌"] + a["漲跌點數"])
       );
-    });
-    display(data);
+      event.target.setAttribute("data-sort", "asc");
+      display(data);
+      // 由小到大
+    } else {
+      data = result["data"].sort(
+        (a, b) =>
+          Number(a["漲跌"] + a["漲跌點數"]) - Number(b["漲跌"] + b["漲跌點數"])
+      );
+      event.target.setAttribute("data-sort", "desc");
+      display(data);
+    }
   }
+  // 漲跌百分比排序
   if (event.target.id === "fluctuations-percent") {
-    let data = result["data"].sort((a, b) => {
-      return Number(a["漲跌百分比"]) - Number(b["漲跌百分比"]);
-    });
-    display(data);
+    const sortDirection = event.target.getAttribute("data-sort");
+    // 由大到小
+    if (sortDirection === "desc") {
+      data = result["data"].sort(
+        (a, b) => Number(a["漲跌百分比"]) - Number(b["漲跌百分比"])
+      );
+      event.target.setAttribute("data-sort", "asc");
+      display(data);
+      // 由小到大
+    } else {
+      data = result["data"].sort(
+        (a, b) => Number(b["漲跌百分比"]) - Number(a["漲跌百分比"])
+      );
+      event.target.setAttribute("data-sort", "desc");
+      display(data);
+    }
   }
+  // 收盤指數排序
   if (event.target.id === "index-close") {
-    let data = result["data"].sort((a, b) => {
-      return Number(a["收盤指數"]) - Number(b["收盤指數"]);
-    });
-    display(data);
+    const sortDirection = event.target.getAttribute("data-sort");
+    // 由大到小
+    if (sortDirection === "desc") {
+      data = result["data"].sort(
+        (a, b) => Number(a["收盤指數"]) - Number(b["收盤指數"])
+      );
+      event.target.setAttribute("data-sort", "asc");
+      display(data);
+      // 由小到大
+    } else {
+      data = result["data"].sort(
+        (a, b) => Number(b["收盤指數"]) - Number(a["收盤指數"])
+      );
+      event.target.setAttribute("data-sort", "desc");
+      display(data);
+    }
   }
 });
 const display = (data) => {
@@ -49,4 +89,3 @@ const display = (data) => {
     }
   }
 };
-// {{#ifCondition this.漲跌百分比}}{{/ifCondition}}
