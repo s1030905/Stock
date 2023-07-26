@@ -182,9 +182,9 @@ const stockController = {
         return `${year}/${month}/${date}`;
       });
       // 與昨日價格差
-      const diff = ["N/A"];
+      const diff = ["--"];
       for (let i = 1; i < date.length; i++) {
-        if (!price[0].close[i]) diff.push("N/A");
+        if (!price[0].close[i]) diff.push("--");
         else diff.push((price[0].close[i] - price[0].close[i - 1]).toFixed(2));
       }
       // 輸出資料格式整理
@@ -194,12 +194,12 @@ const stockController = {
       for (let i = 0; i < date.length; i++) {
         data[date[i]] = {
           date: date[i],
-          volume: price[0].volume[i],
-          open: price[0].open[i].toFixed(2),
-          high: price[0].high[i].toFixed(2),
-          low: price[0].low[i].toFixed(2),
-          close: price[0].close[i].toFixed(2),
-          diff: diff[i],
+          volume: price[0].volume[i] ? price[0].volume[i] : "--",
+          open: price[0].open[i] ? price[0].open[i].toFixed(2) : "--",
+          high: price[0].high[i] ? price[0].high[i].toFixed(2) : "--",
+          low: price[0].low[i] ? price[0].low[i].toFixed(2) : "--",
+          close: price[0].close[i] ? price[0].close[i].toFixed(2) : "--",
+          diff: diff[i] ? diff[i] : "--",
         };
       }
       return res.render("getStock", { data, title, stockId });
