@@ -36,8 +36,8 @@ const ctx = document.getElementById("myChart");
     options: {
       scales: {
         y: {
-          min: Math.round(min) - (Math.round(max) - Math.round(min)), // y 軸的最小值
-          max: Math.round(max) + (Math.round(max) - Math.round(min)), // y 軸的最大值
+          min: Math.round(min - (max - min)), // y 軸的最小值
+          max: Math.round(max + (max - min)), // y 軸的最大值
         },
       },
     },
