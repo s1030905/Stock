@@ -7,7 +7,6 @@ const ctx = document.getElementById("myChart");
   const records = await response.json();
   const { highLow, date, color, openEnd, max, min } = records;
   const [red, green, black] = ["red", "green", "black"];
-  console.log(max, min);
   const myChart = new Chart(ctx, {
     type: "bar",
     data: {
