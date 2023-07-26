@@ -6,8 +6,15 @@ btn.addEventListener("click", async (event) => {
   let data;
   // 漲跌點數排序
   if (event.target.id === "fluctuations") {
-    const sortDirection = event.target.getAttribute("data-sort");
+    // 選中變色
+    const allBtn = document.querySelectorAll(".btn");
+    for (const i of allBtn) {
+      i.removeAttribute("style");
+    }
+    event.target.setAttribute("style", "color: blue; font-weight: bold;");
+
     // 由大到小
+    const sortDirection = event.target.getAttribute("data-sort");
     if (sortDirection === "desc") {
       data = result["data"].sort(
         (a, b) =>
@@ -25,10 +32,18 @@ btn.addEventListener("click", async (event) => {
       display(data);
     }
   }
+
   // 漲跌百分比排序
   if (event.target.id === "fluctuations-percent") {
-    const sortDirection = event.target.getAttribute("data-sort");
+    // 選中變色
+    const allBtn = document.querySelectorAll(".btn");
+    for (const i of allBtn) {
+      i.removeAttribute("style");
+    }
+    event.target.setAttribute("style", "color: blue; font-weight: bold;");
+
     // 由大到小
+    const sortDirection = event.target.getAttribute("data-sort");
     if (sortDirection === "desc") {
       data = result["data"].sort(
         (a, b) => Number(a["漲跌百分比"]) - Number(b["漲跌百分比"])
@@ -44,10 +59,18 @@ btn.addEventListener("click", async (event) => {
       display(data);
     }
   }
+
   // 收盤指數排序
   if (event.target.id === "index-close") {
-    const sortDirection = event.target.getAttribute("data-sort");
+    // 選中變色
+    const allBtn = document.querySelectorAll(".btn");
+    for (const i of allBtn) {
+      i.removeAttribute("style");
+    }
+    event.target.setAttribute("style", "color: blue; font-weight: bold;");
+
     // 由大到小
+    const sortDirection = event.target.getAttribute("data-sort");
     if (sortDirection === "desc") {
       data = result["data"].sort(
         (a, b) => Number(a["收盤指數"]) - Number(b["收盤指數"])
