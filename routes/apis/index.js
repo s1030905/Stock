@@ -32,8 +32,8 @@ router.get("/stock/index", authenticator, async (req, res, next) => {
 router.get("/stock/userStock", authenticator, async (req, res, next) => {
   try {
     // 取得0050資料
-    const { response, timestamp, price } = await getStock("0050");
-    const compare = [];
+    const { timestamp, price } = await getStock("0050");
+    const [compare, kLine] = [[], []];
 
     // 日期轉換
     const date = [];
@@ -51,14 +51,15 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
     // 0050 ratio
     let last = price[0].close[-1] ? 1 : 0;
     if (last) price[0].close.pop();
-    // const sum0050 = price[0].close.reduce((acc, curr) => {
-    //   return acc + curr;
-    // }, 0);
-    // const avg0050 = sum0050 / price[0].close.length;
-    const ratio0050 = [];
+
+    // 第1, 2張圖 所需資料陣列
+    const [ratio0050, kLine0050] = [[], []];
     for (let i = 0; i < price[0].close.length; i++) {
-      if (i === 0) ratio0050.push(0);
-      else {
+      if (i === 0) {
+        ratio0050.push(0);
+        kLine0050.push(0);
+      } else {
+        // 第1張圖 container-day
         ratio0050.push(
           (
             ((price[0].close[i] - price[0].close[i - 1]) /
@@ -66,9 +67,18 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
             100
           ).toFixed(2)
         );
+        // 第2張圖 container-mon
+        kLine0050.push(
+          (
+            ((price[0].close[i] - price[0].close[0]) / price[0].close[0]) *
+            100
+          ).toFixed(2)
+        );
       }
     }
     compare.push(ratio0050);
+    kLine.push(kLine0050);
+
     // 使用者的自選股 ratio 計算
     for (const element of userStock) {
       const { price } = await getStock(element.stockId);
@@ -76,14 +86,13 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
       stockName.push(dic[element.stockId].name);
       // 若ETF有bug 將今日資料刪除
       if (last) price[0].close.pop();
-      // const sum = price[0].close.reduce((acc, curr) => {
-      //   return acc + curr;
-      // }, 0);
-      // const avg = sum / price[0].close.length;
-      const ratio = [];
+      const [ratio, ratio2] = [[], []];
       for (let i = 0; i < price[0].close.length; i++) {
-        if (i === 0) ratio.push(0);
-        else {
+        if (i === 0) {
+          ratio.push(0);
+          ratio2.push(0);
+        } else {
+          // 第1張圖 container-day
           ratio.push(
             (
               ((price[0].close[i] - price[0].close[i - 1]) /
@@ -91,11 +100,19 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
               100
             ).toFixed(2)
           );
+          // 第2張圖 container-mon
+          ratio2.push(
+            (
+              ((price[0].close[i] - price[0].close[0]) / price[0].close[0]) *
+              100
+            ).toFixed(2)
+          );
         }
       }
       compare.push(ratio);
+      kLine.push(ratio2);
     }
-    return res.json({ compare, date, stockId, stockName });
+    return res.json({ compare, date, stockId, stockName, kLine });
   } catch (error) {
     next(error);
   }
