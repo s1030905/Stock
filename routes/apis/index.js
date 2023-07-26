@@ -55,21 +55,44 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
       return acc + curr;
     }, 0);
     const avg0050 = sum0050 / price[0].close.length;
-    const ratio0050 = price[0].close.map((e) => (e / avg0050).toFixed(2));
+    const ratio0050 = [];
+    for (let i = 0; i < price[0].close.length; i++) {
+      if (i === 0) ratio0050.push(0);
+      else {
+        ratio0050.push(
+          (
+            ((price[0].close[i] - price[0].close[0]) / price[0].close[0]) *
+            100
+          ).toFixed(2)
+        );
+      }
+    }
     compare.push(ratio0050);
-
     // 使用者的自選股 ratio 計算
     for (const element of userStock) {
-      const { timestamp, price } = await getStock(element.stockId);
+      const { price } = await getStock(element.stockId);
       stockId.push(element.stockId);
       stockName.push(dic[element.stockId].name);
+      // 若ETF有bug 將今日資料刪除
       if (last) price[0].close.pop();
       const sum = price[0].close.reduce((acc, curr) => {
         return acc + curr;
       }, 0);
       const avg = sum / price[0].close.length;
-      const ratio = price[0].close.map((e) => (e / avg).toFixed(4) * 100 - 100);
+      const ratio = [];
+      for (let i = 0; i < price[0].close.length; i++) {
+        if (i === 0) ratio.push(0);
+        else {
+          ratio.push(
+            (
+              ((price[0].close[i] - price[0].close[0]) / price[0].close[0]) *
+              100
+            ).toFixed(2)
+          );
+        }
+      }
       compare.push(ratio);
+      console.log(ratio);
     }
     return res.json({ compare, date, stockId, stockName });
   } catch (error) {
