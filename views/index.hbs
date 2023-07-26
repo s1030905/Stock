@@ -1,15 +1,15 @@
 <h2>{{title}}</h2>
 <table class="table">
   <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th>指數</th>
-      <th>收盤指數</th>
-      <th>漲跌</th>
-      <th>漲跌百分比</th>
+    <tr id="col">
+      <th scope="col"><i class="fa-solid fa-sort btn" id="index"> #</i></th>
+      <th><i class="fa-solid fa-sort btn"> 指數</i></th>
+      <th><i class="fa-solid fa-sort btn" id="index-close"> 收盤指數</i></th>
+      <th><i class="fa-solid fa-sort btn" id="fluctuations"> 漲跌</i></th>
+      <th><i class="fa-solid fa-sort btn" id="fluctuations-percent"> 漲跌百分比</i></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="table-body">
     {{#each data}}
       <tr>
         <th scope="row">{{addIndex @index}}</th>
@@ -22,3 +22,4 @@
     {{/each}}
   </tbody>
 </table>
+<script src="/javascripts/sort-index.js"></script>

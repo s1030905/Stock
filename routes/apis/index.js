@@ -1,9 +1,33 @@
 const router = require("express").Router();
+const axios = require("axios");
 const { getStock, stockList } = require("../../helpers/stock");
 const { formattedDate } = require("../../helpers/date");
 const { authenticator } = require("../../middleware/auth");
 const { apiErrorHandler } = require("../../middleware/error-handler");
 const { getStockNews } = require("../../helpers/news");
+
+router.get("/stock/index", authenticator, async (req, res, next) => {
+  try {
+    const url = "https://openapi.twse.com.tw/v1/exchangeReport/MI_INDEX";
+    let data = await axios.get(url);
+
+    // 最後更新日期
+    const headerDate = data.headers["last-modified"];
+    // 將日期字串轉換為Date物件
+    const dateObj = new Date(headerDate);
+    const year = dateObj.getFullYear();
+    const month = String(dateObj.getMonth() + 1).padStart(2, "0");
+    const day = String(dateObj.getDate()).padStart(2, "0");
+    const formattedDate = `${year - 1911}年${month}月${day}日`;
+    const title = `${formattedDate} 大盤指數彙總表`;
+
+    // 資料處理
+    data = data.data;
+    res.json({ data, title });
+  } catch (error) {
+    next(error);
+  }
+});
 
 router.get("/stock/userStock", authenticator, async (req, res, next) => {
   try {
@@ -24,6 +48,9 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
     const stockId = ["0050"];
     const stockName = ["台灣50"];
     // 0050 ratio
+
+    let last = price[0].close[-1] ? 0 : 1;
+    if (last) price[0].close.pop();
     const sum0050 = price[0].close.reduce((acc, curr) => {
       return acc + curr;
     }, 0);
@@ -36,6 +63,7 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
       const { timestamp, price } = await getStock(element.stockId);
       stockId.push(element.stockId);
       stockName.push(dic[element.stockId].name);
+      if (last) price[0].close.pop();
       const sum = price[0].close.reduce((acc, curr) => {
         return acc + curr;
       }, 0);
@@ -55,6 +83,7 @@ router.get("/stock/:id/news", authenticator, async (req, res, next) => {
     // 取得中文名稱
     const dic = await stockList();
     const stockName = dic[id]["name"];
+    console.log(stockName);
     // 取得相關新聞
     const news = await getStockNews(stockName);
     return res.json(news);
@@ -76,16 +105,20 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
     const high = price[0].high;
     const low = price[0].low;
     const color = [];
-    const max = Math.max(...high);
-    const min = Math.min(...low);
+
+    // API bug ETF查詢錯誤
+    const last = high[-1] ? 0 : 1;
+    const max = Math.max(...high.slice(0, high.length - last));
+    const min = Math.min(...low.slice(0, low.length - last));
 
     // 時間轉換
     timestamp.forEach((e) => {
       date.push(formattedDate(e));
     });
+    if (last) date.pop();
 
     // 處理當 open/close 相同
-    for (let i = 0; i < price[0].open.length; i++) {
+    for (let i = 0; i < price[0].open.length - last; i++) {
       if (price[0].open[i] === price[0].close[i]) {
         price[0].close[i] -= 0.1;
       }
@@ -102,7 +135,7 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
         color.push("black");
       }
     }
-    for (let i = 0; i < high.length; i++) {
+    for (let i = 0; i < high.length - last; i++) {
       highLow.push([high[i].toFixed(2), low[i].toFixed(2)]);
     }
     res.json({

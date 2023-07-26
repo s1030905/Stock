@@ -7,7 +7,8 @@ const getStockNews = async () => {
   table.remove();
   // 取得stockId
   const queryString = window.location.search;
-  const stockId = queryString.slice(-4);
+  const stockIdIndex = queryString.indexOf("=");
+  const stockId = queryString.slice(stockIdIndex + 1, queryString.length);
 
   // 發送 API 請求
   const response = await fetch(`/api/stock/${stockId}/news`);

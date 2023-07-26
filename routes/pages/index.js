@@ -61,8 +61,6 @@ router.get("/", authenticator, async (req, res, next) => {
 
     // 資料處理
     data = data.data;
-    const dic = {};
-    dic[data[0]["指數"]] = data[0];
     res.render("index", { data, title });
   } catch (error) {
     next(error);
