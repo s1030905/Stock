@@ -7,6 +7,7 @@ const ctx = document.getElementById("myChart");
   const records = await response.json();
   const { highLow, date, color, openEnd, max, min } = records;
   const [red, green, black] = ["red", "green", "black"];
+  console.log(max, min);
   const myChart = new Chart(ctx, {
     type: "bar",
     data: {
@@ -36,8 +37,8 @@ const ctx = document.getElementById("myChart");
     options: {
       scales: {
         y: {
-          min: Math.round(min - (max - min)), // y 軸的最小值
-          max: Math.round(max + (max - min)), // y 軸的最大值
+          min,
+          max,
         },
       },
     },

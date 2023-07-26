@@ -108,9 +108,11 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
 
     // API bug ETF查詢錯誤
     const last = high[-1] ? 0 : 1;
-    const max = Math.max(...high.slice(0, high.length - last));
-    const min = Math.min(...low.slice(0, low.length - last));
-
+    let [max, min] = [
+      Math.max(...high.slice(0, high.length - last)),
+      Math.min(...low.slice(0, low.length - last)),
+    ];
+    [max, min] = [Math.ceil(max + (max - min)), Math.floor(min - (max - min))];
     // 時間轉換
     timestamp.forEach((e) => {
       date.push(formattedDate(e));

@@ -84,7 +84,7 @@ const display = (data) => {
         <td>${data[i]["指數"]}</td>
         <td>${data[i]["收盤指數"]}</td>
         <td>${data[i]["漲跌"]} ${data[i]["漲跌點數"]}</td>
-        <td>${data[i]["漲跌百分比"]}</td>
+        <td>${data[i]["漲跌百分比"]} %</td>
       </tr>`;
     }
   }
