@@ -136,23 +136,18 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
   try {
     // 取得特定id 資料
     const { id } = req.params;
-    const { response, timestamp, price } = await getStock(id);
+    const { timestamp, price } = await getStock(id);
 
     // 取得繪圖必須資料 date, openEnd, highLow, color, max, min
     const date = [];
-    const openEnd = [];
-    const highLow = [];
     const high = price[0].high;
     const low = price[0].low;
-    const color = [];
+    const close = price[0].close;
+    // const color = [];
 
     // API bug ETF查詢錯誤
-    const last = high.slice(-1)[0] ? 0 : 1;
-    let [max, min] = [
-      Math.max(...high.slice(0, high.length - last)),
-      Math.min(...low.slice(0, low.length - last)),
-    ];
-    [max, min] = [Math.ceil(max + (max - min)), Math.floor(min - (max - min))];
+    const last = close.slice(-1)[0] ? 0 : 1;
+
     // 時間轉換
     timestamp.forEach((e) => {
       date.push(formattedDate(e));
@@ -183,38 +178,7 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
       d.push(((2 / 3) * d[i - 1] + (1 / 3) * k[i]).toFixed(2));
     }
 
-    // 處理當 open/close 相同, 決定K棒顏色
-    for (let i = 0; i < price[0].open.length - last; i++) {
-      if (price[0].open[i] === price[0].close[i]) {
-        price[0].close[i] -= 0.1;
-      }
-      let start = price[0].open[i].toFixed(2);
-      let end = price[0].close[i].toFixed(2);
-      openEnd.push([start, end]);
-
-      // 決定顏色
-      if (end > start) {
-        color.push("red");
-      } else if (end < start) {
-        color.push("green");
-      } else {
-        color.push("black");
-      }
-    }
-    // highLow 資料整理 與 相對成交量
-    for (let i = 0; i < high.length - last; i++) {
-      highLow.push([high[i].toFixed(2), low[i].toFixed(2)]);
-      volumeRelative.push(((volume[i] / volAvg) * 25).toFixed(2));
-    }
-    console.log(volumeRelative);
-    res.json({
-      date,
-      openEnd,
-      highLow,
-      max,
-      min,
-      color,
-    });
+    res.json({ date, k, d });
   } catch (error) {
     next(error);
   }
@@ -276,7 +240,6 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
       highLow.push([high[i].toFixed(2), low[i].toFixed(2)]);
       volumeRelative.push(((volume[i] / volAvg) * 25).toFixed(2));
     }
-    console.log(volumeRelative);
     res.json({
       date,
       openEnd,

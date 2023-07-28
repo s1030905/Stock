@@ -54,7 +54,7 @@ const ctx = document.getElementById("myChart");
             text: "股價",
             font: {
               size: 14,
-              weight: "bold",
+              weight: "normal",
             },
           },
         },
@@ -71,7 +71,7 @@ const ctx = document.getElementById("myChart");
             text: "相對平均成交量",
             font: {
               size: 14,
-              weight: "bold",
+              weight: "normal",
             },
           },
         },

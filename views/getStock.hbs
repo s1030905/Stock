@@ -1,11 +1,14 @@
 <div>
   <div style="display: flex; justify-content: space-between;">
-  <h2>{{title}}近30日交易資訊</h2>
-  <form action="/stock/{{stockId}}" method="post">
-    <button class="btn btn-primary" type="submit">加入自選股</button>
-  </form>
-</div>
-  <canvas id="myChart" width="800" height="400"></canvas>
+    <h2>{{title}}近30日交易資訊</h2>
+    <form action="/stock/{{stockId}}" method="post">
+      <button class="btn btn-primary" type="submit">加入自選股</button>
+    </form>
+  </div>
+  <canvas id="myChart" width="800" height="300"></canvas>
+  <br>
+  <h3>技術指標</h3>
+  <canvas id="myChart-data-analysis" width="800" height="200"></canvas>
 </div>
 
 <br>
@@ -54,3 +57,4 @@
 
 <script src="/javascripts/news.js"></script>
 <script src="/javascripts/chart.js"></script>
+<script src="/javascripts/kd-chart.js"></script>
