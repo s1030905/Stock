@@ -7,6 +7,7 @@ const ctxMon = document.getElementById("container-month");
     await userStockResponse.json();
   const colors = ["blue", "#36A2EB", "red", "#ebda36", "black", "#13c1b1"]; // 顏色陣列，可根據需要擴充
   const [datasets, kLineDatasets] = [[], []];
+
   // 第一張 container-day datasets
   for (let i = 0; i < stockId.length; i++) {
     if (stockId[i] === "0050") {
