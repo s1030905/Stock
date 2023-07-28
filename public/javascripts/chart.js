@@ -5,7 +5,7 @@ const ctx = document.getElementById("myChart");
   const stockId = queryString.slice(index + 1);
   const response = await fetch(`/api/stock/${stockId}`);
   const records = await response.json();
-  const { highLow, date, color, openEnd, max, min, k, d } = records;
+  const { highLow, date, color, openEnd, max, min, volumeRelative } = records;
   const [red, green, black] = ["red", "green", "black"];
   new Chart(ctx, {
     type: "bar",
@@ -19,32 +19,27 @@ const ctx = document.getElementById("myChart");
           borderWidth: 1,
           label: "開收價",
           data: openEnd,
-          barPercentage: 10,
-          categoryPercentage: -0.1,
+          barPercentage: 100,
+          categoryPercentage: 0.01,
         },
+
         {
           type: "bar",
           backgroundColor: "black",
           borderColor: "black",
           label: "高低價",
           data: highLow,
-          barPercentage: 0.5,
-          categoryPercentage: 0.1,
+          barPercentage: 10,
+          categoryPercentage: 0.01,
         },
         {
-          type: "line",
-          fill: false, // 填滿線圖面積
-          borderColor: "red", // 設定線的顏色
-          label: "K",
-          data: k,
-          yAxisID: "y2", // 使用新的 y 軸
-        },
-        {
-          type: "line",
-          fill: false, // 填滿線圖面積
-          borderColor: "green", // 設定線的顏色
-          label: "D",
-          data: d,
+          type: "bar",
+          fill: true, // 填滿線圖面積
+          backgroundColor: "#0d877b",
+          label: "成交量",
+          data: volumeRelative,
+          barPercentage: 100,
+          categoryPercentage: 0.01,
           yAxisID: "y2", // 使用新的 y 軸
         },
       ],
@@ -54,14 +49,30 @@ const ctx = document.getElementById("myChart");
         y: {
           min,
           max,
+          title: {
+            display: true,
+            text: "股價",
+            font: {
+              size: 14,
+              weight: "bold",
+            },
+          },
         },
         y2: {
           type: "linear",
           position: "right",
           min: 0,
-          max: 100,
+          max: 200,
           grid: {
             drawOnChartArea: false, // 避免新的 y 軸繪製在原先的圖表上
+          },
+          title: {
+            display: true,
+            text: "相對平均成交量",
+            font: {
+              size: 14,
+              weight: "bold",
+            },
           },
         },
       },
@@ -73,9 +84,6 @@ const ctx = document.getElementById("myChart");
             type: "line",
             mode: "horizontal",
             scaleID: "y2", // 使用新的 y 軸
-            value: 10, // 新的 y 軸的標記位置
-            borderColor: "red", // 標記的顏色
-            borderWidth: 2, // 標記的寬度
             label: {
               content: "y2", // 標記的標籤文字
               enabled: true, // 是否顯示標籤
