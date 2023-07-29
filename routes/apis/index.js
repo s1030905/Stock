@@ -138,12 +138,13 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
     const { id } = req.params;
     const { timestamp, price } = await getStock(id);
 
-    // 取得繪圖必須資料 date, openEnd, highLow, color, max, min
+    // 取得繪圖、計算KD必須資料 date, ,high, low, close
     const date = [];
     const high = price[0].high;
     const low = price[0].low;
     const close = price[0].close;
-    // const color = [];
+    const diff = [0, 0, 0, 0];
+    const note = ["--", "--", "--", "--"];
 
     // API bug ETF查詢錯誤
     const last = close.slice(-1)[0] ? 0 : 1;
@@ -177,8 +178,36 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
       k.push(((2 / 3) * k[i - 1] + (1 / 3) * rsv[i]).toFixed(2));
       d.push(((2 / 3) * d[i - 1] + (1 / 3) * k[i]).toFixed(2));
     }
-
-    res.json({ date, k, d });
+    // 每日KD分析結果
+    for (let i = 4; i < k.length; i++) {
+      diff.push((k[i] - d[i]).toFixed(2));
+      let dateNote = "";
+      if (k[i] > d[i] && k[i - 1] < d[i - 1]) {
+        dateNote += "黃金交叉";
+      }
+      if (k[i] < d[i] && k[i - 1] > d[i - 1]) {
+        dateNote += "死亡交叉";
+      }
+      if (k[i] >= 80 && d[i] >= 80) {
+        if (dateNote.length >= 4) {
+          dateNote += "、超買";
+        } else {
+          dateNote += "超買";
+        }
+      }
+      if (k[i] <= 20 && d[i] <= 20 && dateNote.length >= 4) {
+        if (dateNote.length >= 4) {
+          dateNote += "、超賣";
+        } else {
+          dateNote += "超賣";
+        }
+      }
+      if (!dateNote.length) {
+        dateNote += "--";
+      }
+      note.push(dateNote);
+    }
+    res.json({ date, k, d, diff, note, close });
   } catch (error) {
     next(error);
   }

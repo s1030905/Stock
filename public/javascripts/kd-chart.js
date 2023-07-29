@@ -4,8 +4,9 @@ const kdChart = document.getElementById("myChart-data-analysis");
   const index = queryString.indexOf("=");
   const stockId = queryString.slice(index + 1);
   const response = await fetch(`/api/stock/${stockId}/kd`);
-  const records = await response.json();
-  const { highLow, date, color, openEnd, max, min, k, d } = records;
+  const { date, k, d } = await response.json();
+  // const { date, k, d } = records;
+
   new Chart(kdChart, {
     type: "line",
     data: {
