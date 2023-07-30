@@ -234,7 +234,10 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
       Math.max(...high.slice(0, high.length - last)),
       Math.min(...low.slice(0, low.length - last)),
     ];
-    [max, min] = [Math.ceil(max + (max - min)), Math.floor(min - (max - min))];
+    [max, min] = [
+      Math.ceil(max + (max - min) * 0.1),
+      Math.floor(min - (max - min) * 0.1),
+    ];
     // 時間轉換
     timestamp.forEach((e) => {
       date.push(formattedDate(e));

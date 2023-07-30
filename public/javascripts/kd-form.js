@@ -16,6 +16,7 @@ const getStockKD = async () => {
   // 表格訊息
   let kdList = ``;
   let [buyPrice, sellPrice, profit] = [0, 0, 0];
+  let totalProfit = 0;
   for (let i = 0; i < date.length; i++) {
     const tradeSign = note[i].slice(0, 4);
 
@@ -36,6 +37,7 @@ const getStockKD = async () => {
         <td>${diff[i]}</td>
         <td>${note[i]} 預估獲利: ${profit}</td>
       </tr>`;
+      totalProfit += Number(profit);
       profit = 0;
     } else {
       kdList += `
@@ -49,6 +51,9 @@ const getStockKD = async () => {
       </tr>`;
     }
   }
+  // 計算kd 總獲利
+  const total = document.querySelector("#total");
+  total.innerHTML = `<h4 style="font-weight: 700">總共獲利: ${totalProfit}點</h4>`;
   // 更新table
   const kdContainer = document.querySelector("#table-container");
   kdContainer.innerHTML = `<table class="table">

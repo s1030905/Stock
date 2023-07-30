@@ -1,6 +1,6 @@
 <div>
   <div style="display: flex; justify-content: space-between;">
-    <h2>{{title}}近30日交易資訊</h2>
+    <h2>{{title}}近90日交易資訊</h2>
     <form action="/stock/{{stockId}}" method="post">
       <button class="btn btn-primary" type="submit">加入自選股</button>
     </form>
@@ -27,6 +27,7 @@
     </div>
   </li>
 </ul>
+<div id="total" class="m-2"></div>
 <div id="explanationContainer"></div>
 <div id="table-container">
 <table class="table">

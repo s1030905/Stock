@@ -29,7 +29,7 @@ const ctx = document.getElementById("myChart");
           borderColor: "black",
           label: "高低價",
           data: highLow,
-          barPercentage: 10,
+          barPercentage: 20,
           categoryPercentage: 0.01,
         },
         {
@@ -38,7 +38,7 @@ const ctx = document.getElementById("myChart");
           backgroundColor: "#0d877b",
           label: "成交量",
           data: volumeRelative,
-          barPercentage: 100,
+          barPercentage: 200,
           categoryPercentage: 0.01,
           yAxisID: "y2", // 使用新的 y 軸
         },
