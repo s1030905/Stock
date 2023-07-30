@@ -21,9 +21,13 @@
     <a class="nav-link" id="news" href="#">News</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="kd-form" href="#">KD分析</a>
+    <div style="display: flex; align-items:center">
+      <a class="nav-link" id="kd-form" href="#">KD分析</a>
+      <i class="fa-solid fa-circle-exclamation" id="explanationBtn"></i>
+    </div>
   </li>
 </ul>
+<div id="explanationContainer"></div>
 <div id="table-container">
 <table class="table">
   <thead>
@@ -59,3 +63,4 @@
 <script src="/javascripts/chart.js"></script>
 <script src="/javascripts/kd-chart.js"></script>
 <script src="/javascripts/kd-form.js"></script>
+<script src="/javascripts/kd-form-explanation.js"></script>
