@@ -49,7 +49,7 @@ router.get("/stock/userStock", authenticator, async (req, res, next) => {
     const stockName = ["台灣50"];
 
     // 0050 ratio
-    let last = price[0].close[-1] ? 1 : 0;
+    let last = price[0].close.slice(-1)[0] ? 0 : 1;
     if (last) price[0].close.pop();
 
     // 第1, 2張圖 所需資料陣列
@@ -132,6 +132,87 @@ router.get("/stock/:id/news", authenticator, async (req, res, next) => {
   }
 });
 
+router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
+  try {
+    // 取得特定id 資料
+    const { id } = req.params;
+    const { timestamp, price } = await getStock(id);
+
+    // 取得繪圖、計算KD必須資料 date, ,high, low, close
+    const date = [];
+    const high = price[0].high;
+    const low = price[0].low;
+    const close = price[0].close;
+    const diff = [0, 0, 0, 0];
+    const note = ["--", "--", "--", "--"];
+
+    // API bug ETF查詢錯誤
+    const last = close.slice(-1)[0] ? 0 : 1;
+
+    // 時間轉換
+    timestamp.forEach((e) => {
+      date.push(formattedDate(e));
+    });
+    if (last) date.pop();
+
+    // 畫 KD 的 K
+    // RSV值計算公式：(收盤價 – 設定周期內最低價) / (設定周期內最高價 – 設定周期內最低價) × 100
+    // K值計算公式：(2/3 × 前一根K線K值)＋(1/3 × 當日RSV)
+    // D值計算公式：D值= (2/3 × 前一根K線D值)＋(1/3 × 當日K值)
+    const [rsv, k, d] = [
+      [0, 0, 0, 0],
+      [50, 50, 50, 50],
+      [50, 50, 50, 50],
+    ];
+    for (let i = 4; i < price[0].close.length - last; i++) {
+      const cyclePriceHigh = high.slice(i - 4, i + 1);
+      const cyclePriceLow = low.slice(i - 4, i + 1);
+      let cycleMin = Math.min(...cyclePriceLow);
+      let cycleMax = Math.max(...cyclePriceHigh);
+      rsv.push(
+        (
+          ((price[0].close[i] - cycleMin) / (cycleMax - cycleMin)) *
+          100
+        ).toFixed(2)
+      );
+      k.push(((2 / 3) * k[i - 1] + (1 / 3) * rsv[i]).toFixed(2));
+      d.push(((2 / 3) * d[i - 1] + (1 / 3) * k[i]).toFixed(2));
+    }
+    // 每日KD分析結果
+    for (let i = 4; i < k.length; i++) {
+      diff.push((k[i] - d[i]).toFixed(2));
+      let dateNote = "";
+      if (k[i] > d[i] && k[i - 1] < d[i - 1]) {
+        dateNote += "黃金交叉";
+      }
+      if (k[i] < d[i] && k[i - 1] > d[i - 1]) {
+        dateNote += "死亡交叉";
+      }
+      if (k[i] >= 80 && d[i] >= 80) {
+        if (dateNote.length >= 4) {
+          dateNote += "、超買";
+        } else {
+          dateNote += "超買";
+        }
+      }
+      if (k[i] <= 20 && d[i] <= 20 && dateNote.length >= 4) {
+        if (dateNote.length >= 4) {
+          dateNote += "、超賣";
+        } else {
+          dateNote += "超賣";
+        }
+      }
+      if (!dateNote.length) {
+        dateNote += "--";
+      }
+      note.push(dateNote);
+    }
+    res.json({ date, k, d, diff, note, close });
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.get("/stock/:id", authenticator, async (req, res, next) => {
   try {
     // 取得特定id 資料
@@ -144,10 +225,11 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
     const highLow = [];
     const high = price[0].high;
     const low = price[0].low;
+    const volume = price[0].volume;
     const color = [];
 
     // API bug ETF查詢錯誤
-    const last = high[-1] ? 1 : 0;
+    const last = high.slice(-1)[0] ? 0 : 1;
     let [max, min] = [
       Math.max(...high.slice(0, high.length - last)),
       Math.min(...low.slice(0, low.length - last)),
@@ -159,7 +241,9 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
     });
     if (last) date.pop();
 
-    // 處理當 open/close 相同
+    // 處理當 open/close 相同, 決定K棒顏色, 成交量平均值
+    let volAvg = 0;
+    const volumeRelative = [];
     for (let i = 0; i < price[0].open.length - last; i++) {
       if (price[0].open[i] === price[0].close[i]) {
         price[0].close[i] -= 0.1;
@@ -176,9 +260,14 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
       } else {
         color.push("black");
       }
+
+      // 計算成交量平均值
+      volAvg += volume[i] / (volume.length - last);
     }
+    // highLow 資料整理 與 相對成交量
     for (let i = 0; i < high.length - last; i++) {
       highLow.push([high[i].toFixed(2), low[i].toFixed(2)]);
+      volumeRelative.push(((volume[i] / volAvg) * 25).toFixed(2));
     }
     res.json({
       date,
@@ -187,6 +276,7 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
       max,
       min,
       color,
+      volumeRelative,
     });
   } catch (error) {
     next(error);

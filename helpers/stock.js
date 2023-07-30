@@ -18,7 +18,6 @@ const getStock = async function (stockNo) {
   }
   let timestamp = response.result[0].timestamp;
   let price = response.result[0].indicators.quote;
-
   return { response, timestamp, price };
 };
 
