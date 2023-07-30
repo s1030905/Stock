@@ -74,7 +74,6 @@ kdFormBtn.addEventListener("click", (event) => {
   activeTabs.forEach((tab) => {
     tab.classList.remove("active");
   });
-
   event.target.classList.add("active");
   getStockKD();
 });
