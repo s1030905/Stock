@@ -1,4 +1,4 @@
-// 監聽 "News" 的點擊事件
+// 監聽 "kd-form" 的點擊事件
 const kdFormBtn = document.querySelector("#kd-form");
 
 const getStockKD = async () => {
@@ -74,7 +74,6 @@ kdFormBtn.addEventListener("click", (event) => {
   activeTabs.forEach((tab) => {
     tab.classList.remove("active");
   });
-
   event.target.classList.add("active");
   getStockKD();
 });
