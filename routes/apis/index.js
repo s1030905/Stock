@@ -352,7 +352,7 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
     ];
     [max, min] = [
       Math.ceil(max + (max - min) * 0.1),
-      Math.floor(min - (max - min) * 0.1),
+      Math.floor(min - (max - min) * 0.5),
     ];
     // 時間轉換
     timestamp.forEach((e) => {

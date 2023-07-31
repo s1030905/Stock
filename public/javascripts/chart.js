@@ -22,7 +22,6 @@ const ctx = document.getElementById("myChart");
           barPercentage: 100,
           categoryPercentage: 0.01,
         },
-
         {
           type: "bar",
           backgroundColor: "black",
