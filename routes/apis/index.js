@@ -234,9 +234,6 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
       date.pop();
       close.pop();
     }
-    console.log("--------------------------------------");
-    console.log(`last: ${last}`);
-    console.log(`close: ${close.length}`);
     // 畫 RSI (5, 10)
     // RSI (相對強弱指標) = n日漲幅平均值÷(n日漲幅平均值+ n日跌幅平均值) × 100
     // n日漲幅平均值 = n日內上漲日總上漲幅度加總 ÷ n
