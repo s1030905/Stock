@@ -1,14 +1,21 @@
 <div>
   <div style="display: flex; justify-content: space-between;">
-    <h2>{{title}}近30日交易資訊</h2>
+    <h2>{{title}}近90日交易資訊</h2>
     <form action="/stock/{{stockId}}" method="post">
       <button class="btn btn-primary" type="submit">加入自選股</button>
     </form>
   </div>
   <canvas id="myChart" width="800" height="300"></canvas>
   <br>
-  <h3>技術指標</h3>
-  <canvas id="myChart-data-analysis" width="800" height="200"></canvas>
+  <div style="display: flex; align-items: center;">
+    <h3 style=" margin-bottom: 0; margin-right: 8px;">
+      技術指標
+    </h3>
+    <i class="fa-solid fa-circle-exclamation" id="explanationBtn"></i>
+  </div>
+  <div id="explanationContainer"></div>
+  <canvas id="kd-chart" width="800" height="200"></canvas>
+  <canvas id="rsi-chart" width="800" height="200"></canvas>
 </div>
 
 <br>
@@ -21,13 +28,13 @@
     <a class="nav-link" id="news" href="#">News</a>
   </li>
   <li class="nav-item">
-    <div style="display: flex; align-items:center" id="kd-form" class="nav-link">
-      <a href="#" style="margin-right: 10px; text-decoration-line: none;">KD分析</a>
-      <i class="fa-solid fa-circle-exclamation" id="explanationBtn"></i>
-    </div>
+    <a href="#" id="kd-form" class="nav-link">KD分析</a>
+  </li>
+  <li class="nav-item">
+      <a href="#" id="rsi-form" class="nav-link">RSI分析</a>
   </li>
 </ul>
-<div id="explanationContainer"></div>
+<div id="total" class="m-2"></div>
 <div id="table-container">
 <table class="table">
   <thead>
@@ -66,4 +73,5 @@
 <script src="/javascripts/chart.js"></script>
 <script src="/javascripts/kd-chart.js"></script>
 <script src="/javascripts/kd-form.js"></script>
-<script src="/javascripts/kd-form-explanation.js"></script>
+<script src="/javascripts/rsi-chart.js"></script>
+<script src="/javascripts/rsi-form.js"></script>

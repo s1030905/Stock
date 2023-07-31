@@ -1,12 +1,12 @@
-const kdChart = document.getElementById("kd-chart");
+const rsiChart = document.getElementById("rsi-chart");
 (async () => {
   const queryString = window.location.search;
   const index = queryString.indexOf("=");
   const stockId = queryString.slice(index + 1);
-  const response = await fetch(`/api/stock/${stockId}/kd`);
-  const { date, k, d } = await response.json();
+  const response = await fetch(`/api/stock/${stockId}/rsi`);
+  const { date, RSI5, RSI10 } = await response.json();
 
-  new Chart(kdChart, {
+  new Chart(rsiChart, {
     type: "line",
     data: {
       labels: date,
@@ -15,15 +15,15 @@ const kdChart = document.getElementById("kd-chart");
           type: "line",
           backgroundColor: "red",
           borderColor: "red",
-          label: "K",
-          data: k,
+          label: "RSI5",
+          data: RSI5,
         },
         {
           type: "line",
           backgroundColor: "green",
           borderColor: "green",
-          label: "D",
-          data: d,
+          label: "RSI10",
+          data: RSI10,
         },
       ],
     },

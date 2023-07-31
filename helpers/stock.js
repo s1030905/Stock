@@ -5,7 +5,7 @@ const { taiwanTime, todayStart } = require("./date");
 const getStock = async function (stockNo) {
   // 日期
   let tradeDay = todayStart;
-  let tradeDay30 = todayStart - 2592000;
+  let tradeDay30 = todayStart - 7776000;
   let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay30}&period2=${tradeDay}&interval=1d&events=history`;
 
   // 獲取資料
