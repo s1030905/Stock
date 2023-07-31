@@ -213,6 +213,124 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
   }
 });
 
+router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
+  try {
+    // 取得特定id 資料
+    const { id } = req.params;
+    const { timestamp, price } = await getStock(id);
+
+    // 取得繪圖、計算KD必須資料 date, ,high, low, close
+    const date = [];
+    const close = price[0].close;
+
+    // API bug ETF查詢錯誤
+    const last = close.slice(-1)[0] ? 0 : 1;
+
+    // 時間轉換
+    timestamp.forEach((e) => {
+      date.push(formattedDate(e));
+    });
+    if (last) {
+      date.pop();
+      close.pop();
+    }
+
+    // 畫 RSI (5, 10)
+    // RSI (相對強弱指標) = n日漲幅平均值÷(n日漲幅平均值+ n日跌幅平均值) × 100
+    // n日漲幅平均值 = n日內上漲日總上漲幅度加總 ÷ n
+    // n日跌幅平均值 = n日內下跌日總下跌幅度加總 ÷ n
+    const RSI5 = [null, null, null, null, null],
+      RSI10 = [null, null, null, null, null, null, null, null, null, null];
+    let up5 = 0,
+      down5 = 0,
+      up10 = 0,
+      down10 = 0;
+    // RSI5 計算
+    for (let i = 1; i < close.length; i++) {
+      let diff = (close[i] - close[i - 1]) / 5;
+      if (i < 6) {
+        if (diff >= 0) {
+          up5 += diff;
+        } else {
+          down5 += diff;
+        }
+      }
+      if (i === 6) {
+        RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
+      }
+      if (i > 6) {
+        if (diff >= 0) {
+          up5 += (diff - up5) / 5;
+          down5 += (0 - down5) / 5;
+        } else {
+          up5 += (0 - up5) / 5;
+          down5 += (diff - down5) / 5;
+        }
+        RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
+      }
+    }
+
+    // RSI10 計算
+    for (let i = 1; i < close.length; i++) {
+      let diff = (close[i] - close[i - 1]) / 10;
+      if (i < 11) {
+        if (diff >= 0) {
+          up10 += diff;
+        } else {
+          down10 += diff;
+        }
+      }
+      if (i === 11) {
+        RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
+      }
+      if (i > 11) {
+        if (diff >= 0) {
+          up10 += (diff - up10) / 10;
+          down10 += (0 - down10) / 10;
+        } else {
+          up10 += (0 - up10) / 10;
+          down10 += (diff - down10) / 10;
+        }
+        RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
+      }
+    }
+    const note = ["--", "--", "--", "--", "--", "--", "--", "--", "--", "--"];
+    // 每日RSI分析結果
+    for (let i = 0; i < RSI10.length; i++) {
+      // let diff = (RSI5[i] - RSI10[i]) / 10;
+      let dateNote = "";
+      if (RSI5[i] > RSI10[i] && RSI5[i - 1] < RSI10[i - 1]) {
+        dateNote += "黃金交叉";
+      }
+      if (RSI5[i] < RSI10[i] && RSI5[i - 1] > RSI10[i - 1]) {
+        dateNote += "死亡交叉";
+      }
+      if (RSI5[i] >= 80) {
+        if (dateNote.length >= 4) {
+          dateNote += "、超買";
+        } else {
+          dateNote += "超買";
+        }
+      }
+      if (RSI5[i] <= 20) {
+        if (dateNote.length >= 4) {
+          dateNote += "、超賣";
+        } else {
+          dateNote += "超賣";
+        }
+      }
+      if (!dateNote.length) {
+        dateNote += "--";
+      }
+      note.push(dateNote);
+    }
+
+    return res.json({ close, date, RSI5, RSI10, note });
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.get("/stock/:id", authenticator, async (req, res, next) => {
   try {
     // 取得特定id 資料

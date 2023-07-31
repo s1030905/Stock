@@ -1,7 +1,7 @@
-// 監聽 "kd-form" 的點擊事件
-const kdFormBtn = document.querySelector("#kd-form");
+// 監聽 "rsi-form" 的點擊事件
+const rsiFormBtn = document.querySelector("#rsi-form");
 
-const getStockKD = async () => {
+const getStockRSI = async () => {
   // 移除原先的列表
   const table = document.querySelector("table");
   table.remove();
@@ -11,10 +11,10 @@ const getStockKD = async () => {
   const stockId = queryString.slice(stockIdIndex + 1, queryString.length);
 
   // 發送 API 請求
-  const response = await fetch(`/api/stock/${stockId}/kd`);
-  const { date, k, d, note, diff, close } = await response.json();
+  const response = await fetch(`/api/stock/${stockId}/rsi`);
+  const { date, RSI5, RSI10, close, note } = await response.json();
   // 表格訊息
-  let kdList = ``;
+  let rsiList = ``;
   let [buyPrice, sellPrice, profit] = [0, 0, 0];
   let totalProfit = 0;
   for (let i = 0; i < date.length; i++) {
@@ -28,30 +28,28 @@ const getStockKD = async () => {
       [buyPrice, sellPrice] = [0, 0];
     }
     if (profit !== 0) {
-      kdList += `
+      rsiList += `
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
-        <td>${k[i]}</td>
-        <td>${d[i]}</td>
-        <td>${diff[i]}</td>
+        <td>${RSI5[i]}</td>
+        <td>${RSI10[i]}</td>
         <td>${note[i]} 預估獲利: ${profit}</td>
       </tr>`;
       totalProfit += Number(profit);
       profit = 0;
     } else {
-      kdList += `
+      rsiList += `
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
-        <td>${k[i]}</td>
-        <td>${d[i]}</td>
-        <td>${diff[i]}</td>
+        <td>${RSI5[i]}</td>
+        <td>${RSI10[i]}</td>
         <td>${note[i]}</td>
       </tr>`;
     }
   }
-  // 計算kd 總獲利
+  // 計算rsi 總獲利
   const total = document.querySelector("#total");
   total.innerHTML = `<h4 style="font-weight: 700">總共獲利: ${totalProfit.toFixed(
     2
@@ -63,40 +61,44 @@ const getStockKD = async () => {
     <tr>
       <th scope="col">#</th>
       <th scope="col">時間</th>
-      <th scope="col">K值</th>
-      <th scope="col">D值</th>
-      <th scope="col">差值</th>
+      <th scope="col">RSI5</th>
+      <th scope="col">RSI10</th>
       <th scope="col">買賣訊號</th>
     </tr>
   </thead>
   <tbody>
-    ${kdList}
+    ${rsiList}
   </tbody>
 </table>`;
 };
 
-kdFormBtn.addEventListener("click", (event) => {
+rsiFormBtn.addEventListener("click", (event) => {
   // 取消其他標籤的 active 狀態
   const activeTabs = document.querySelectorAll(".nav-item .nav-link.active");
   activeTabs.forEach((tab) => {
     tab.classList.remove("active");
   });
   event.target.classList.add("active");
-  getStockKD();
+  getStockRSI();
 });
 
-const explanationBtn = document.querySelector("#explanationBtn");
+// const explanationBtn = document.querySelector("#explanationBtn");
+// // mouseenter 顯示說明
+// explanationBtn.addEventListener("mouseenter", (event) => {
+//   const explanationContainer = document.querySelector("#explanationContainer");
+//   explanationContainer.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+//     黃金交叉為買點；死亡交叉為買點
+//     <button
+//       type="button"
+//       class="btn-close"
+//       data-bs-dismiss="alert"
+//       aria-label="Close"
+//     ></button>
+//   </div>`;
+// });
 
-// mouseenter 顯示說明
-explanationBtn.addEventListener("mouseenter", (event) => {
-  const explanationContainer = document.querySelector("#explanationContainer");
-  explanationContainer.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    黃金交叉為買點；死亡交叉為買點
-  </div>`;
-});
-
-// mouseout 移除說明
-explanationBtn.addEventListener("mouseout", (event) => {
-  const explanationContainer = document.querySelector("#explanationContainer");
-  explanationContainer.innerHTML = ``;
-});
+// // mouseout 移除說明
+// explanationBtn.addEventListener("mouseout", (event) => {
+//   const explanationContainer = document.querySelector("#explanationContainer");
+//   explanationContainer.innerHTML = ``;
+// });
