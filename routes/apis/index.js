@@ -234,7 +234,6 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
       date.pop();
       close.pop();
     }
-
     // 畫 RSI (5, 10)
     // RSI (相對強弱指標) = n日漲幅平均值÷(n日漲幅平均值+ n日跌幅平均值) × 100
     // n日漲幅平均值 = n日內上漲日總上漲幅度加總 ÷ n
@@ -246,7 +245,7 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
       up10 = 0,
       down10 = 0;
     // RSI5 計算
-    for (let i = 1; i < close.length; i++) {
+    for (let i = 1; i <= close.length; i++) {
       let diff = (close[i] - close[i - 1]) / 5;
       if (i < 6) {
         if (diff >= 0) {
@@ -255,10 +254,10 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
           down5 += diff;
         }
       }
-      if (i === 6) {
+      if (i === 5) {
         RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
       }
-      if (i > 6) {
+      if (i >= 6) {
         if (diff >= 0) {
           up5 += (diff - up5) / 5;
           down5 += (0 - down5) / 5;
@@ -271,7 +270,7 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
     }
 
     // RSI10 計算
-    for (let i = 1; i < close.length; i++) {
+    for (let i = 1; i <= close.length; i++) {
       let diff = (close[i] - close[i - 1]) / 10;
       if (i < 11) {
         if (diff >= 0) {
@@ -280,10 +279,10 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
           down10 += diff;
         }
       }
-      if (i === 11) {
+      if (i === 10) {
         RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
       }
-      if (i > 11) {
+      if (i >= 11) {
         if (diff >= 0) {
           up10 += (diff - up10) / 10;
           down10 += (0 - down10) / 10;
@@ -294,10 +293,9 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
         RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
       }
     }
-    const note = ["--", "--", "--", "--", "--", "--", "--", "--", "--", "--"];
+    const note = [];
     // 每日RSI分析結果
     for (let i = 0; i < RSI10.length; i++) {
-      // let diff = (RSI5[i] - RSI10[i]) / 10;
       let dateNote = "";
       if (RSI5[i] > RSI10[i] && RSI5[i - 1] < RSI10[i - 1]) {
         dateNote += "黃金交叉";
@@ -305,14 +303,14 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
       if (RSI5[i] < RSI10[i] && RSI5[i - 1] > RSI10[i - 1]) {
         dateNote += "死亡交叉";
       }
-      if (RSI5[i] >= 80) {
+      if (RSI5[i] >= 80 && RSI5[i]) {
         if (dateNote.length >= 4) {
           dateNote += "、超買";
         } else {
           dateNote += "超買";
         }
       }
-      if (RSI5[i] <= 20) {
+      if (RSI5[i] <= 20 && RSI5[i]) {
         if (dateNote.length >= 4) {
           dateNote += "、超賣";
         } else {

@@ -13,6 +13,20 @@ const getStockRSI = async () => {
   // 發送 API 請求
   const response = await fetch(`/api/stock/${stockId}/rsi`);
   const { date, RSI5, RSI10, close, note } = await response.json();
+  const RSI5Format = RSI5.map((e) => {
+    if (e == null) {
+      return "--";
+    } else {
+      return e;
+    }
+  });
+  const RSI10Format = RSI10.map((e) => {
+    if (e == null) {
+      return "--";
+    } else {
+      return e;
+    }
+  });
   // 表格訊息
   let rsiList = ``;
   let [buyPrice, sellPrice, profit] = [0, 0, 0];
@@ -43,8 +57,8 @@ const getStockRSI = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
-        <td>${RSI5[i]}</td>
-        <td>${RSI10[i]}</td>
+        <td>${RSI5Format[i]}</td>
+        <td>${RSI10Format[i]}</td>
         <td>${note[i]}</td>
       </tr>`;
     }
