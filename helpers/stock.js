@@ -113,11 +113,11 @@ const stockList = async function () {
   return dic;
 };
 
-// 取得個股近180日價格資訊
+// 取得個股近270日價格資訊
 const getStock180 = async function (stockNo) {
   // 日期
   let tradeDay = todayStart;
-  let tradeDay150 = todayStart - 12960000;
+  let tradeDay150 = todayStart - 7776000 * 4;
   let tradeDay90 = todayStart - 7776000;
   let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay150}&period2=${tradeDay}&interval=1d&events=history`;
 

@@ -183,6 +183,8 @@ const stockController = {
         const date = str.slice(6, 8);
         return `${year}/${month}/${date}`;
       });
+      // api bug
+      const last = price[0].high.slice(-1)[0] ? 0 : 1;
       // 與昨日價格差
       const diff = ["--"];
       for (let i = 1; i < date.length; i++) {
@@ -193,7 +195,7 @@ const stockController = {
       const data = {};
       const dic = await stockList(stockId);
       const title = dic[stockId].name;
-      for (let i = 0; i < date.length; i++) {
+      for (let i = 0; i < date.length - last; i++) {
         data[date[i]] = {
           date: date[i],
           volume: price[0].volume[i] ? price[0].volume[i] : "--",
@@ -204,7 +206,10 @@ const stockController = {
           diff: diff[i] ? diff[i] : "--",
         };
       }
-      return res.render("getStock", { data, title, stockId });
+      // 計算buy&hold
+      const close = price[0].close;
+      const buyAndHold = (close[close.length - 1] - close[0]).toFixed(2);
+      return res.render("getStock", { data, title, stockId, buyAndHold });
     } catch (error) {
       next(error);
     }

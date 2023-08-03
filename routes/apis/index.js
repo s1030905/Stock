@@ -143,8 +143,8 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
     const high = price[0].high;
     const low = price[0].low;
     const close = price[0].close;
-    const diff = [0, 0, 0, 0];
-    const note = ["--", "--", "--", "--"];
+    const diff = new Array(8).fill(0);
+    const note = new Array(8).fill("--");
 
     // API bug ETF查詢錯誤
     const last = close.slice(-1)[0] ? 0 : 1;
@@ -156,18 +156,18 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
     if (last) date.pop();
     const day90Index = date.indexOf(formattedDate(tradeDay90));
 
-    // 畫 KD 的 K
+    // 畫 KD 的 (9, 14)
     // RSV值計算公式：(收盤價 – 設定周期內最低價) / (設定周期內最高價 – 設定周期內最低價) × 100
     // K值計算公式：(2/3 × 前一根K線K值)＋(1/3 × 當日RSV)
     // D值計算公式：D值= (2/3 × 前一根K線D值)＋(1/3 × 當日K值)
     const [rsv, k, d] = [
-      [0, 0, 0, 0],
-      [50, 50, 50, 50],
-      [50, 50, 50, 50],
+      new Array(8).fill(0),
+      new Array(8).fill(50),
+      new Array(8).fill(50),
     ];
-    for (let i = 4; i < price[0].close.length - last; i++) {
-      const cyclePriceHigh = high.slice(i - 4, i + 1);
-      const cyclePriceLow = low.slice(i - 4, i + 1);
+    for (let i = 8; i < price[0].close.length - last; i++) {
+      const cyclePriceHigh = high.slice(i - 8, i + 1);
+      const cyclePriceLow = low.slice(i - 8, i + 1);
       let cycleMin = Math.min(...cyclePriceLow);
       let cycleMax = Math.max(...cyclePriceHigh);
       rsv.push(
@@ -180,7 +180,7 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
       d.push(((2 / 3) * d[i - 1] + (1 / 3) * k[i]).toFixed(2));
     }
     // 每日KD分析結果
-    for (let i = 4; i < k.length; i++) {
+    for (let i = 8; i < k.length; i++) {
       diff.push((k[i] - d[i]).toFixed(2));
       let dateNote = "";
       if (k[i] > d[i] && k[i - 1] < d[i - 1]) {
@@ -245,65 +245,71 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
     }
     const day90Index = date.indexOf(formattedDate(tradeDay90));
 
-    // 畫 RSI (5, 10)
+    // 畫 RSI (6, 12)
     // RSI (相對強弱指標) = n日漲幅平均值÷(n日漲幅平均值+ n日跌幅平均值) × 100
     // n日漲幅平均值 = n日內上漲日總上漲幅度加總 ÷ n
     // n日跌幅平均值 = n日內下跌日總下跌幅度加總 ÷ n
-    const RSI5 = [null, null, null, null, null],
-      RSI10 = [null, null, null, null, null, null, null, null, null, null];
+    const RSI5 = new Array(6).fill(null),
+      RSI10 = new Array(12).fill(null);
     let up5 = 0,
       down5 = 0,
       up10 = 0,
       down10 = 0;
-    // RSI5 計算
+    // RSI5 計算(EMA)
     for (let i = 1; i <= close.length; i++) {
-      let diff = (close[i] - close[i - 1]) / 5;
-      if (i < 6) {
+      let diff = (close[i] - close[i - 1]) / 6;
+      if (i < 7) {
         if (diff >= 0) {
           up5 += diff;
         } else {
           down5 += diff;
         }
       }
-      if (i === 5) {
+      if (i === 6) {
         RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
       }
-      if (i >= 6) {
+      if (i >= 7) {
         if (diff >= 0) {
-          up5 += (diff - up5) / 5;
-          down5 += (0 - down5) / 5;
+          up5 += (diff - up5) / 6;
+          down5 += (0 - down5) / 6;
         } else {
-          up5 += (0 - up5) / 5;
-          down5 += (diff - down5) / 5;
+          up5 += (0 - up5) / 6;
+          down5 += (diff - down5) / 6;
         }
         RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
       }
     }
 
-    // RSI10 計算
+    // RSI10 計算(EMA)
     for (let i = 1; i <= close.length; i++) {
-      let diff = (close[i] - close[i - 1]) / 10;
-      if (i < 11) {
+      let diff = (close[i] - close[i - 1]) / 12;
+      if (i < 13) {
         if (diff >= 0) {
           up10 += diff;
         } else {
           down10 += diff;
         }
       }
-      if (i === 10) {
+      if (i === 12) {
         RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
       }
-      if (i >= 11) {
+      if (i >= 13) {
         if (diff >= 0) {
-          up10 += (diff - up10) / 10;
-          down10 += (0 - down10) / 10;
+          up10 += (diff - up10) / 12;
+          down10 += (0 - down10) / 12;
         } else {
-          up10 += (0 - up10) / 10;
-          down10 += (diff - down10) / 10;
+          up10 += (0 - up10) / 12;
+          down10 += (diff - down10) / 12;
         }
         RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
       }
     }
+    // 取近90日資料
+    close.splice(0, day90Index);
+    date.splice(0, day90Index);
+    RSI5.splice(0, day90Index);
+    RSI10.splice(0, day90Index);
+
     const note = [];
     // 每日RSI分析結果
     for (let i = 0; i < RSI10.length; i++) {
@@ -333,12 +339,6 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
       }
       note.push(dateNote);
     }
-    close.splice(0, day90Index);
-    date.splice(0, day90Index);
-    RSI5.splice(0, day90Index);
-    RSI10.splice(0, day90Index);
-    note.splice(0, day90Index);
-
     return res.json({ close, date, RSI5, RSI10, note });
   } catch (error) {
     next(error);
@@ -349,7 +349,7 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
   try {
     // 取得特定id 資料
     const { id } = req.params;
-    const { timestamp, price } = await getStock(id);
+    const { timestamp, price, tradeDay90 } = await getStock180(id);
 
     // 取得繪圖、計算macd必須資料 date, high, low, close
     const date = [];
@@ -366,88 +366,82 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
       date.pop();
       close.pop();
     }
+    const tradeDay90Index = date.indexOf(formattedDate(tradeDay90));
+
+    // MACD(12,26,9)
     // EMA(n)=(前一日EMA(n) × (n-1)+今日收盤價 × 2) ÷ (n+1)
     // EMA(m)=(前一日EMA(m) × (m-1)+今日收盤價 × 2) ÷ (m+1)
-    // DIF=EMA(n)－EMA(m)
-    // MACD(x)=(前一日xMACD × (x-1)+DIF × 2) ÷ (x+1)
-    const RSI5 = [null, null, null, null, null],
-      RSI10 = [null, null, null, null, null, null, null, null, null, null];
-    let up5 = 0,
-      down5 = 0,
-      up10 = 0,
-      down10 = 0;
-    // RSI5 計算
-    for (let i = 1; i <= close.length; i++) {
-      let diff = (close[i] - close[i - 1]) / 5;
-      if (i < 6) {
-        if (diff >= 0) {
-          up5 += diff;
-        } else {
-          down5 += diff;
-        }
+    // 快線 DIF=EMA(n)－EMA(m)
+    // 慢線 MACD(x)=(前一日xMACD × (x-1)+DIF × 2) ÷ (x+1)
+    // OSC 柱狀圖
+    const EMA12 = new Array(11).fill(null),
+      EMA26 = new Array(25).fill(null),
+      n = 12,
+      m = 26,
+      k = 9,
+      DIF = new Array(25).fill(null),
+      MACD = new Array(33).fill(null),
+      OSC = new Array(33).fill(null);
+    let sum12 = 0,
+      sum26 = 0;
+    for (let i = 0; i < close.length; i++) {
+      // 計算 EMA12
+      if (i < n) {
+        sum12 += close[i];
       }
-      if (i === 5) {
-        RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
+      if (i === n - 1) {
+        EMA12.push(sum12 / n);
       }
-      if (i >= 6) {
-        if (diff >= 0) {
-          up5 += (diff - up5) / 5;
-          down5 += (0 - down5) / 5;
-        } else {
-          up5 += (0 - up5) / 5;
-          down5 += (diff - down5) / 5;
-        }
-        RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
+      if (i > n - 1) {
+        sum12 = (EMA12[i - 1] * (n - 1) + close[i] * 2) / (n + 1);
+        EMA12.push(sum12);
       }
-    }
 
-    // RSI10 計算
-    for (let i = 1; i <= close.length; i++) {
-      let diff = (close[i] - close[i - 1]) / 10;
-      if (i < 11) {
-        if (diff >= 0) {
-          up10 += diff;
-        } else {
-          down10 += diff;
-        }
+      // 計算 EMA26 DIF
+      if (i < m - 1) {
+        sum26 += close[i];
       }
-      if (i === 10) {
-        RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
+      if (i === m - 1) {
+        EMA26.push(sum26 / m);
+        // DIF.push((sum12 - sum26).toFixed(3));
+        DIF.push(sum12 - sum26);
       }
-      if (i >= 11) {
-        if (diff >= 0) {
-          up10 += (diff - up10) / 10;
-          down10 += (0 - down10) / 10;
-        } else {
-          up10 += (0 - up10) / 10;
-          down10 += (diff - down10) / 10;
-        }
-        RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
+      if (i > m - 1) {
+        sum26 = (EMA26[i - 1] * (m - 1) + close[i] * 2) / (m + 1);
+        EMA26.push(sum26);
+        // DIF.push((sum12 - sum26).toFixed(3));
+        DIF.push(sum12 - sum26);
+      }
+      // 計算 MACD
+      // MACD(x)=(前一日xMACD × (x-1)+DIF × 2) ÷ (x+1)
+      if (i === m + k - 2) {
+        let DIF9 = DIF.slice(m + k - 9, m + k);
+        let sum = DIF9.reduce((acc, cur) => acc + cur, 0);
+        MACD.push((sum / k).toFixed(4));
+        OSC.push(DIF[i] - MACD[i]);
+      }
+      if (i > m + k - 2) {
+        let sum = (Number(MACD[i - 1]) * (k - 1) + DIF[i] * 2) / (k + 1);
+        MACD.push(sum.toFixed(3));
+        OSC.push(DIF[i] - MACD[i]);
       }
     }
+    close.splice(0, tradeDay90Index);
+    EMA12.splice(0, tradeDay90Index);
+    EMA26.splice(0, tradeDay90Index);
+    date.splice(0, tradeDay90Index);
+    DIF.splice(0, tradeDay90Index);
+    MACD.splice(0, tradeDay90Index);
+
     const note = [];
-    // 每日RSI分析結果
-    for (let i = 0; i < RSI10.length; i++) {
+    // 每日 MACD 分析結果
+    for (let i = 0; i < date.length; i++) {
       let dateNote = "";
-      if (RSI5[i] > RSI10[i] && RSI5[i - 1] < RSI10[i - 1]) {
+      if (DIF[i] > MACD[i] && DIF[i - 1] < MACD[i - 1]) {
         dateNote += "黃金交叉";
       }
-      if (RSI5[i] < RSI10[i] && RSI5[i - 1] > RSI10[i - 1]) {
+      if (DIF[i] < MACD[i] && DIF[i - 1] > MACD[i - 1]) {
         dateNote += "死亡交叉";
-      }
-      if (RSI5[i] >= 80 && RSI5[i]) {
-        if (dateNote.length >= 4) {
-          dateNote += "、超買";
-        } else {
-          dateNote += "超買";
-        }
-      }
-      if (RSI5[i] <= 20 && RSI5[i]) {
-        if (dateNote.length >= 4) {
-          dateNote += "、超賣";
-        } else {
-          dateNote += "超賣";
-        }
       }
       if (!dateNote.length) {
         dateNote += "--";
@@ -455,7 +449,7 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
       note.push(dateNote);
     }
 
-    return res.json({ close, date, RSI5, RSI10, note });
+    return res.json({ close, date, EMA12, EMA26, note, DIF, MACD });
   } catch (error) {
     next(error);
   }
@@ -478,6 +472,7 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
 
     // API bug ETF查詢錯誤
     const last = high.slice(-1)[0] ? 0 : 1;
+    console.log(last);
     let [max, min] = [
       Math.max(...high.slice(0, high.length - last)),
       Math.min(...low.slice(0, low.length - last)),
@@ -520,6 +515,7 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
       highLow.push([high[i].toFixed(2), low[i].toFixed(2)]);
       volumeRelative.push(((volume[i] / volAvg) * 25).toFixed(2));
     }
+
     res.json({
       date,
       openEnd,

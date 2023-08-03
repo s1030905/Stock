@@ -1,7 +1,7 @@
-// 監聽 "rsi-form" 的點擊事件
-const rsiFormBtn = document.querySelector("#rsi-form");
+// 監聽 "macd-form" 的點擊事件
+const macdForm = document.querySelector("#macd-form");
 
-const getStockRSI = async () => {
+const getStockMACD = async () => {
   // 移除原先的列表
   const table = document.querySelector("table");
   table.remove();
@@ -11,22 +11,9 @@ const getStockRSI = async () => {
   const stockId = queryString.slice(stockIdIndex + 1, queryString.length);
 
   // 發送 API 請求
-  const response = await fetch(`/api/stock/${stockId}/rsi`);
-  const { date, RSI5, RSI10, close, note } = await response.json();
-  const RSI5Format = RSI5.map((e) => {
-    if (e == null) {
-      return "--";
-    } else {
-      return e;
-    }
-  });
-  const RSI10Format = RSI10.map((e) => {
-    if (e == null) {
-      return "--";
-    } else {
-      return e;
-    }
-  });
+  const response = await fetch(`/api/stock/${stockId}/macd`);
+  const { close, date, EMA12, EMA26, note, DIF, MACD } = await response.json();
+
   // 表格訊息
   let rsiList = ``;
   let [buyPrice, sellPrice, profit] = [0, 0, 0];
@@ -46,8 +33,8 @@ const getStockRSI = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
-        <td>${RSI5[i]}</td>
-        <td>${RSI10[i]}</td>
+        <td>${DIF[i]}</td>
+        <td>${MACD[i]}</td>
         <td>${note[i]} 預估獲利: ${profit}</td>
       </tr>`;
       totalProfit += Number(profit);
@@ -57,8 +44,8 @@ const getStockRSI = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
-        <td>${RSI5Format[i]}</td>
-        <td>${RSI10Format[i]}</td>
+        <td>${DIF[i]}</td>
+        <td>${MACD[i]}</td>
         <td>${note[i]}</td>
       </tr>`;
     }
@@ -69,8 +56,8 @@ const getStockRSI = async () => {
     2
   )}點</h4>`;
   // 更新table
-  const kdContainer = document.querySelector("#table-container");
-  kdContainer.innerHTML = `<table class="table">
+  const tableContainer = document.querySelector("#table-container");
+  tableContainer.innerHTML = `<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -86,12 +73,12 @@ const getStockRSI = async () => {
 </table>`;
 };
 
-rsiFormBtn.addEventListener("click", (event) => {
+macdForm.addEventListener("click", (event) => {
   // 取消其他標籤的 active 狀態
   const activeTabs = document.querySelectorAll(".nav-item .nav-link.active");
   activeTabs.forEach((tab) => {
     tab.classList.remove("active");
   });
   event.target.classList.add("active");
-  getStockRSI();
+  getStockMACD();
 });
