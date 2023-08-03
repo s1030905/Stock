@@ -1,12 +1,12 @@
 const axios = require("axios");
 const { taiwanTime, todayStart } = require("./date");
 
-// 取得個股本月價格資訊
+// 取得個股近90日價格資訊
 const getStock = async function (stockNo) {
   // 日期
   let tradeDay = todayStart;
-  let tradeDay30 = todayStart - 7776000;
-  let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay30}&period2=${tradeDay}&interval=1d&events=history`;
+  let tradeDay90 = todayStart - 7776000;
+  let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay90}&period2=${tradeDay}&interval=1d&events=history`;
 
   // 獲取資料
   let stock = await axios.get(url);
@@ -113,9 +113,31 @@ const stockList = async function () {
   return dic;
 };
 
+// 取得個股近180日價格資訊
+const getStock180 = async function (stockNo) {
+  // 日期
+  let tradeDay = todayStart;
+  let tradeDay150 = todayStart - 12960000;
+  let tradeDay90 = todayStart - 7776000;
+  let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay150}&period2=${tradeDay}&interval=1d&events=history`;
+
+  // 獲取資料
+  let stock = await axios.get(url);
+  let response = stock.data.chart;
+  if (response.result === null) {
+    let timestamp = null;
+    let price = null;
+    return { response, timestamp, price };
+  }
+  let timestamp = response.result[0].timestamp;
+  let price = response.result[0].indicators.quote;
+  return { response, timestamp, price, tradeDay90 };
+};
+
 module.exports = {
   getStock,
   getForeignBuy,
   getLocalBuy,
   stockList,
+  getStock180,
 };

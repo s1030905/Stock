@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const axios = require("axios");
-const { getStock, stockList } = require("../../helpers/stock");
+const { getStock, stockList, getStock180 } = require("../../helpers/stock");
 const { formattedDate } = require("../../helpers/date");
 const { authenticator } = require("../../middleware/auth");
 const { apiErrorHandler } = require("../../middleware/error-handler");
@@ -136,7 +136,7 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
   try {
     // 取得特定id 資料
     const { id } = req.params;
-    const { timestamp, price } = await getStock(id);
+    const { timestamp, price, tradeDay90 } = await getStock180(id);
 
     // 取得繪圖、計算KD必須資料 date, ,high, low, close
     const date = [];
@@ -154,6 +154,7 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
       date.push(formattedDate(e));
     });
     if (last) date.pop();
+    const day90Index = date.indexOf(formattedDate(tradeDay90));
 
     // 畫 KD 的 K
     // RSV值計算公式：(收盤價 – 設定周期內最低價) / (設定周期內最高價 – 設定周期內最低價) × 100
@@ -207,7 +208,14 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
       }
       note.push(dateNote);
     }
-    res.json({ date, k, d, diff, note, close });
+
+    close.splice(0, day90Index);
+    date.splice(0, day90Index);
+    k.splice(0, day90Index);
+    d.splice(0, day90Index);
+    diff.splice(0, day90Index);
+    note.splice(0, day90Index);
+    return res.json({ date, k, d, diff, note, close });
   } catch (error) {
     next(error);
   }
@@ -217,9 +225,133 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
   try {
     // 取得特定id 資料
     const { id } = req.params;
-    const { timestamp, price } = await getStock(id);
+    const { timestamp, price, tradeDay90 } = await getStock180(id);
 
     // 取得繪圖、計算KD必須資料 date, ,high, low, close
+    const date = [];
+    const close = price[0].close;
+
+    // API bug ETF查詢錯誤
+    const last = close.slice(-1)[0] ? 0 : 1;
+
+    // 時間轉換
+
+    timestamp.forEach((e) => {
+      date.push(formattedDate(e));
+    });
+    if (last) {
+      date.pop();
+      close.pop();
+    }
+    const day90Index = date.indexOf(formattedDate(tradeDay90));
+
+    // 畫 RSI (5, 10)
+    // RSI (相對強弱指標) = n日漲幅平均值÷(n日漲幅平均值+ n日跌幅平均值) × 100
+    // n日漲幅平均值 = n日內上漲日總上漲幅度加總 ÷ n
+    // n日跌幅平均值 = n日內下跌日總下跌幅度加總 ÷ n
+    const RSI5 = [null, null, null, null, null],
+      RSI10 = [null, null, null, null, null, null, null, null, null, null];
+    let up5 = 0,
+      down5 = 0,
+      up10 = 0,
+      down10 = 0;
+    // RSI5 計算
+    for (let i = 1; i <= close.length; i++) {
+      let diff = (close[i] - close[i - 1]) / 5;
+      if (i < 6) {
+        if (diff >= 0) {
+          up5 += diff;
+        } else {
+          down5 += diff;
+        }
+      }
+      if (i === 5) {
+        RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
+      }
+      if (i >= 6) {
+        if (diff >= 0) {
+          up5 += (diff - up5) / 5;
+          down5 += (0 - down5) / 5;
+        } else {
+          up5 += (0 - up5) / 5;
+          down5 += (diff - down5) / 5;
+        }
+        RSI5.push(Number(((up5 / (up5 - down5)) * 100).toFixed(2)));
+      }
+    }
+
+    // RSI10 計算
+    for (let i = 1; i <= close.length; i++) {
+      let diff = (close[i] - close[i - 1]) / 10;
+      if (i < 11) {
+        if (diff >= 0) {
+          up10 += diff;
+        } else {
+          down10 += diff;
+        }
+      }
+      if (i === 10) {
+        RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
+      }
+      if (i >= 11) {
+        if (diff >= 0) {
+          up10 += (diff - up10) / 10;
+          down10 += (0 - down10) / 10;
+        } else {
+          up10 += (0 - up10) / 10;
+          down10 += (diff - down10) / 10;
+        }
+        RSI10.push(Number(((up10 / (up10 - down10)) * 100).toFixed(2)));
+      }
+    }
+    const note = [];
+    // 每日RSI分析結果
+    for (let i = 0; i < RSI10.length; i++) {
+      let dateNote = "";
+      if (RSI5[i] > RSI10[i] && RSI5[i - 1] < RSI10[i - 1]) {
+        dateNote += "黃金交叉";
+      }
+      if (RSI5[i] < RSI10[i] && RSI5[i - 1] > RSI10[i - 1]) {
+        dateNote += "死亡交叉";
+      }
+      if (RSI5[i] >= 80 && RSI5[i]) {
+        if (dateNote.length >= 4) {
+          dateNote += "、超買";
+        } else {
+          dateNote += "超買";
+        }
+      }
+      if (RSI5[i] <= 20 && RSI5[i]) {
+        if (dateNote.length >= 4) {
+          dateNote += "、超賣";
+        } else {
+          dateNote += "超賣";
+        }
+      }
+      if (!dateNote.length) {
+        dateNote += "--";
+      }
+      note.push(dateNote);
+    }
+    close.splice(0, day90Index);
+    date.splice(0, day90Index);
+    RSI5.splice(0, day90Index);
+    RSI10.splice(0, day90Index);
+    note.splice(0, day90Index);
+
+    return res.json({ close, date, RSI5, RSI10, note });
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
+  try {
+    // 取得特定id 資料
+    const { id } = req.params;
+    const { timestamp, price } = await getStock(id);
+
+    // 取得繪圖、計算macd必須資料 date, high, low, close
     const date = [];
     const close = price[0].close;
 
@@ -234,10 +366,10 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
       date.pop();
       close.pop();
     }
-    // 畫 RSI (5, 10)
-    // RSI (相對強弱指標) = n日漲幅平均值÷(n日漲幅平均值+ n日跌幅平均值) × 100
-    // n日漲幅平均值 = n日內上漲日總上漲幅度加總 ÷ n
-    // n日跌幅平均值 = n日內下跌日總下跌幅度加總 ÷ n
+    // EMA(n)=(前一日EMA(n) × (n-1)+今日收盤價 × 2) ÷ (n+1)
+    // EMA(m)=(前一日EMA(m) × (m-1)+今日收盤價 × 2) ÷ (m+1)
+    // DIF=EMA(n)－EMA(m)
+    // MACD(x)=(前一日xMACD × (x-1)+DIF × 2) ÷ (x+1)
     const RSI5 = [null, null, null, null, null],
       RSI10 = [null, null, null, null, null, null, null, null, null, null];
     let up5 = 0,
