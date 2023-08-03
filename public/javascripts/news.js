@@ -67,5 +67,8 @@ newsBtn.addEventListener("click", (event) => {
   });
 
   event.target.classList.add("active");
+  const total = document.querySelector("#total");
+  total.innerText = ``;
+
   getStockNews();
 });

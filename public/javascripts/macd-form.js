@@ -12,7 +12,7 @@ const getStockMACD = async () => {
 
   // 發送 API 請求
   const response = await fetch(`/api/stock/${stockId}/macd`);
-  const { close, date, EMA12, EMA26, note, DIF, MACD } = await response.json();
+  const { close, date, note, DIF, MACD } = await response.json();
 
   // 表格訊息
   let rsiList = ``;
@@ -52,7 +52,7 @@ const getStockMACD = async () => {
   }
   // 計算rsi 總獲利
   const total = document.querySelector("#total");
-  total.innerHTML = `<h4 style="font-weight: 700">總共獲利: ${totalProfit.toFixed(
+  total.innerHTML = `<h4 style="font-weight: 700">MACD策略共獲利: ${totalProfit.toFixed(
     2
   )}點</h4>`;
   // 更新table
@@ -62,8 +62,8 @@ const getStockMACD = async () => {
     <tr>
       <th scope="col">#</th>
       <th scope="col">時間</th>
-      <th scope="col">RSI5</th>
-      <th scope="col">RSI10</th>
+      <th scope="col">DIF</th>
+      <th scope="col">MACD</th>
       <th scope="col">買賣訊號</th>
     </tr>
   </thead>
@@ -80,5 +80,49 @@ macdForm.addEventListener("click", (event) => {
     tab.classList.remove("active");
   });
   event.target.classList.add("active");
+  const macdHeader = document.getElementById("analysis-type");
+  macdHeader.innerText = "MACD";
   getStockMACD();
+  const analysisChart = document.getElementById("analysis-chart");
+  (async () => {
+    const queryString = window.location.search;
+    const index = queryString.indexOf("=");
+    const stockId = queryString.slice(index + 1);
+    const response = await fetch(`/api/stock/${stockId}/macd`);
+    const { date, DIF, MACD, OSC } = await response.json();
+
+    // 把上一個chart刪除
+    const preAnalysisChart = Chart.getChart("analysis-chart");
+    if (preAnalysisChart) preAnalysisChart.destroy();
+    // 重新畫
+    new Chart(analysisChart, {
+      type: "line",
+      data: {
+        labels: date,
+        datasets: [
+          {
+            type: "line",
+            backgroundColor: "red",
+            borderColor: "red",
+            label: "DIF",
+            data: DIF,
+          },
+          {
+            type: "line",
+            backgroundColor: "green",
+            borderColor: "green",
+            label: "MACD",
+            data: MACD,
+          },
+          {
+            type: "bar",
+            fill: true,
+            backgroundColor: "#0d877b",
+            label: "OSC",
+            data: OSC,
+          },
+        ],
+      },
+    });
+  })();
 });

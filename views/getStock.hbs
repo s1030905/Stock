@@ -14,17 +14,16 @@
     <i class="fa-solid fa-circle-exclamation" id="explanationBtn"></i>
   </div>
   <div id="explanationContainer"></div>
-  <h4 class="m-2">KD</h4>
-  <canvas id="kd-chart" width="800" height="200"></canvas>
-  <h4 class="m-2">RSI</h4>
-  <canvas id="rsi-chart" width="800" height="200"></canvas>
+  <h4 class="m-2" id="analysis-type"></h4>
+  <canvas id="analysis-chart" width="800" height="200"></canvas>
 </div>
 
 <br>
 <br>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/stock/search?stockId={{stockId}}">Price</a>
+    {{!-- <a class="nav-link active" aria-current="page" href="/stock/search?stockId={{stockId}}" id="price">Price</a> --}}
+    <a class="nav-link active" aria-current="page" href="#" id="price">Price</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="news" href="#">News</a>
@@ -79,6 +78,5 @@
 <script src="/javascripts/chart.js"></script>
 <script src="/javascripts/kd-chart.js"></script>
 <script src="/javascripts/kd-form.js"></script>
-<script src="/javascripts/rsi-chart.js"></script>
 <script src="/javascripts/rsi-form.js"></script>
 <script src="/javascripts/macd-form.js"></script>

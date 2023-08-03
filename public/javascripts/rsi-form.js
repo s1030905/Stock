@@ -65,7 +65,7 @@ const getStockRSI = async () => {
   }
   // 計算rsi 總獲利
   const total = document.querySelector("#total");
-  total.innerHTML = `<h4 style="font-weight: 700">總共獲利: ${totalProfit.toFixed(
+  total.innerHTML = `<h4 style="font-weight: 700">RSI策略共獲利: ${totalProfit.toFixed(
     2
   )}點</h4>`;
   // 更新table
@@ -94,4 +94,48 @@ rsiFormBtn.addEventListener("click", (event) => {
   });
   event.target.classList.add("active");
   getStockRSI();
+  const analysisChart = document.getElementById("analysis-chart");
+  const rsiHeader = document.getElementById("analysis-type");
+  rsiHeader.innerText = "RSI";
+  (async () => {
+    const queryString = window.location.search;
+    const index = queryString.indexOf("=");
+    const stockId = queryString.slice(index + 1);
+    const response = await fetch(`/api/stock/${stockId}/rsi`);
+    const { date, RSI5, RSI10 } = await response.json();
+    // 把上一個chart刪除
+    const preAnalysisChart = Chart.getChart("analysis-chart");
+    if (preAnalysisChart) preAnalysisChart.destroy();
+    // 重新畫
+    new Chart(analysisChart, {
+      type: "line",
+      data: {
+        labels: date,
+        datasets: [
+          {
+            type: "line",
+            backgroundColor: "red",
+            borderColor: "red",
+            label: "RSI5",
+            data: RSI5,
+          },
+          {
+            type: "line",
+            backgroundColor: "green",
+            borderColor: "green",
+            label: "RSI10",
+            data: RSI10,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            min: 0,
+            max: 100,
+          },
+        },
+      },
+    });
+  })();
 });

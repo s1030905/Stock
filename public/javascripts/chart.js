@@ -94,3 +94,19 @@ const ctx = document.getElementById("myChart");
     },
   });
 })();
+
+const explanationBtn = document.querySelector("#explanationBtn");
+
+// mouseenter 顯示說明
+explanationBtn.addEventListener("mouseenter", (event) => {
+  const explanationContainer = document.querySelector("#explanationContainer");
+  explanationContainer.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    黃金交叉為買點；死亡交叉為賣點
+  </div>`;
+});
+
+// mouseout 移除說明
+explanationBtn.addEventListener("mouseout", (event) => {
+  const explanationContainer = document.querySelector("#explanationContainer");
+  explanationContainer.innerHTML = ``;
+});

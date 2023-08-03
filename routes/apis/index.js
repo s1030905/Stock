@@ -403,27 +403,27 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
       }
       if (i === m - 1) {
         EMA26.push(sum26 / m);
-        // DIF.push((sum12 - sum26).toFixed(3));
-        DIF.push(sum12 - sum26);
+        let diff = (sum12 - sum26).toFixed(3);
+        DIF.push(Number(diff));
       }
       if (i > m - 1) {
         sum26 = (EMA26[i - 1] * (m - 1) + close[i] * 2) / (m + 1);
         EMA26.push(sum26);
-        // DIF.push((sum12 - sum26).toFixed(3));
-        DIF.push(sum12 - sum26);
+        let diff = (sum12 - sum26).toFixed(3);
+        DIF.push(Number(diff));
       }
       // 計算 MACD
       // MACD(x)=(前一日xMACD × (x-1)+DIF × 2) ÷ (x+1)
       if (i === m + k - 2) {
         let DIF9 = DIF.slice(m + k - 9, m + k);
         let sum = DIF9.reduce((acc, cur) => acc + cur, 0);
-        MACD.push((sum / k).toFixed(4));
-        OSC.push(DIF[i] - MACD[i]);
+        MACD.push(Number((sum / k).toFixed(3)));
+        OSC.push(Number((DIF[i] - MACD[i]).toFixed(3)));
       }
       if (i > m + k - 2) {
         let sum = (Number(MACD[i - 1]) * (k - 1) + DIF[i] * 2) / (k + 1);
-        MACD.push(sum.toFixed(3));
-        OSC.push(DIF[i] - MACD[i]);
+        MACD.push(Number(sum.toFixed(3)));
+        OSC.push(Number((DIF[i] - MACD[i]).toFixed(3)));
       }
     }
     close.splice(0, tradeDay90Index);
@@ -432,7 +432,7 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
     date.splice(0, tradeDay90Index);
     DIF.splice(0, tradeDay90Index);
     MACD.splice(0, tradeDay90Index);
-
+    OSC.splice(0, tradeDay90Index);
     const note = [];
     // 每日 MACD 分析結果
     for (let i = 0; i < date.length; i++) {
@@ -449,7 +449,7 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
       note.push(dateNote);
     }
 
-    return res.json({ close, date, EMA12, EMA26, note, DIF, MACD });
+    return res.json({ close, date, EMA12, EMA26, note, DIF, MACD, OSC });
   } catch (error) {
     next(error);
   }

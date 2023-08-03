@@ -1,5 +1,6 @@
 // 監聽 "kd-form" 的點擊事件
 const kdFormBtn = document.querySelector("#kd-form");
+const priceFormBtn = document.querySelector("#price");
 
 const getStockKD = async () => {
   // 移除原先的列表
@@ -53,7 +54,7 @@ const getStockKD = async () => {
   }
   // 計算kd 總獲利
   const total = document.querySelector("#total");
-  total.innerHTML = `<h4 style="font-weight: 700">總共獲利: ${totalProfit.toFixed(
+  total.innerHTML = `<h4 style="font-weight: 700">KD策略共獲利: ${totalProfit.toFixed(
     2
   )}點</h4>`;
   // 更新table
@@ -74,6 +75,54 @@ const getStockKD = async () => {
   </tbody>
 </table>`;
 };
+const drawKDChart = () => {
+  // 選取位置 圖表名稱
+  const analysisChart = document.getElementById("analysis-chart");
+  const kdHeader = document.getElementById("analysis-type");
+  // 畫chart
+  (async () => {
+    kdHeader.innerText = "KD";
+    const queryString = window.location.search;
+    const index = queryString.indexOf("=");
+    const stockId = queryString.slice(index + 1);
+    const response = await fetch(`/api/stock/${stockId}/kd`);
+    const { date, k, d } = await response.json();
+    // 把上一個chart刪除
+    const preAnalysisChart = Chart.getChart("analysis-chart");
+    if (preAnalysisChart) preAnalysisChart.destroy();
+    // 重新畫
+    new Chart(analysisChart, {
+      type: "line",
+      data: {
+        labels: date,
+        datasets: [
+          {
+            type: "line",
+            backgroundColor: "red",
+            borderColor: "red",
+            label: "K",
+            data: k,
+          },
+          {
+            type: "line",
+            backgroundColor: "green",
+            borderColor: "green",
+            label: "D",
+            data: d,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            min: 0,
+            max: 100,
+          },
+        },
+      },
+    });
+  })();
+};
 
 kdFormBtn.addEventListener("click", (event) => {
   // 取消其他標籤的 active 狀態
@@ -82,21 +131,21 @@ kdFormBtn.addEventListener("click", (event) => {
     tab.classList.remove("active");
   });
   event.target.classList.add("active");
+  // 表格
   getStockKD();
+  // 畫圖
+  drawKDChart();
 });
 
-const explanationBtn = document.querySelector("#explanationBtn");
-
-// mouseenter 顯示說明
-explanationBtn.addEventListener("mouseenter", (event) => {
-  const explanationContainer = document.querySelector("#explanationContainer");
-  explanationContainer.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    黃金交叉為買點；死亡交叉為賣點
-  </div>`;
-});
-
-// mouseout 移除說明
-explanationBtn.addEventListener("mouseout", (event) => {
-  const explanationContainer = document.querySelector("#explanationContainer");
-  explanationContainer.innerHTML = ``;
+priceFormBtn.addEventListener("click", (event) => {
+  // 取消其他標籤的 active 狀態
+  const activeTabs = document.querySelectorAll(".nav-item .nav-link.active");
+  activeTabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+  event.target.classList.add("active");
+  // 表格
+  getStockKD();
+  // 畫圖
+  drawKDChart();
 });

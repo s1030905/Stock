@@ -1,5 +1,7 @@
-const kdChart = document.getElementById("kd-chart");
+const kdChart = document.getElementById("analysis-chart");
+const kdHeader = document.getElementById("analysis-type");
 (async () => {
+  kdHeader.innerText = "KD";
   const queryString = window.location.search;
   const index = queryString.indexOf("=");
   const stockId = queryString.slice(index + 1);
