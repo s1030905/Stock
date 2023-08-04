@@ -174,7 +174,8 @@ const stockController = {
         return res.redirect(`/stock/search?stockId=${stockId}`);
       }
       // 獲取資料
-      const { response, timestamp, price } = await getStock(stockId);
+      const { timestamp, price } = await getStock(stockId);
+      const close = price[0].close;
       // 日期資料處理
       const date = timestamp.map((e) => {
         const str = formattedDate(e);
@@ -185,6 +186,10 @@ const stockController = {
       });
       // api bug
       const last = price[0].high.slice(-1)[0] ? 0 : 1;
+      if (last) {
+        date.pop();
+        close.pop();
+      }
       // 與昨日價格差
       const diff = ["--"];
       for (let i = 1; i < date.length; i++) {
@@ -195,7 +200,7 @@ const stockController = {
       const data = {};
       const dic = await stockList(stockId);
       const title = dic[stockId].name;
-      for (let i = 0; i < date.length - last; i++) {
+      for (let i = 0; i < date.length; i++) {
         data[date[i]] = {
           date: date[i],
           volume: price[0].volume[i] ? price[0].volume[i] : "--",
@@ -207,7 +212,6 @@ const stockController = {
         };
       }
       // 計算buy&hold
-      const close = price[0].close;
       const buyAndHold = (close[close.length - 1] - close[0]).toFixed(2);
       return res.render("getStock", { data, title, stockId, buyAndHold });
     } catch (error) {

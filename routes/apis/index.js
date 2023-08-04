@@ -5,6 +5,7 @@ const { formattedDate } = require("../../helpers/date");
 const { authenticator } = require("../../middleware/auth");
 const { apiErrorHandler } = require("../../middleware/error-handler");
 const { getStockNews } = require("../../helpers/news");
+const { sd } = require("../../helpers/math");
 
 router.get("/stock/index", authenticator, async (req, res, next) => {
   try {
@@ -154,7 +155,15 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
       date.push(formattedDate(e));
     });
     if (last) date.pop();
-    const day90Index = date.indexOf(formattedDate(tradeDay90));
+
+    let day90Index = date.indexOf(formattedDate(tradeDay90));
+    let nextTradeDay = tradeDay90 + 86400;
+
+    // 找下一個交易日
+    while (day90Index === -1) {
+      nextTradeDay += 86400;
+      day90Index = date.indexOf(formattedDate(nextTradeDay));
+    }
 
     // 畫 KD 的 (9, 14)
     // RSV值計算公式：(收盤價 – 設定周期內最低價) / (設定周期內最高價 – 設定周期內最低價) × 100
@@ -243,7 +252,14 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
       date.pop();
       close.pop();
     }
-    const day90Index = date.indexOf(formattedDate(tradeDay90));
+    let day90Index = date.indexOf(formattedDate(tradeDay90));
+    let nextTradeDay = tradeDay90 + 86400;
+
+    // 找下一個交易日
+    while (day90Index === -1) {
+      nextTradeDay += 86400;
+      day90Index = date.indexOf(formattedDate(nextTradeDay));
+    }
 
     // 畫 RSI (6, 12)
     // RSI (相對強弱指標) = n日漲幅平均值÷(n日漲幅平均值+ n日跌幅平均值) × 100
@@ -366,7 +382,14 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
       date.pop();
       close.pop();
     }
-    const tradeDay90Index = date.indexOf(formattedDate(tradeDay90));
+    let day90Index = date.indexOf(formattedDate(tradeDay90));
+    let nextTradeDay = tradeDay90 + 86400;
+
+    // 找下一個交易日
+    while (day90Index === -1) {
+      nextTradeDay += 86400;
+      day90Index = date.indexOf(formattedDate(nextTradeDay));
+    }
 
     // MACD(12,26,9)
     // EMA(n)=(前一日EMA(n) × (n-1)+今日收盤價 × 2) ÷ (n+1)
@@ -426,13 +449,13 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
         OSC.push(Number((DIF[i] - MACD[i]).toFixed(3)));
       }
     }
-    close.splice(0, tradeDay90Index);
-    EMA12.splice(0, tradeDay90Index);
-    EMA26.splice(0, tradeDay90Index);
-    date.splice(0, tradeDay90Index);
-    DIF.splice(0, tradeDay90Index);
-    MACD.splice(0, tradeDay90Index);
-    OSC.splice(0, tradeDay90Index);
+    close.splice(0, day90Index);
+    EMA12.splice(0, day90Index);
+    EMA26.splice(0, day90Index);
+    date.splice(0, day90Index);
+    DIF.splice(0, day90Index);
+    MACD.splice(0, day90Index);
+    OSC.splice(0, day90Index);
     const note = [];
     // 每日 MACD 分析結果
     for (let i = 0; i < date.length; i++) {
@@ -455,6 +478,116 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
   }
 });
 
+router.get("/stock/:id/boolean-path", authenticator, async (req, res, next) => {
+  try {
+    // 取得特定id 資料
+    const { id } = req.params;
+    const { timestamp, price, tradeDay90 } = await getStock180(id);
+
+    // 取得繪圖、計算boolean path必須資料 date ,標準差, close
+    const date = [];
+    const close = price[0].close;
+    const note = [];
+
+    // API bug ETF查詢錯誤
+    const last = close.slice(-1)[0] ? 0 : 1;
+
+    // 時間轉換
+    timestamp.forEach((e) => {
+      date.push(formattedDate(e));
+    });
+    if (last) {
+      date.pop();
+      close.pop();
+    }
+    let day90Index = date.indexOf(formattedDate(tradeDay90));
+    let nextTradeDay = tradeDay90 + 86400;
+
+    // 找下一個交易日
+    while (day90Index === -1) {
+      nextTradeDay += 86400;
+      day90Index = date.indexOf(formattedDate(nextTradeDay));
+    }
+
+    // 畫 布林
+    // 標準差、20日均線
+    // 20日均線
+    const n = 20;
+    const ma20 = new Array(19).fill(null),
+      ma20Top = new Array(19).fill(null),
+      ma20Bottom = new Array(19).fill(null);
+    let sum = 0;
+    for (let i = 0; i < date.length; i++) {
+      // 計算初始值
+      if (i < n - 1) sum += close[i];
+      else if (i === n - 1) {
+        sum += close[i];
+        // 標準差
+        const cycle = close.slice(i - 19, i + 1); // 0,20 1,21
+        const sigma = sd(cycle, n);
+        // 布林
+        ma20.push(sum / n);
+        ma20Top.push(sum / n + 2 * sigma);
+        ma20Bottom.push(sum / n - 2 * sigma);
+      } else {
+        sum = sum - close[i - 20] + close[i];
+        // 標準差
+        const cycle = close.slice(i - 19, i + 1);
+        const sigma = sd(cycle, n);
+        // 布林
+        ma20.push(sum / n);
+        ma20Top.push(sum / n + 2 * sigma);
+        ma20Bottom.push(sum / n - 2 * sigma);
+      }
+    }
+    date.splice(0, day90Index);
+    ma20.splice(0, day90Index);
+    ma20Top.splice(0, day90Index);
+    ma20Bottom.splice(0, day90Index);
+    close.splice(0, day90Index);
+    // 每日布林分析結果
+    for (let i = 0; i < date.length; i++) {
+      let dateNote = "";
+      if (
+        close[i] > close[i - 1] &&
+        close[i - 1] < ma20Bottom[i - 1] &&
+        close[i] > ma20Bottom[i]
+      ) {
+        dateNote += "突破下軌";
+      }
+      if (
+        close[i] < close[i - 1] &&
+        close[i - 1] > ma20Top[i - 1] &&
+        close[i] < ma20Bottom[i]
+      ) {
+        dateNote += "跌破上軌";
+      }
+      if (
+        close[i] < close[i - 1] &&
+        close[i - 1] > ma20Bottom[i - 1] &&
+        close[i] < ma20Bottom[i]
+      ) {
+        dateNote += "跌破下軌";
+      }
+      if (
+        close[i] < close[i - 1] &&
+        close[i - 1] > ma20[i - 1] &&
+        close[i] < ma20[i]
+      ) {
+        dateNote += "跌破中軌";
+      }
+      if (!dateNote.length) {
+        dateNote += "--";
+      }
+      note.push(dateNote);
+    }
+
+    return res.json({ date, ma20, ma20Top, ma20Bottom, note, close });
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.get("/stock/:id", authenticator, async (req, res, next) => {
   try {
     // 取得特定id 資料
@@ -467,12 +600,13 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
     const highLow = [];
     const high = price[0].high;
     const low = price[0].low;
+    const open = price[0].open;
+    const close = price[0].close;
     const volume = price[0].volume;
     const color = [];
 
     // API bug ETF查詢錯誤
     const last = high.slice(-1)[0] ? 0 : 1;
-    console.log(last);
     let [max, min] = [
       Math.max(...high.slice(0, high.length - last)),
       Math.min(...low.slice(0, low.length - last)),
@@ -524,6 +658,10 @@ router.get("/stock/:id", authenticator, async (req, res, next) => {
       min,
       color,
       volumeRelative,
+      high,
+      low,
+      open,
+      close,
     });
   } catch (error) {
     next(error);

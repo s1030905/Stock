@@ -1,6 +1,6 @@
 // 監聽 "kd-form" 的點擊事件
 const kdFormBtn = document.querySelector("#kd-form");
-const priceFormBtn = document.querySelector("#price");
+// const priceFormBtn = document.querySelector("#price");
 
 const getStockKD = async () => {
   // 移除原先的列表
@@ -76,6 +76,14 @@ const getStockKD = async () => {
 </table>`;
 };
 const drawKDChart = () => {
+  // 把上一個chart刪除
+  const preAnalysisChart = Chart.getChart("analysis-chart");
+  if (preAnalysisChart) preAnalysisChart.destroy();
+  // 畫圖區域
+  const newChart = document.querySelector("#analysis");
+  newChart.innerHTML = `<h4 class="m-2" id="analysis-type"></h4>
+    <canvas id="analysis-chart" width="800" height="200"></canvas>`;
+
   // 選取位置 圖表名稱
   const analysisChart = document.getElementById("analysis-chart");
   const kdHeader = document.getElementById("analysis-type");
@@ -87,10 +95,8 @@ const drawKDChart = () => {
     const stockId = queryString.slice(index + 1);
     const response = await fetch(`/api/stock/${stockId}/kd`);
     const { date, k, d } = await response.json();
-    // 把上一個chart刪除
-    const preAnalysisChart = Chart.getChart("analysis-chart");
-    if (preAnalysisChart) preAnalysisChart.destroy();
-    // 重新畫
+
+    // 圖表設定
     new Chart(analysisChart, {
       type: "line",
       data: {
@@ -137,15 +143,15 @@ kdFormBtn.addEventListener("click", (event) => {
   drawKDChart();
 });
 
-priceFormBtn.addEventListener("click", (event) => {
-  // 取消其他標籤的 active 狀態
-  const activeTabs = document.querySelectorAll(".nav-item .nav-link.active");
-  activeTabs.forEach((tab) => {
-    tab.classList.remove("active");
-  });
-  event.target.classList.add("active");
-  // 表格
-  getStockKD();
-  // 畫圖
-  drawKDChart();
-});
+// priceFormBtn.addEventListener("click", (event) => {
+//   // 取消其他標籤的 active 狀態
+//   const activeTabs = document.querySelectorAll(".nav-item .nav-link.active");
+//   activeTabs.forEach((tab) => {
+//     tab.classList.remove("active");
+//   });
+//   event.target.classList.add("active");
+//   // 表格
+//   getStockKD();
+//   // 畫圖
+//   drawKDChart();
+// });

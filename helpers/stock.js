@@ -117,9 +117,9 @@ const stockList = async function () {
 const getStock180 = async function (stockNo) {
   // 日期
   let tradeDay = todayStart;
-  let tradeDay150 = todayStart - 7776000 * 4;
+  let tradeDay360 = todayStart - 7776000 * 4;
   let tradeDay90 = todayStart - 7776000;
-  let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay150}&period2=${tradeDay}&interval=1d&events=history`;
+  let url = `https://query1.finance.yahoo.com/v8/finance/chart/${stockNo}.TW?period1=${tradeDay360}&period2=${tradeDay}&interval=1d&events=history`;
 
   // 獲取資料
   let stock = await axios.get(url);

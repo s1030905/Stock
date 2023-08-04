@@ -94,19 +94,28 @@ rsiFormBtn.addEventListener("click", (event) => {
   });
   event.target.classList.add("active");
   getStockRSI();
+
+  // 把上一個chart刪除
+  const preAnalysisChart = Chart.getChart("analysis-chart");
+  if (preAnalysisChart) preAnalysisChart.destroy();
+  // 畫圖區域
+  const newChart = document.querySelector("#analysis");
+  newChart.innerHTML = `<h4 class="m-2" id="analysis-type"></h4>
+    <canvas id="analysis-chart" width="800" height="200"></canvas>`;
+
+  // 選取位置 圖表名稱
   const analysisChart = document.getElementById("analysis-chart");
   const rsiHeader = document.getElementById("analysis-type");
   rsiHeader.innerText = "RSI";
+  // 圖表
   (async () => {
     const queryString = window.location.search;
     const index = queryString.indexOf("=");
     const stockId = queryString.slice(index + 1);
     const response = await fetch(`/api/stock/${stockId}/rsi`);
     const { date, RSI5, RSI10 } = await response.json();
-    // 把上一個chart刪除
-    const preAnalysisChart = Chart.getChart("analysis-chart");
-    if (preAnalysisChart) preAnalysisChart.destroy();
-    // 重新畫
+
+    // 圖表設定
     new Chart(analysisChart, {
       type: "line",
       data: {

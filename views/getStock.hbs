@@ -14,15 +14,13 @@
     <i class="fa-solid fa-circle-exclamation" id="explanationBtn"></i>
   </div>
   <div id="explanationContainer"></div>
-  <h4 class="m-2" id="analysis-type"></h4>
-  <canvas id="analysis-chart" width="800" height="200"></canvas>
+  <div id="analysis"></div>
 </div>
 
 <br>
 <br>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    {{!-- <a class="nav-link active" aria-current="page" href="/stock/search?stockId={{stockId}}" id="price">Price</a> --}}
     <a class="nav-link active" aria-current="page" href="#" id="price">Price</a>
   </li>
   <li class="nav-item">
@@ -32,10 +30,13 @@
     <a href="#" id="kd-form" class="nav-link">KD分析</a>
   </li>
   <li class="nav-item">
-      <a href="#" id="rsi-form" class="nav-link">RSI分析</a>
+    <a href="#" id="rsi-form" class="nav-link">RSI分析</a>
   </li>
   <li class="nav-item">
-      <a href="#" id="macd-form" class="nav-link">MACD分析</a>
+    <a href="#" id="macd-form" class="nav-link">MACD分析</a>
+  </li>
+  <li class="nav-item">
+    <a href="#" id="boolean-path-form" class="nav-link">Boolean Path分析</a>
   </li>
 </ul>
 <div id="buy-and-hold" class="m-2"><h4 style="font-weight: 700">近90日漲跌: {{buyAndHold}}點</h4></div>
@@ -76,7 +77,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.0.2/chartjs-plugin-annotation.min.js"></script>
 <script src="/javascripts/news.js"></script>
 <script src="/javascripts/chart.js"></script>
-<script src="/javascripts/kd-chart.js"></script>
+<script src="/javascripts/price-form.js"></script>
 <script src="/javascripts/kd-form.js"></script>
 <script src="/javascripts/rsi-form.js"></script>
 <script src="/javascripts/macd-form.js"></script>
+<script src="/javascripts/boolean-path-form.js"></script>

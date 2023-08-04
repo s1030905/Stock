@@ -1,7 +1,7 @@
-// 監聽 "macd-form" 的點擊事件
-const macdForm = document.querySelector("#macd-form");
+// 監聽 "boolean-path-form" 的點擊事件
+const bpFormBtn = document.querySelector("#boolean-path-form");
 
-const getStockMACD = async () => {
+const getStockBP = async () => {
   // 移除原先的列表
   const table = document.querySelector("table");
   table.remove();
@@ -11,77 +11,61 @@ const getStockMACD = async () => {
   const stockId = queryString.slice(stockIdIndex + 1, queryString.length);
 
   // 發送 API 請求
-  const response = await fetch(`/api/stock/${stockId}/macd`);
-  const { close, date, note, DIF, MACD } = await response.json();
-
+  const response = await fetch(`/api/stock/${stockId}/boolean-path`);
+  const { date, ma20, ma20Top, ma20Bottom, note } = await response.json();
   // 表格訊息
-  let rsiList = ``;
+  let BPList = ``;
   let [buyPrice, sellPrice, profit] = [0, 0, 0];
   let totalProfit = 0;
   for (let i = 0; i < date.length; i++) {
-    const tradeSign = note[i].slice(0, 4);
+    const tradeSign = note[i].slice(0, 2);
 
-    if (tradeSign === "黃金交叉") {
+    if (tradeSign === "突破") {
       buyPrice = close[i];
-    } else if (tradeSign === "死亡交叉" && buyPrice > 0) {
+    } else if (tradeSign === "跌破" && buyPrice > 0) {
       sellPrice = close[i];
       profit = (sellPrice - buyPrice).toFixed(2);
       [buyPrice, sellPrice] = [0, 0];
     }
     if (profit !== 0) {
-      rsiList += `
+      BPList += `
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
-        <td>${DIF[i]}</td>
-        <td>${MACD[i]}</td>
         <td>${note[i]} 預估獲利: ${profit}</td>
       </tr>`;
       totalProfit += Number(profit);
       profit = 0;
     } else {
-      rsiList += `
+      BPList += `
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
-        <td>${DIF[i]}</td>
-        <td>${MACD[i]}</td>
         <td>${note[i]}</td>
       </tr>`;
     }
   }
-  // 計算macd 總獲利
+  // 計算kd 總獲利
   const total = document.querySelector("#total");
-  total.innerHTML = `<h4 style="font-weight: 700">MACD策略共獲利: ${totalProfit.toFixed(
+  total.innerHTML = `<h4 style="font-weight: 700">Boolean Path策略共獲利: ${totalProfit.toFixed(
     2
   )}點</h4>`;
   // 更新table
-  const tableContainer = document.querySelector("#table-container");
-  tableContainer.innerHTML = `<table class="table">
+  const bpContainer = document.querySelector("#table-container");
+  bpContainer.innerHTML = `<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">時間</th>
-      <th scope="col">DIF</th>
-      <th scope="col">MACD</th>
       <th scope="col">買賣訊號</th>
     </tr>
   </thead>
   <tbody>
-    ${rsiList}
+    ${BPList}
   </tbody>
 </table>`;
 };
-
-macdForm.addEventListener("click", (event) => {
-  // 取消其他標籤的 active 狀態
-  const activeTabs = document.querySelectorAll(".nav-item .nav-link.active");
-  activeTabs.forEach((tab) => {
-    tab.classList.remove("active");
-  });
-  event.target.classList.add("active");
-  getStockMACD();
-
+const drawBPChart = () => {
   // 把上一個chart刪除
   const preAnalysisChart = Chart.getChart("analysis-chart");
   if (preAnalysisChart) preAnalysisChart.destroy();
@@ -91,17 +75,19 @@ macdForm.addEventListener("click", (event) => {
     <canvas id="analysis-chart" width="800" height="200"></canvas>`;
 
   // 選取位置 圖表名稱
-  const macdHeader = document.getElementById("analysis-type");
-  macdHeader.innerText = "MACD";
   const analysisChart = document.getElementById("analysis-chart");
+  const BPHeader = document.getElementById("analysis-type");
+
+  // 畫chart
   (async () => {
+    BPHeader.innerText = "Boolean Path";
     const queryString = window.location.search;
     const index = queryString.indexOf("=");
     const stockId = queryString.slice(index + 1);
-    const response = await fetch(`/api/stock/${stockId}/macd`);
-    const { date, DIF, MACD, OSC } = await response.json();
+    const response = await fetch(`/api/stock/${stockId}/boolean-path`);
+    const { date, ma20, ma20Top, ma20Bottom, close } = await response.json();
 
-    // 圖表設定
+    // 重新畫
     new Chart(analysisChart, {
       type: "line",
       data: {
@@ -109,27 +95,47 @@ macdForm.addEventListener("click", (event) => {
         datasets: [
           {
             type: "line",
-            backgroundColor: "red",
-            borderColor: "red",
-            label: "DIF",
-            data: DIF,
+            backgroundColor: "black",
+            borderColor: "black",
+            label: "中軌",
+            data: ma20,
           },
           {
             type: "line",
-            backgroundColor: "green",
-            borderColor: "green",
-            label: "MACD",
-            data: MACD,
+            backgroundColor: "black",
+            borderColor: "black",
+            label: "上軌",
+            data: ma20Top,
           },
           {
-            type: "bar",
-            fill: true,
-            backgroundColor: "#0d877b",
-            label: "OSC",
-            data: OSC,
+            type: "line",
+            backgroundColor: "black",
+            borderColor: "black",
+            label: "下軌",
+            data: ma20Bottom,
+          },
+          {
+            type: "line",
+            backgroundColor: "blue",
+            borderColor: "blue",
+            label: "價格",
+            data: close,
           },
         ],
       },
     });
   })();
+};
+
+bpFormBtn.addEventListener("click", (event) => {
+  // 取消其他標籤的 active 狀態
+  const activeTabs = document.querySelectorAll(".nav-item .nav-link.active");
+  activeTabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+  event.target.classList.add("active");
+  // 表格
+  getStockBP();
+  // 畫圖
+  drawBPChart();
 });
