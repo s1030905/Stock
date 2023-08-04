@@ -1,6 +1,11 @@
 const router = require("express").Router();
 const axios = require("axios");
-const { getStock, stockList, getStock180 } = require("../../helpers/stock");
+const {
+  getStock,
+  stockList,
+  getStock180,
+  getIndex,
+} = require("../../helpers/stock");
 const { formattedDate } = require("../../helpers/date");
 const { authenticator } = require("../../middleware/auth");
 const { apiErrorHandler } = require("../../middleware/error-handler");
@@ -9,22 +14,8 @@ const { sd } = require("../../helpers/math");
 
 router.get("/stock/index", authenticator, async (req, res, next) => {
   try {
-    const url = "https://openapi.twse.com.tw/v1/exchangeReport/MI_INDEX";
-    let data = await axios.get(url);
-
-    // 最後更新日期
-    const headerDate = data.headers["last-modified"];
-    // 將日期字串轉換為Date物件
-    const dateObj = new Date(headerDate);
-    const year = dateObj.getFullYear();
-    const month = String(dateObj.getMonth() + 1).padStart(2, "0");
-    const day = String(dateObj.getDate()).padStart(2, "0");
-    const formattedDate = `${year - 1911}年${month}月${day}日`;
-    const title = `${formattedDate} 大盤指數彙總表`;
-
-    // 資料處理
-    data = data.data;
-    res.json({ data, title });
+    const { data, title, day } = await getIndex();
+    return res.json({ data, title, day });
   } catch (error) {
     next(error);
   }

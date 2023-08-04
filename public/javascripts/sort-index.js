@@ -1,8 +1,7 @@
 // 監聽 "col" 的點擊事件
 const btn = document.querySelector("#col");
 btn.addEventListener("click", async (event) => {
-  const response = await fetch(`/api/stock/index`);
-  const result = await response.json();
+  const result = await checker();
   let data;
   // 漲跌點數排序
   if (event.target.id === "fluctuations") {
@@ -110,5 +109,30 @@ const display = (data) => {
         <td>${data[i]["漲跌百分比"]} %</td>
       </tr>`;
     }
+  }
+};
+
+const checker = async () => {
+  // 獲取本地stockIndex
+  let stockIndex = localStorage.getItem("stockIndex");
+  stockIndex = JSON.parse(stockIndex);
+  if (stockIndex) {
+    let { day } = stockIndex;
+    const now = new Date();
+    let today = now.getDate();
+    if (today.toString().length === 1) {
+      today = "0" + today;
+    }
+    if (day === today) return stockIndex;
+    else {
+      const response = await fetch(`/api/stock/index`);
+      const result = await response.json();
+      return result;
+    }
+  } else {
+    const response = await fetch(`/api/stock/index`);
+    const result = await response.json();
+    localStorage.setItem("stockIndex", JSON.stringify(result));
+    return result;
   }
 };

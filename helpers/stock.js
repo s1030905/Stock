@@ -134,10 +134,29 @@ const getStock180 = async function (stockNo) {
   return { response, timestamp, price, tradeDay90 };
 };
 
+// 取得大盤資訊
+const getIndex = async () => {
+  const url = "https://openapi.twse.com.tw/v1/exchangeReport/MI_INDEX";
+  let data = await axios.get(url);
+  // 最後更新日期
+  const headerDate = data.headers["last-modified"];
+  // 將日期字串轉換為Date物件
+  const dateObj = new Date(headerDate);
+  const year = dateObj.getFullYear();
+  const month = String(dateObj.getMonth() + 1).padStart(2, "0");
+  const day = String(dateObj.getDate()).padStart(2, "0");
+  const formattedDate = `${year - 1911}年${month}月${day}日`;
+  const title = `${formattedDate} 大盤指數彙總表`;
+  // 資料處理
+  data = data.data;
+  return { data, title, day };
+};
+
 module.exports = {
   getStock,
   getForeignBuy,
   getLocalBuy,
   stockList,
   getStock180,
+  getIndex,
 };
