@@ -192,10 +192,10 @@ router.get("/stock/:id/kd", authenticator, async (req, res, next) => {
     for (let i = 8; i < k.length; i++) {
       diff.push((k[i] - d[i]).toFixed(2));
       let dateNote = "";
-      if (k[i] > d[i] && k[i - 1] < d[i - 1]) {
+      if (k[i] >= d[i] && k[i - 1] < d[i - 1]) {
         dateNote += "黃金交叉";
       }
-      if (k[i] < d[i] && k[i - 1] > d[i - 1]) {
+      if (k[i] <= d[i] && k[i - 1] > d[i - 1]) {
         dateNote += "死亡交叉";
       }
       if (k[i] >= 80 && d[i] >= 80) {
@@ -330,10 +330,10 @@ router.get("/stock/:id/rsi", authenticator, async (req, res, next) => {
     // 每日RSI分析結果
     for (let i = 0; i < RSI10.length; i++) {
       let dateNote = "";
-      if (RSI5[i] > RSI10[i] && RSI5[i - 1] < RSI10[i - 1]) {
+      if (RSI5[i] >= RSI10[i] && RSI5[i - 1] < RSI10[i - 1]) {
         dateNote += "黃金交叉";
       }
-      if (RSI5[i] < RSI10[i] && RSI5[i - 1] > RSI10[i - 1]) {
+      if (RSI5[i] <= RSI10[i] && RSI5[i - 1] > RSI10[i - 1]) {
         dateNote += "死亡交叉";
       }
       if (RSI5[i] >= 80 && RSI5[i]) {
@@ -460,10 +460,10 @@ router.get("/stock/:id/macd", authenticator, async (req, res, next) => {
     // 每日 MACD 分析結果
     for (let i = 0; i < date.length; i++) {
       let dateNote = "";
-      if (DIF[i] > MACD[i] && DIF[i - 1] < MACD[i - 1]) {
+      if (DIF[i] >= MACD[i] && DIF[i - 1] < MACD[i - 1]) {
         dateNote += "黃金交叉";
       }
-      if (DIF[i] < MACD[i] && DIF[i - 1] > MACD[i - 1]) {
+      if (DIF[i] <= MACD[i] && DIF[i - 1] > MACD[i - 1]) {
         dateNote += "死亡交叉";
       }
       if (!dateNote.length) {

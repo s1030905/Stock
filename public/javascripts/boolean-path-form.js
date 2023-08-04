@@ -12,7 +12,7 @@ const getStockBP = async () => {
 
   // 發送 API 請求
   const response = await fetch(`/api/stock/${stockId}/boolean-path`);
-  const { date, ma20, ma20Top, ma20Bottom, note } = await response.json();
+  const { date, note, close } = await response.json();
   // 表格訊息
   let BPList = ``;
   let [buyPrice, sellPrice, profit] = [0, 0, 0];
@@ -22,9 +22,12 @@ const getStockBP = async () => {
 
     if (tradeSign === "突破") {
       buyPrice = close[i];
+      console.log(`buyPrice: ${buyPrice}`);
     } else if (tradeSign === "跌破" && buyPrice > 0) {
       sellPrice = close[i];
       profit = (sellPrice - buyPrice).toFixed(2);
+      console.log(`sellPrice: ${sellPrice}`);
+      console.log(`profit: ${profit}`);
       [buyPrice, sellPrice] = [0, 0];
     }
     if (profit !== 0) {
@@ -45,7 +48,7 @@ const getStockBP = async () => {
       </tr>`;
     }
   }
-  // 計算kd 總獲利
+  // 計算bp 總獲利
   const total = document.querySelector("#total");
   total.innerHTML = `<h4 style="font-weight: 700">Boolean Path策略共獲利: ${totalProfit.toFixed(
     2
