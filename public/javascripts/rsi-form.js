@@ -46,6 +46,7 @@ const getStockRSI = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
+        <td>${close[i]}</td>
         <td>${RSI5[i]}</td>
         <td>${RSI10[i]}</td>
         <td>${note[i]} 預估獲利: ${profit}</td>
@@ -57,6 +58,7 @@ const getStockRSI = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
+        <td>${close[i]}</td>
         <td>${RSI5Format[i]}</td>
         <td>${RSI10Format[i]}</td>
         <td>${note[i]}</td>
@@ -75,6 +77,7 @@ const getStockRSI = async () => {
     <tr>
       <th scope="col">#</th>
       <th scope="col">時間</th>
+      <th scope="col">收盤價</th>
       <th scope="col">RSI5</th>
       <th scope="col">RSI10</th>
       <th scope="col">買賣訊號</th>

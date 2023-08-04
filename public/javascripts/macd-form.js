@@ -33,6 +33,7 @@ const getStockMACD = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
+        <td>${close[i]}</td>
         <td>${DIF[i]}</td>
         <td>${MACD[i]}</td>
         <td>${note[i]} 預估獲利: ${profit}</td>
@@ -44,6 +45,7 @@ const getStockMACD = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
+        <td>${close[i]}</td>
         <td>${DIF[i]}</td>
         <td>${MACD[i]}</td>
         <td>${note[i]}</td>
@@ -62,6 +64,7 @@ const getStockMACD = async () => {
     <tr>
       <th scope="col">#</th>
       <th scope="col">時間</th>
+      <th scope="col">收盤價</th>
       <th scope="col">DIF</th>
       <th scope="col">MACD</th>
       <th scope="col">買賣訊號</th>

@@ -35,6 +35,7 @@ const getStockBP = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
+        <td>${close[i]}</td>
         <td>${note[i]} 預估獲利: ${profit}</td>
       </tr>`;
       totalProfit += Number(profit);
@@ -44,6 +45,7 @@ const getStockBP = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
+        <td>${close[i]}</td>
         <td>${note[i]}</td>
       </tr>`;
     }
@@ -60,6 +62,7 @@ const getStockBP = async () => {
     <tr>
       <th scope="col">#</th>
       <th scope="col">時間</th>
+      <th scope="col">收盤價</th>
       <th scope="col">買賣訊號</th>
     </tr>
   </thead>

@@ -33,6 +33,7 @@ const getStockKD = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
+        <td>${close[i]}</td>
         <td>${k[i]}</td>
         <td>${d[i]}</td>
         <td>${diff[i]}</td>
@@ -45,6 +46,7 @@ const getStockKD = async () => {
       <tr>
         <th scope="row">${i + 1}</th>
         <td>${date[i]}</td>
+        <td>${close[i]}</td>
         <td>${k[i]}</td>
         <td>${d[i]}</td>
         <td>${diff[i]}</td>
@@ -64,6 +66,7 @@ const getStockKD = async () => {
     <tr>
       <th scope="col">#</th>
       <th scope="col">時間</th>
+      <th scope="col">收盤價</th>
       <th scope="col">K值</th>
       <th scope="col">D值</th>
       <th scope="col">差值</th>
